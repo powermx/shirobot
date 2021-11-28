@@ -6551,33 +6551,7 @@ El archivo se esta enviando espere`
                 sendFileFromUrl(res1[0].link, audio, {quoted: mek, mimetype: 'audio/mp4', filename: res1[0].output})
                 }
                 break
-
-case 'playvid2':
-if(!isVerify) return isUser()
-if (isBanned) return reply(banf())
-if (args.length < 1) return reply(`✳️ *Ingresa el nombre de un video*\n\n📌Ejemplo: *${prefix}play* Lil Peep broken smile`)
-reply(wait()) 
-let yut = await yts(q)
-ytv(yut.videos[0].url)
-.then((res) => {
-const { dl_link, thumb, title, filesizeF, filesize } = res
-const mp4 = `${yut.videos[0].url}`
-})
-resyv = await y2mateV(`${mp4}`).catch(e => {
-                  reply('❎ No se encontró el video')
-                  })
-                  result = `*🎶Vídeo encontrado*
-
-‣ *📌Título* : ${resyv[0].judul}
-‣ *📂Archivo* : Mp3
-‣ *⚖️Tamaño* : ${resyv[0].size}
-‣ *🔗Link* : ${mp4}
-
-El vídeo se esta enviando espere`
-                  sendFileFromUrl(resyv[0].thumb, image, {caption: result, quoted: mek})
-                  sendFileFromUrl(resyv[0].link, video, {quoted: mek, mimetype:'video/mp4', duration: 9999999999})
-break
-
+                
 case 'playvid': 
  case 'playmp4': 
  case 'playvideo': 
@@ -6600,40 +6574,31 @@ El vídeo se esta enviando espere`
 sendFileFromUrl(link[0].image, image, {quoted: mek, caption: music})
  res1 = await y2mateV(link[0].url).catch(e => {
                 })
-                sendFileFromUrl(res1[0].link, video, {quoted: mek, mimetype: 'video/mp4', filename: link[0].title})
+                sendFileFromUrl(res1[0].link, video, {quoted: mek, mimetype: 'video/mp4', filename: link[0].title caption: `✅ Video descargado\n\n‣ *Titulo:* ${link[0].title}`})
  break
 
 //----
-    case 'play2':
+
+case 'playvid2':
+case 'video2':
+case 'playvideo2': 
 if(!isVerify) return isUser()
   if (isBanned) return reply(banf())
-  if(!isPremium)return reply(premi())
-	        if (args.length < 1) return reply(`✳️ *Ingresa el nombre de una música*\n\n📌Ejemplo: *${prefix}play* Lil Peep broken smile`)
-                playz = q
-                reply(wait()) 
-  msc = await fetchJson(`https://api-gdr2.herokuapp.com/api/yt/play2?query=${playz}`)
-  judul = msc.result.title
-  lagu = msc.result.url_audio
-  foto = msc.result.thumbnail
-  durasi = msc.result.duration
-  link = msc.result.url
-  capt = `*🎶Musica encontrada*
-
-‣ *📌Título* : ${judul}
-‣ *📂Archivo* : Mp3
-‣ *⏰Duración* : ${durasi}
-‣ *🔗Link* : ${link}
-
-El archivo se esta enviando espere`
-//if(Number(size.split(' MB')[0]) >= 5.00) return reply('❎ El archivo pesa más de 5 mb')
-  thumb = await getBuffer(foto)
-  Fg.sendMessage(from, thumb, image, {mimetype: 'image/webp', quoted: mek, caption: capt})
-  mp3 = await getBuffer(lagu)
-  Fg.sendMessage(from, mp3, document, {mimetype: 'audio/mp4', filename: `${judul}.mp3`, quoted: mek})
-  .catch((err) => {
-            reply(`❎ Error, intente más tarde`); 
-            })
-  break
+				  if (args.length < 1) return reply('*Ingrese el título*')
+				play7 = args.join(" ")
+				anu = await fetchJson(`https://api.zeks.xyz/api/ytplaymp4?q=${play7}&apikey=oCHDwj8ggZGBGjU5WIaK5Rctu6c`)
+				if (anu.error) return reply(anu.error)
+				infomp3 = `❒════❬ *VIDEO* ❭═════╾❒
+├‣ *Nombre* : ${anu.result.title}
+├‣ *Fuente* : ${anu.result.source}
+├‣ *Tamaño* : ${anu.result.size}
+❒════════════════╾❒`			
+				buffer = await getBuffer(anu.result.thumbnail)
+				buffer1 = await getBuffer(anu.result.url_video)
+				Fg.sendMessage(from, buffer, image, {quoted: mek, caption: infomp3})
+				Fg.sendMessage(from, buffer1, video, {mimetype: 'video/mp4', filename: `${anu.result.video}.mp4`, quoted: mek, caption: `✅ Video descargado\n\n‣ *Titulo:* ${anu.result.title}`})
+					addFilter(from)
+          break
 
         
       //𝗦𝗧𝗜𝗖𝗞𝗘𝗥 𝗠𝗔𝗞𝗘𝗥

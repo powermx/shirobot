@@ -6552,7 +6552,7 @@ El archivo se esta enviando espere`
                 }
                 break
 
-case 'playvid':
+case 'playvid2':
 if(!isVerify) return isUser()
 if (isBanned) return reply(banf())
 if (args.length < 1) return reply(`✳️ *Ingresa el nombre de un video*\n\n📌Ejemplo: *${prefix}play* Lil Peep broken smile`)
@@ -6563,7 +6563,7 @@ ytv(yut.videos[0].url)
 const { dl_link, thumb, title, filesizeF, filesize } = res
 const mp4 = `${yut.videos[0].url}`
 })
-resyv = await y2mateV(mp4).catch(e => {
+resyv = await y2mateV(`${mp4}`).catch(e => {
                   reply('❎ No se encontró el video')
                   })
                   result = `*🎶Vídeo encontrado*
@@ -6577,6 +6577,31 @@ El vídeo se esta enviando espere`
                   sendFileFromUrl(resyv[0].thumb, image, {caption: result, quoted: mek})
                   sendFileFromUrl(resyv[0].link, video, {quoted: mek, mimetype:'video/mp4', duration: 9999999999})
 break
+
+case 'playvid': 
+ case 'playmp4': 
+ case 'playvideo': 
+if(!isVerify) return isUser()
+if (isBanned) return reply(banf())
+if (args.length < 1) return reply(`✳️ *Ingresa el nombre de un video*\n\n📌Ejemplo: *${prefix}play* Lil Peep broken smile`)
+reply(wait()) 
+   url = await yts(value);
+   link = url.all 
+   if(!link) return ('Error')
+   imgplay = await getBuffer(link[0].image)
+   music = `*🎶Vídeo encontrado*
+
+‣ *📌Título* : ${link[0].title}
+‣ *📂Archivo* : Mp3
+‣ *⏰Duración* : ${link[0].timestamp}
+‣ *🔗Link* : ${link[0].url}
+
+El vídeo se esta enviando espere` 
+sendFileFromUrl(link[0].image, image, {quoted: mek, caption: music})
+ res1 = await y2mateA(link[0].url).catch(e => {
+                })
+                sendFileFromUrl(res1[0].link, audio, {quoted: mek, mimetype: 'video/mp4', filename: link[0].title})
+ break
 
 //----
     case 'play2':

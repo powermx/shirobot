@@ -8455,6 +8455,11 @@ case 'chiste':
               answer = chiste[Math.floor(Math.random() * chiste.length)]
               Fg.sendMessage(from, `*◼️CHISTE*\n\n${answer}`, text, { quoted: mek })
               break
+              
+case 'nada':
+              if (isBanned) return reply(banf())
+              Fg.sendMessage(from, `De nada, disfruta tu estadía el el grupo :3`, text, { quoted: mek })
+              break
 
 //--------------------------------------
       default:

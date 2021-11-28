@@ -8461,6 +8461,15 @@ case 'nada':
               Fg.sendMessage(from, `De nada, disfruta tu estadía el el grupo :3`, text, { quoted: mek })
               break
 
+case 'faker':
+const faker2 = pll.split("|")[1];
+const xxxyz = await getBuffer(`${faker2}`)
+Fg.sendMessage(from, `${q}`, text, {quoted: mek, thumbnail: xxxyz })
+.catch((err) => {
+            reply(`❎ Error, intente de nuevo mas tarde`); 
+            })
+              break
+
 //--------------------------------------
       default:
  

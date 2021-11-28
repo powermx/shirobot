@@ -3566,8 +3566,8 @@ case '3d':
 				if (args.length < 1) return reply(`*✳️ Ingrese el texto*\n\n📌Ejemplo: ${prefix + command} Texto`)
 			    defg = q
 			reply(wait())
-                const data = await await getBuffer(`https://docs-jojo.herokuapp.com/api/text3d?text=${defg}`)
-                Fg.sendMessage(from, data, image, {quoted: mek, caption: `${isPremium ? '💎No se te descontará ningún Diamante' : `💎-1 Diamante por utilizar esta función`}\n\n✅ Listo : *${defg}*`})
+                const dataa = await await getBuffer(`https://docs-jojo.herokuapp.com/api/text3d?text=${defg}`)
+                Fg.sendMessage(from, dataa, image, {quoted: mek, caption: `${isPremium ? '💎No se te descontará ningún Diamante' : `💎-1 Diamante por utilizar esta función`}\n\n✅ Listo : *${defg}*`})
                 .catch((err) => {
             reply(`❎ Error, intente más tarde`); 
             })

@@ -3565,9 +3565,9 @@ case '3d':
 			reply(wait())
 			
 			try {
-				datax = `https://docs-jojo.herokuapp.com/api/text3d?text=${defg}`
+				const datax = `https://docs-jojo.herokuapp.com/api/text3d?text=${defg}`
 				} catch {
-				datax = `https://api.zeks.me/api/text3d?apikey=apivinz&text=${defg}`
+				const datax = `https://api.zeks.me/api/text3d?apikey=apivinz&text=${defg}`
 				}
 			    const dataa = await getBuffer(datax)
                 Fg.sendMessage(from, dataa, image, {quoted: mek, caption: `${isPremium ? '💎No se te descontará ningún Diamante' : `💎-1 Diamante por utilizar esta función`}\n\n✅ Listo : *${defg}*`})
@@ -6523,9 +6523,9 @@ if(!isVerify) return isUser()
 if (mek.message.extendedTextMessage != undefined){
 mentioned = mek.message.extendedTextMessage.contextInfo.mentionedJid
 	try {
-	const pic = await Fg.getProfilePicture(mentioned[0])
+	 pic = await Fg.getProfilePicture(mentioned[0])
 	} catch {
-	const pic = 'https://i.ibb.co/9vCxvzL/sinperfil.jpg'
+	 pic = 'https://i.ibb.co/9vCxvzL/sinperfil.jpg'
 	}
 thumb = await getBuffer(pic)
 Fg.sendMessage(from, thumb,image,{quoted : mek})

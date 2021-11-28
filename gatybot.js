@@ -3565,11 +3565,11 @@ case '3d':
 			reply(wait())
 			
 			try {
-				dataa = `https://docs-jojo.herokuapp.com/api/text3d?text=${defg}`
+				datax = `https://docs-jojo.herokuapp.com/api/text3d?text=${defg}`
 				} catch {
-				dataa = `https://api.zeks.me/api/text3d?apikey=apivinz&text=${defg}`
+				datax = `https://api.zeks.me/api/text3d?apikey=apivinz&text=${defg}`
 				}
-			    const dataa = await getBuffer(dataa)
+			    const dataa = await getBuffer(datax)
                 Fg.sendMessage(from, dataa, image, {quoted: mek, caption: `${isPremium ? '💎No se te descontará ningún Diamante' : `💎-1 Diamante por utilizar esta función`}\n\n✅ Listo : *${defg}*`})
                 .catch((err) => {
                 	reply(`❎ Error, intente más tarde`);

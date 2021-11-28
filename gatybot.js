@@ -5796,12 +5796,12 @@ break
         const bufer = fs.readFileSync(tipes);
         const desc = `${pn}`;
         const title = `${pen}`;
-        const url = `${pe}`;
+        const uurl = `${pe}`;
         const buu = `https://${be}`;
         var anu = {
           detectLinks: false,
         };
-        var mat = await Fg.generateLinkPreview(url);
+        var mat = await Fg.generateLinkPreview(uurl);
         mat.title = title;
         mat.description = desc;
         mat.jpegThumbnail = bufer;
@@ -6585,13 +6585,13 @@ if(!isVerify) return isUser()
 if (isBanned) return reply(banf())
 if (args.length < 1) return reply(`✳️ *Ingresa el nombre de un video*\n\n📌Ejemplo: *${prefix}play* Lil Peep broken smile`)
 reply(wait()) 
-   url = await yts(q);
+   const url = await yts(q);
    link = url.all 
    if(!link) return ('Error')
    imgplay = await getBuffer(link[0].image)
    music = `*🎶Vídeo encontrado*
 
-‣ *??Título* : ${link[0].title}
+‣ *📌Título* : ${link[0].title}
 ‣ *📂Archivo* : Mp3
 ‣ *⏰Duración* : ${link[0].timestamp}
 ‣ *🔗Link* : ${link[0].url}

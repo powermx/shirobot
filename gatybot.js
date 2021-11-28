@@ -2692,8 +2692,8 @@ break
 
     *DESCARGAS*
   📥 ${prefix}play
-  📥 ${prefix}play2
   📥 ${prefix}playvid
+  📥 ${prefix}playvid2
   📥 ${prefix}ytmp3
   📥 ${prefix}ytmp4
   📥 ${prefix}instagram
@@ -2726,6 +2726,10 @@ break
   🧩 ${prefix}gaming
   🧩 ${prefix}3d
   🧩 ${prefix}phlogo
+  🧩 ${prefix}light
+  🧩 ${prefix}marvel
+  🧩 ${prefix}3dbox
+  🧩 ${prefix}flame
 
     *MEDIA*
   🎥 ${prefix}screenshot
@@ -3416,6 +3420,71 @@ case 'voz':
 					break
 
 //******************** 》 MAKER 《 ********************\\
+case 'light':
+ if(!isVerify) return isUser()
+  if (isBanned) return reply(banf())
+if (isLimit(sender, isPremium, isOwner, limitCount, limit)) return reply(fdiama(prefix))
+if (args.length < 1) return reply(`*✳️ Ingrese el texto*\n\n📌Ejemplo: ${prefix + command} Texto`)
+reply(wait())
+bp = args.join(" ")
+const bpz4 = await getBuffer(`https://api.zeks.me/api/tlight?apikey=apivinz&text=${bp}`)
+reply(wait())
+Fg.sendMessage(from, bpz3, image, {quoted: mek, caption: `${isPremium ? '💎No se te descontará ningún Diamante' : `💎-1 Diamante por utilizar esta función`}\n\n✅ Listo : *${bp}*`})
+.catch((err) => {
+            reply(`❎ Error, intente más tarde`); 
+            })
+limitAdd(sender, limit)
+break
+
+case 'marvel':
+if(!isVerify) return isUser()
+  if (isBanned) return reply(banf())
+if (isLimit(sender, isPremium, isOwner, limitCount, limit)) return reply(fdiama(prefix))
+            pll = body.slice(8);
+            plo = pll.split("|")[0];
+			      plo2 = pll.split("|")[1];
+            const preeffk = `*✳️ Ingrese el texto*\n\n📌Ejemplo: ${prefix + command} Texto|Texto2`
+					  if (args.length < 1) return reply(preeffk)
+            rakz = await getBuffer(`https://api.zeks.me/api/marvellogo?apikey=apivinz&text1=${plo}&text2=${plo2}`)
+            reply(wait())
+            Fg.sendMessage(from, rakz, image, {quoted: mek, caption: `${isPremium ? '💎No se te descontará ningún Diamante' : `💎-1 Diamante por utilizar esta función`}\n\n✅ Listo : *${plo} ${plo2}*`})
+            .catch((err) => {
+            reply(`❎ Error, intente más tarde`); 
+            })
+            limitAdd(sender, limit)
+             break;
+
+case '3dbox':
+ if(!isVerify) return isUser()
+  if (isBanned) return reply(banf())
+if (isLimit(sender, isPremium, isOwner, limitCount, limit)) return reply(fdiama(prefix))
+if (args.length < 1) return reply(`*✳️ Ingrese el texto*\n\n📌Ejemplo: ${prefix + command} Texto`)
+reply(wait())
+bp = args.join(" ")
+const bpz3 = await getBuffer(`https://api.zeks.me/api/text3dbox?apikey=apivinz&text=${bp}`)
+reply(wait())
+Fg.sendMessage(from, bpz3, image, {quoted: mek, caption: `${isPremium ? '💎No se te descontará ningún Diamante' : `💎-1 Diamante por utilizar esta función`}\n\n✅ Listo : *${bp}*`})
+.catch((err) => {
+            reply(`❎ Error, intente más tarde`); 
+            })
+limitAdd(sender, limit)
+break
+
+case 'flame':
+ if(!isVerify) return isUser()
+  if (isBanned) return reply(banf())
+if (isLimit(sender, isPremium, isOwner, limitCount, limit)) return reply(fdiama(prefix))
+if (args.length < 1) return reply(`*✳️ Ingrese el texto*\n\n📌Ejemplo: ${prefix + command} Texto`)
+reply(wait())
+bp = args.join(" ")
+const bpz2 = await getBuffer(`https://api.zeks.me/api/flametext?apikey=apivinz&text=${bp}`)
+reply(wait())
+Fg.sendMessage(from, bpz2, image, {quoted: mek, caption: `${isPremium ? '💎No se te descontará ningún Diamante' : `💎-1 Diamante por utilizar esta función`}\n\n✅ Listo : *${bp}*`})
+.catch((err) => {
+            reply(`❎ Error, intente más tarde`); 
+            })
+limitAdd(sender, limit)
+break
 
 //https://docs-jojo.herokuapp.com/api/galaxywp?text=Jojo
 //https://docs-jojo.herokuapp.com/api/phblogo?text1=JOJO&text2=APIs
@@ -3428,9 +3497,9 @@ if (isLimit(sender, isPremium, isOwner, limitCount, limit)) return reply(fdiama(
 			      plo2 = pll.split("|")[1];
             const preffk = `*✳️ Ingrese el texto*\n\n📌Ejemplo: ${prefix + command} Texto|Texto2`
 					  if (args.length < 1) return reply(preffk)
-            rakz = await getBuffer(`https://ferdiz-afk.my.id/api/maker/pornhub?text=${plo}&text2=${plo2}`)
+            const rakz3 = await getBuffer(`https://ferdiz-afk.my.id/api/maker/pornhub?text=${plo}&text2=${plo2}`)
             reply(wait())
-            Fg.sendMessage(from, rakz, image, {quoted: mek, caption: `${isPremium ? '💎No se te descontará ningún Diamante' : `💎-1 Diamante por utilizar esta función`}\n\n✅ Listo : *${plo} ${plo2}*`})
+            Fg.sendMessage(from, rakz3, image, {quoted: mek, caption: `${isPremium ? '💎No se te descontará ningún Diamante' : `💎-1 Diamante por utilizar esta función`}\n\n✅ Listo : *${plo} ${plo2}*`})
             .catch((err) => {
             reply(`❎ Error, intente más tarde`); 
             })
@@ -3447,9 +3516,9 @@ if (isLimit(sender, isPremium, isOwner, limitCount, limit)) return reply(fdiama(
 			    plo3 = pll.split("|")[2];
             const preffk2 = `*✳️ Ingrese el texto*\n\n📌Ejemplo: ${prefix + command} Texto|Texto2|Texto3`
 					  if (args.length < 1) return reply(preffk2)   
-            rakz = await getBuffer(`https://docs-jojo.herokuapp.com/api/neon?text1=${plo}&text2=${plo2}&text3=${plo3}`)
+            const rakz2 = await getBuffer(`https://docs-jojo.herokuapp.com/api/neon?text1=${plo}&text2=${plo2}&text3=${plo3}`)
             reply(wait())
-            Fg.sendMessage(from, rakz, image, {quoted: mek, caption: `${isPremium ? '💎No se te descontará ningún Diamante' : `💎-1 Diamante por utilizar esta función`}\n\n✅ Listo : *${plo} ${plo2} ${plo3}*`})
+            Fg.sendMessage(from, rakz2, image, {quoted: mek, caption: `${isPremium ? '💎No se te descontará ningún Diamante' : `💎-1 Diamante por utilizar esta función`}\n\n✅ Listo : *${plo} ${plo2} ${plo3}*`})
             .catch((err) => {
             reply(`❎ Error, intente más tarde`); 
             })
@@ -3464,8 +3533,8 @@ if(!isVerify) return isUser()
             plo = pll.split("|")[0];
 			      plo2 = pll.split("|")[1];
             const preffk3 = `*✳️ Ingrese el texto*\n\n📌Ejemplo: ${prefix + command} Texto|Texto2`
-					  if (args.length < 1) return reply(preffk3)   
-            rakz = await getBuffer(`https://docs-jojo.herokuapp.com/api/ttlogo?text1=${plo}&text2=${plo2}`)
+		    if (args.length < 1) return reply(preffk3)   
+            const rakz = await getBuffer(`https://docs-jojo.herokuapp.com/api/ttlogo?text1=${plo}&text2=${plo2}`)
             reply(wait())
             Fg.sendMessage(from, rakz, image, {quoted: mek, caption: `${isPremium ? '💎No se te descontará ningún Diamante' : `💎-1 Diamante por utilizar esta función`}\n\n✅ Listo : *${plo} ${plo2}*`})
             .catch((err) => {
@@ -3481,7 +3550,7 @@ if (isLimit(sender, isPremium, isOwner, limitCount, limit)) return reply(fdiama(
 if (args.length < 1) return reply(`*✳️ Ingrese el texto*\n\n📌Ejemplo: ${prefix + command} Texto`)
 reply(wait())
 bp = args.join(" ")
-bpz = await getBuffer(`https://docs-jojo.herokuapp.com/api/blackpink?text=${bp}`)
+const bpz = await getBuffer(`https://docs-jojo.herokuapp.com/api/blackpink?text=${bp}`)
 reply(wait())
 Fg.sendMessage(from, bpz, image, {quoted: mek, caption: `${isPremium ? '💎No se te descontará ningún Diamante' : `💎-1 Diamante por utilizar esta función`}\n\n✅ Listo : *${bp}*`})
 .catch((err) => {
@@ -3496,9 +3565,8 @@ case '3d':
   if (isLimit(sender, isPremium, isOwner, limitCount, limit)) return reply(fdiama(prefix))
 				if (args.length < 1) return reply(`*✳️ Ingrese el texto*\n\n📌Ejemplo: ${prefix + command} Texto`)
 			    defg = q
-                data = await await getBuffer(`https://docs-jojo.herokuapp.com/api/text3d?text=${defg}`)
-                
-                	reply(wait())
+			reply(wait())
+                const data = await await getBuffer(`https://docs-jojo.herokuapp.com/api/text3d?text=${defg}`)
                 Fg.sendMessage(from, data, image, {quoted: mek, caption: `${isPremium ? '💎No se te descontará ningún Diamante' : `💎-1 Diamante por utilizar esta función`}\n\n✅ Listo : *${defg}*`})
                 .catch((err) => {
             reply(`❎ Error, intente más tarde`); 
@@ -3512,10 +3580,9 @@ if(!isVerify) return isUser()
    if (isLimit(sender, isPremium, isOwner, limitCount, limit)) return reply(fdiama(prefix))
 				if (args.length < 1) return reply(`*✳️ Ingrese el texto*\n\n📌Ejemplo: ${prefix + command} Texto`)
 			    defg = q
-                data = await await getBuffer(`https://docs-jojo.herokuapp.com/api/neon_light?text=${encodeUrl(defg)}`)
-                
+                const data2 = await await getBuffer(`https://docs-jojo.herokuapp.com/api/neon_light?text=${encodeUrl(defg)}`)
                 	reply(wait())
-                Fg.sendMessage(from, data, image, {quoted: mek, caption: `${isPremium ? '💎No se te descontará ningún Diamante' : `💎-1 Diamante por utilizar esta función`}\n\n✅ Listo : *${defg}*`})
+                Fg.sendMessage(from, data2, image, {quoted: mek, caption: `${isPremium ? '💎No se te descontará ningún Diamante' : `💎-1 Diamante por utilizar esta función`}\n\n✅ Listo : *${defg}*`})
                 .catch((err) => {
             reply(`❎ Error, intente más tarde`); 
             })
@@ -3529,9 +3596,9 @@ if(!isVerify) return isUser()
    if (isLimit(sender, isPremium, isOwner, limitCount, limit)) return reply(fdiama(prefix))
 				if (args.length < 1) return reply(`*✳️ Ingrese el texto*\n\n📌Ejemplo: ${prefix + command} Texto`)
 			    defg = q
-                data = await await getBuffer(`https://docs-jojo.herokuapp.com/api/gaming?text=${defg}`)
+                const data3 = await await getBuffer(`https://docs-jojo.herokuapp.com/api/gaming?text=${defg}`)
                 	reply(wait())
-                Fg.sendMessage(from, data, image, {quoted: mek, caption: `${isPremium ? '💎No se te descontará ningún Diamante' : `💎-1 Diamante por utilizar esta función`}\n\n✅ Listo : *${defg}*`})
+                Fg.sendMessage(from, data3, image, {quoted: mek, caption: `${isPremium ? '💎No se te descontará ningún Diamante' : `💎-1 Diamante por utilizar esta función`}\n\n✅ Listo : *${defg}*`})
                 .catch((err) => {
             reply(`❎ Error, intente más tarde`); 
             })
@@ -6374,7 +6441,7 @@ case 'promote':
 case 'promover':
 case 'rol':
 case '+adm':
-				  if(!isVerify) return isUser()
+if(!isVerify) return isUser()
   if (isBanned) return reply(banf())
 					if (!isGroup) return reply(group())
 					if (!isGroupAdmins && !isOwner) return reply(admin())
@@ -6404,7 +6471,7 @@ case 'demote':
 case 'degradar':
 case 'delrol':
 case '-adm':
-			    if(!isVerify) return isUser()
+if(!isVerify) return isUser()
   if (isBanned) return reply(banf())
 					if (!isGroup) return reply(group())
 					if (!isGroupAdmins && !isOwner) return reply(admin())
@@ -6467,8 +6534,8 @@ break
 				
 //mi perfil 
 case 'profile':
-					case 'perfil':
-					case 'itsme':
+case 'perfil':
+case 'itsme':
 					   if(!isVerify) return isUser()
                        if (isBanned) return reply(banf())  
 					Fg.updatePresence(from, Presence.composing)
@@ -6530,7 +6597,7 @@ break
 case 'play':
                 if(!isVerify) return isUser()
                 if (isBanned) return reply(banf())
-                if (args.length < 1) return reply(`✳️ *Ingresa el nombre de una música*\n\n📌Ejemplo: *${prefix}play* Lil Peep broken smile`)
+                if (args.length < 1) return reply(`✳️ *Ingresa el nombre de una música*\n\n📌Ejemplo: *${prefix + command}* Lil Peep broken smile`)
                 teks = args.join(' ')
                 if (!teks.endsWith("-doc")){
                 res1 = await yts(q).catch(e => {	
@@ -6598,7 +6665,6 @@ if(!isVerify) return isUser()
 				buffer1 = await getBuffer(anu.result.url_video)
 				Fg.sendMessage(from, buffer, image, {quoted: mek, caption: infomp3})
 				Fg.sendMessage(from, buffer1, video, {mimetype: 'video/mp4', filename: `${anu.result.video}.mp4`, quoted: mek, caption: `✅ Video descargado\n\n‣ *Titulo:* ${anu.result.title}`})
-					addFilter(from)
           break
 
         

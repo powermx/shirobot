@@ -6557,7 +6557,7 @@ case 'playvid':
  case 'playvideo': 
 if(!isVerify) return isUser()
 if (isBanned) return reply(banf())
-if (args.length < 1) return reply(`✳️ *Ingresa el nombre de un video*\n\n📌Ejemplo: *${prefix}play* Lil Peep broken smile`)
+if (args.length < 1) return reply(`✳️ *Ingresa el nombre de un video*\n\n📌Ejemplo: *${prefix + command}* Lil Peep broken smile`)
 reply(wait()) 
    const url = await yts(q);
    link = url.all 
@@ -6574,7 +6574,7 @@ El vídeo se esta enviando espere`
 sendFileFromUrl(link[0].image, image, {quoted: mek, caption: music})
  res1 = await y2mateV(link[0].url).catch(e => {
                 })
-                sendFileFromUrl(res1[0].link, video, {quoted: mek, mimetype: 'video/mp4', filename: link[0].title caption: `✅ Video descargado\n\n‣ *Titulo:* ${link[0].title}`})
+                sendFileFromUrl(res1[0].link, video, {quoted: mek, mimetype: 'video/mp4', filename: link[0].title, caption: `✅ Video descargado\n\n‣ *Titulo:* ${anu.result.title}`})
  break
 
 //----
@@ -6584,7 +6584,8 @@ case 'video2':
 case 'playvideo2': 
 if(!isVerify) return isUser()
   if (isBanned) return reply(banf())
-				  if (args.length < 1) return reply('*Ingrese el título*')
+		if (args.length < 1) return reply(`✳️ *Ingresa el nombre de un video*\n\n📌Ejemplo: *${prefix + command}* Lil Peep broken smile`)
+				reply(wait()) 
 				play7 = args.join(" ")
 				anu = await fetchJson(`https://api.zeks.xyz/api/ytplaymp4?q=${play7}&apikey=oCHDwj8ggZGBGjU5WIaK5Rctu6c`)
 				if (anu.error) return reply(anu.error)

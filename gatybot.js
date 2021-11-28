@@ -6598,7 +6598,7 @@ reply(wait())
 
 El vídeo se esta enviando espere` 
 sendFileFromUrl(link[0].image, image, {quoted: mek, caption: music})
- res1 = await y2mateA(link[0].url).catch(e => {
+ res1 = await y2mateV(link[0].url).catch(e => {
                 })
                 sendFileFromUrl(res1[0].link, video, {quoted: mek, mimetype: 'video/mp4', filename: link[0].title})
  break

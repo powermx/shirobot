@@ -2730,6 +2730,7 @@ break
   🧩 ${prefix}marvel
   🧩 ${prefix}3dbox
   🧩 ${prefix}flame
+  🧩 ${prefix}matrix
 
     *MEDIA*
   🎥 ${prefix}screenshot
@@ -3453,6 +3454,21 @@ if (isLimit(sender, isPremium, isOwner, limitCount, limit)) return reply(fdiama(
             limitAdd(sender, limit)
              break;
 
+case 'matrix':
+ if(!isVerify) return isUser()
+  if (isBanned) return reply(banf())
+if (isLimit(sender, isPremium, isOwner, limitCount, limit)) return reply(fdiama(prefix))
+if (args.length < 1) return reply(`*✳️ Ingrese el texto*\n\n📌Ejemplo: ${prefix + command} Texto`)
+reply(wait())
+bp = args.join(" ")
+const bpz0 = await getBuffer(`https://api.zeks.me/api/matrix?apikey=apivinz&text=${bp}`)
+Fg.sendMessage(from, bpz0, image, {quoted: mek, caption: `${isPremium ? '💎No se te descontará ningún Diamante' : `💎-1 Diamante por utilizar esta función`}\n\n✅ Listo : *${bp}*`})
+.catch((err) => {
+            reply(`❎ Error, intente más tarde`); 
+            })
+limitAdd(sender, limit)
+break
+
 case '3dbox':
  if(!isVerify) return isUser()
   if (isBanned) return reply(banf())
@@ -3522,6 +3538,7 @@ if (isLimit(sender, isPremium, isOwner, limitCount, limit)) return reply(fdiama(
             limitAdd(sender, limit)
              break;
 
+//https://docs-jojo.herokuapp.com/api/ttlogo?text1=${plo}&text2=${plo2}
 case 'glich':
 if(!isVerify) return isUser()
   if (isBanned) return reply(banf())
@@ -3532,7 +3549,7 @@ if(!isVerify) return isUser()
             const preffk3 = `*✳️ Ingrese el texto*\n\n📌Ejemplo: ${prefix + command} Texto|Texto2`
 		    if (args.length < 1) return reply(preffk3)
 		reply(wait())
-            const rakz = await getBuffer(`https://docs-jojo.herokuapp.com/api/ttlogo?text1=${plo}&text2=${plo2}`)
+            const rakz = await getBuffer(`https://api.zeks.me/api/gtext?apikey=apivinz&text1=${plo}&text2=${plo2}`)
             Fg.sendMessage(from, rakz, image, {quoted: mek, caption: `${isPremium ? '💎No se te descontará ningún Diamante' : `💎-1 Diamante por utilizar esta función`}\n\n✅ Listo : *${plo} ${plo2}*`})
             .catch((err) => {
             reply(`❎ Error, intente más tarde`); 
@@ -3540,6 +3557,7 @@ if(!isVerify) return isUser()
             limitAdd(sender, limit)
              break;
 
+//https://docs-jojo.herokuapp.com/api/blackpink?text=${bp}
 case 'blackpink':
  if(!isVerify) return isUser()
   if (isBanned) return reply(banf())
@@ -3547,7 +3565,7 @@ if (isLimit(sender, isPremium, isOwner, limitCount, limit)) return reply(fdiama(
 if (args.length < 1) return reply(`*✳️ Ingrese el texto*\n\n📌Ejemplo: ${prefix + command} Texto`)
 reply(wait())
 bp = args.join(" ")
-const bpz = await getBuffer(`https://docs-jojo.herokuapp.com/api/blackpink?text=${bp}`)
+const bpz = await getBuffer(`https://api.zeks.me/api/logobp?apikey=apivinz&text=${bp}`)
 reply(wait())
 Fg.sendMessage(from, bpz, image, {quoted: mek, caption: `${isPremium ? '💎No se te descontará ningún Diamante' : `💎-1 Diamante por utilizar esta función`}\n\n✅ Listo : *${bp}*`})
 .catch((err) => {
@@ -3556,6 +3574,7 @@ Fg.sendMessage(from, bpz, image, {quoted: mek, caption: `${isPremium ? '💎No s
 limitAdd(sender, limit)
 break
 
+//https://docs-jojo.herokuapp.com/api/text3d?text=${defg}
 case '3d':
 				if(!isVerify) return isUser()
   if (isBanned) return reply(banf())
@@ -3563,13 +3582,7 @@ case '3d':
 				if (args.length < 1) return reply(`*✳️ Ingrese el texto*\n\n📌Ejemplo: ${prefix + command} Texto`)
 			    defg = q
 			reply(wait())
-			
-			try {
-				const datax = `https://docs-jojo.herokuapp.com/api/text3d?text=${defg}`
-				} catch {
-				const datax = `https://api.zeks.me/api/text3d?apikey=apivinz&text=${defg}`
-				}
-			    const dataa = await getBuffer(datax)
+			    const dataa = await getBuffer(`https://api.zeks.me/api/text3d?apikey=apivinz&text=${defg}`)
                 Fg.sendMessage(from, dataa, image, {quoted: mek, caption: `${isPremium ? '💎No se te descontará ningún Diamante' : `💎-1 Diamante por utilizar esta función`}\n\n✅ Listo : *${defg}*`})
                 .catch((err) => {
                 	reply(`❎ Error, intente más tarde`);

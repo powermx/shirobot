@@ -3572,8 +3572,8 @@ case '3d':
 			
                 Fg.sendMessage(from, dataa, image, {quoted: mek, caption: `${isPremium ? '💎No se te descontará ningún Diamante' : `💎-1 Diamante por utilizar esta función`}\n\n✅ Listo : *${defg}*`})
                 .catch((err) => {
-            reply(`❎ Error, intente más tarde`); 
-            })
+                	reply(`❎ Error, intente más tarde`);
+                })
                 limitAdd(sender, limit)
                 break
                 

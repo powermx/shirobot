@@ -6585,13 +6585,13 @@ if(!isVerify) return isUser()
 if (isBanned) return reply(banf())
 if (args.length < 1) return reply(`✳️ *Ingresa el nombre de un video*\n\n📌Ejemplo: *${prefix}play* Lil Peep broken smile`)
 reply(wait()) 
-   url = await yts(value);
+   url = await yts(q);
    link = url.all 
    if(!link) return ('Error')
    imgplay = await getBuffer(link[0].image)
    music = `*🎶Vídeo encontrado*
 
-‣ *📌Título* : ${link[0].title}
+‣ *??Título* : ${link[0].title}
 ‣ *📂Archivo* : Mp3
 ‣ *⏰Duración* : ${link[0].timestamp}
 ‣ *🔗Link* : ${link[0].url}

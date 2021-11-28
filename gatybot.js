@@ -2408,13 +2408,13 @@ Fg.sendMessage(id, buttonMessages, MessageType.buttonsMessage, options)
 //Warns
 const chetwarnx = getWarn(sender)
 var advertencia = 'primera'
-            if (chetwarnx === 1) {
+            if (chetwarnx === 2) {
                 advertencia = 'primera'
-            } else if (chetwarnx === 2) {
-                advertencia = 'segunda'
             } else if (chetwarnx === 3) {
+                advertencia = 'segunda'
+            } else if (chetwarnx === 4) {
                 advertencia = 'tercera'
-	        } else if (chetwarnx === 4) {
+	        } else if (chetwarnx === 5) {
                 advertencia = 'cuarta'
             }
 
@@ -2886,6 +2886,8 @@ break
   🐱 ${prefix}banchat
   🐱 ${prefix}unbanchat
   🐱 ${prefix}chatmode
+  🐱 ${prefix}buggc
+  
 
     *INFORMACIÓN*
   ℹ️ ${prefix}reglas

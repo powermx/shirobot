@@ -6561,18 +6561,21 @@ let yut = await yts(q)
 ytv(yut.videos[0].url)
 .then((res) => {
 const { dl_link, thumb, title, filesizeF, filesize } = res
-axios.get(`https://tinyurl.com/api-create.php?url=${dl_link}`)
-.then((a) => {
-if (Number(filesize) >= 40000) return sendMediaURL(from, thumb, `*P L A Y  M P 4*\n\n • Judul : ${title}\n • Size : ${filesizeF}\n • Upload : ${yut.videos[0].ago}\n • Ditonton : ${yut.videos[0].views}\n • Duration : ${yut.videos[0].timestamp}\n • Link : ${a.data}\n\n_Ukuran File Terlalu besar, anda bisa download sendiri lewat Link Diatas!!_`)
-const mp4 = `
-*PLAY MP4*\n\nData DiTemukan!\n • Judul : ${title}\n • Size : ${filesizeF}\n • Upload : ${yut.videos[0].ago}\n • Ditonton : ${yut.videos[0].views}\n • Duration : ${yut.videos[0].timestamp}\n • Url : ${yut.videos[0].url}\n\n_Tunggu Sebentar File sedang Di Kirim!!_`
-sendMediaURL(from, thumb, mp4)
-sendMediaURL(from, dl_link, '')
+const mp4 = `${yut.videos[0].url}`
 })
-})
-.catch((err) => {
-            reply(`❎ Error, intente más tarde`); 
-            })
+resyv = await y2mateV(mp4).catch(e => {
+                  reply('❎ No se encontró el video')
+                  })
+                  result = `*🎶Vídeo encontrado*
+
+‣ *📌Título* : ${resyv[0].judul}
+‣ *📂Archivo* : Mp3
+‣ *⚖️Tamaño* : ${resyv[0].size}
+‣ *🔗Link* : ${mp4}
+
+El vídeo se esta enviando espere`
+                  sendFileFromUrl(resyv[0].thumb, image, {caption: result, quoted: mek})
+                  sendFileFromUrl(resyv[0].link, video, {quoted: mek, mimetype:'video/mp4', duration: 9999999999})
 break
 
 //----

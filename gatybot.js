@@ -3428,7 +3428,6 @@ if (args.length < 1) return reply(`*✳️ Ingrese el texto*\n\n📌Ejemplo: ${p
 reply(wait())
 bp = args.join(" ")
 const bpz4 = await getBuffer(`https://api.zeks.me/api/tlight?apikey=apivinz&text=${bp}`)
-reply(wait())
 Fg.sendMessage(from, bpz3, image, {quoted: mek, caption: `${isPremium ? '💎No se te descontará ningún Diamante' : `💎-1 Diamante por utilizar esta función`}\n\n✅ Listo : *${bp}*`})
 .catch((err) => {
             reply(`❎ Error, intente más tarde`); 
@@ -3445,8 +3444,8 @@ if (isLimit(sender, isPremium, isOwner, limitCount, limit)) return reply(fdiama(
 			      plo2 = pll.split("|")[1];
             const preeffk = `*✳️ Ingrese el texto*\n\n📌Ejemplo: ${prefix + command} Texto|Texto2`
 					  if (args.length < 1) return reply(preeffk)
+					reply(wait())
             rakz = await getBuffer(`https://api.zeks.me/api/marvellogo?apikey=apivinz&text1=${plo}&text2=${plo2}`)
-            reply(wait())
             Fg.sendMessage(from, rakz, image, {quoted: mek, caption: `${isPremium ? '💎No se te descontará ningún Diamante' : `💎-1 Diamante por utilizar esta función`}\n\n✅ Listo : *${plo} ${plo2}*`})
             .catch((err) => {
             reply(`❎ Error, intente más tarde`); 
@@ -3462,7 +3461,6 @@ if (args.length < 1) return reply(`*✳️ Ingrese el texto*\n\n📌Ejemplo: ${p
 reply(wait())
 bp = args.join(" ")
 const bpz3 = await getBuffer(`https://api.zeks.me/api/text3dbox?apikey=apivinz&text=${bp}`)
-reply(wait())
 Fg.sendMessage(from, bpz3, image, {quoted: mek, caption: `${isPremium ? '💎No se te descontará ningún Diamante' : `💎-1 Diamante por utilizar esta función`}\n\n✅ Listo : *${bp}*`})
 .catch((err) => {
             reply(`❎ Error, intente más tarde`); 
@@ -3478,7 +3476,6 @@ if (args.length < 1) return reply(`*✳️ Ingrese el texto*\n\n📌Ejemplo: ${p
 reply(wait())
 bp = args.join(" ")
 const bpz2 = await getBuffer(`https://api.zeks.me/api/flametext?apikey=apivinz&text=${bp}`)
-reply(wait())
 Fg.sendMessage(from, bpz2, image, {quoted: mek, caption: `${isPremium ? '💎No se te descontará ningún Diamante' : `💎-1 Diamante por utilizar esta función`}\n\n✅ Listo : *${bp}*`})
 .catch((err) => {
             reply(`❎ Error, intente más tarde`); 
@@ -3497,8 +3494,8 @@ if (isLimit(sender, isPremium, isOwner, limitCount, limit)) return reply(fdiama(
 			      plo2 = pll.split("|")[1];
             const preffk = `*✳️ Ingrese el texto*\n\n📌Ejemplo: ${prefix + command} Texto|Texto2`
 					  if (args.length < 1) return reply(preffk)
+					reply(wait())
             const rakz3 = await getBuffer(`https://ferdiz-afk.my.id/api/maker/pornhub?text=${plo}&text2=${plo2}`)
-            reply(wait())
             Fg.sendMessage(from, rakz3, image, {quoted: mek, caption: `${isPremium ? '💎No se te descontará ningún Diamante' : `💎-1 Diamante por utilizar esta función`}\n\n✅ Listo : *${plo} ${plo2}*`})
             .catch((err) => {
             reply(`❎ Error, intente más tarde`); 
@@ -3516,8 +3513,8 @@ if (isLimit(sender, isPremium, isOwner, limitCount, limit)) return reply(fdiama(
 			    plo3 = pll.split("|")[2];
             const preffk2 = `*✳️ Ingrese el texto*\n\n📌Ejemplo: ${prefix + command} Texto|Texto2|Texto3`
 					  if (args.length < 1) return reply(preffk2)   
+					reply(wait())
             const rakz2 = await getBuffer(`https://docs-jojo.herokuapp.com/api/neon?text1=${plo}&text2=${plo2}&text3=${plo3}`)
-            reply(wait())
             Fg.sendMessage(from, rakz2, image, {quoted: mek, caption: `${isPremium ? '💎No se te descontará ningún Diamante' : `💎-1 Diamante por utilizar esta función`}\n\n✅ Listo : *${plo} ${plo2} ${plo3}*`})
             .catch((err) => {
             reply(`❎ Error, intente más tarde`); 
@@ -3533,9 +3530,9 @@ if(!isVerify) return isUser()
             plo = pll.split("|")[0];
 			      plo2 = pll.split("|")[1];
             const preffk3 = `*✳️ Ingrese el texto*\n\n📌Ejemplo: ${prefix + command} Texto|Texto2`
-		    if (args.length < 1) return reply(preffk3)   
+		    if (args.length < 1) return reply(preffk3)
+		reply(wait())
             const rakz = await getBuffer(`https://docs-jojo.herokuapp.com/api/ttlogo?text1=${plo}&text2=${plo2}`)
-            reply(wait())
             Fg.sendMessage(from, rakz, image, {quoted: mek, caption: `${isPremium ? '💎No se te descontará ningún Diamante' : `💎-1 Diamante por utilizar esta función`}\n\n✅ Listo : *${plo} ${plo2}*`})
             .catch((err) => {
             reply(`❎ Error, intente más tarde`); 

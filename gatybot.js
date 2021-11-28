@@ -6589,7 +6589,7 @@ reply(wait())
    link = url.all 
    if(!link) return ('Error')
    imgplay = await getBuffer(link[0].image)
-   music = `*🎶Vídeo encontrado*
+   music = `*🎥Vídeo encontrado*
 
 ‣ *📌Título* : ${link[0].title}
 ‣ *📂Archivo* : Mp3
@@ -6600,7 +6600,7 @@ El vídeo se esta enviando espere`
 sendFileFromUrl(link[0].image, image, {quoted: mek, caption: music})
  res1 = await y2mateA(link[0].url).catch(e => {
                 })
-                sendFileFromUrl(res1[0].link, audio, {quoted: mek, mimetype: 'video/mp4', filename: link[0].title})
+                sendFileFromUrl(res1[0].link, video, {quoted: mek, mimetype: 'video/mp4', filename: link[0].title})
  break
 
 //----

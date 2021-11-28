@@ -1996,7 +1996,7 @@ Fg.sendMessage(from, levelup, text, {quoted: mek, contextInfo: {"mentionedJid": 
 //>> Descargas de YouTube
   const sendMediaURL = async(url, text="", mids=[]) =>{
         if(mids.length > 0){
-          text = normalizeMention(to, text, mids)
+          const text = normalizeMention(to, text, mids)
         }
         const fn = Date.now() / 10000;
         const filename = fn.toString()

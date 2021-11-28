@@ -6527,9 +6527,10 @@ console.log(e)
 }
 break
 
-case 'play':
+case 'play2':
                 if(!isVerify) return isUser()
                 if (isBanned) return reply(banf())
+                if (args.length < 1) return reply(`✳️ *Ingresa el nombre de una música*\n\n📌Ejemplo: *${prefix}play* Lil Peep broken smile`)
                 teks = args.join(' ')
                 if (!teks.endsWith("-doc")){
                 res1 = await yts(q).catch(e => {	
@@ -6551,8 +6552,82 @@ El archivo se esta enviando espere`
                 }
                 break
 
+case 'play':
+if(!isVerify) return isUser()
+if (isBanned) return reply(banf())
+reply(wait())
+if (args.length < 1) return reply(`✳️ *Ingresa el nombre de una música*\n\n📌Ejemplo: *${prefix}play* Lil Peep broken smile`)
+let yut = await yts(q)
+yta(yut.videos[0].url)
+.then(async(res) => {
+const { thumb, title, filesizeF, filesize } = res
+const capti = `*⏯️ PLAY AUDIO & VIDEO*
+
+‣ *📌Título* : ${title}
+‣ *📂Archivo* : Mp3
+‣ *⚖️Tamaño* : ${filesizeF}
+‣ *🧿Visitas* : ${yut.videos[0].views}
+‣ *⏰Duración* : ${yut.videos[0].timestamp}
+
+‣ *🔗Link* : ${yut.videos[0].url}`
+sendMediaURL(from, thumb, capti)
+ya = await getBuffer(thumb)
+py =  await Fg.prepareMessage(from, ya, image)
+gbutsan = [
+{buttonId: `${prefix}mp3 ${yut.videos[0].url}`, buttonText: {displayText: '🔊 AUDIO'}, type: 1},
+{buttonId: `${prefix}mp4 ${yut.videos[0].url}`, buttonText: {displayText: '🎥 VIDEO'}, type: 1}
+]
+gbuttonan = {
+imageMessage: py.message.imageMessage,
+contentText: capti,
+footerText: `Si no ves lo botones intenta con *${prefix}play2*`,
+buttons: gbutsan,
+headerType: 4
+}
+await Fg.sendMessage(from, gbuttonan, MessageType.buttonsMessage, {quoted: mek})
+})
+break
+
+case 'mp3':
+if(!isVerify) return isUser()
+if (isBanned) return reply(banf())
+reply(wait())
+try{
+downm = await yta(q)
+const { dl_link, thumb, title, filesizeF, filesize } = downm
+if(Number(filesize) >= 50000){
+short = await axios.get(`https://tinyurl.com/api-create.php?url=${dl_link}`)
+return sendMediaURL(from, thumb, `*Y O U T U B E  D O W N L O A D E R*\n\n${shp} Judul : ${title}\n${shp} Size : ${filesizeF}\n${shp} Link : ${short.data}\n\n${mess.oversize}`)
+}
+teks = `*Y O U T U B E  D O W N L O A D E R*\n\n${shp} Judul : ${title}\n${shp} Size : ${filesizeF}\n${shp} Type : MP3\n\nTunggu sebentar\nMusic segera dikirim`
+sendMediaURL(from, thumb, teks)
+sendMediaURL(from, dl_link)
+}catch(e){
+reply(`❎ Error, intente de nuevo mas tarde`);
+}
+break
+
+case 'mp4':
+if(!isVerify) return isUser()
+if (isBanned) return reply(banf())
+reply(wait())
+try{
+downm = await ytv(q)
+const { dl_link, thumb, title, filesizeF, filesize } = downm
+if(Number(filesize) >= 50000){
+short = await axios.get(`https://tinyurl.com/api-create.php?url=${dl_link}`)
+return sendMediaURL(from, thumb, `*Y O U T U B E  D O W N L O A D E R*\n\n${shp} Judul : ${title}\n${shp} Size : ${filesizeF}\n${shp} Link : ${short.data}\n\n${mess.oversize}`)
+        }
+teks = `*Y O U T U B E  D O W N L O A D E R*\n\n${shp} Judul : ${title}\n${shp} Size : ${filesizeF}\n${shp} Type : MP4\n\nTunggu sebentar\nMusic segera dikirim`
+sendMediaURL(from, thumb, teks)
+sendMediaURL(from, dl_link)
+}catch(e){
+reply(`❎ Error, intente de nuevo mas tarde`);
+}
+break
+
 //----
-    case '______play':
+    case '_______play2':
 if(!isVerify) return isUser()
   if (isBanned) return reply(banf())
   if(!isPremium)return reply(premi())
@@ -6663,7 +6738,7 @@ reply(mess.error)
 }
 break
         
- case 'play2':
+ case '____play2':
 			if(!isVerify) return isUser()
   if (isBanned) return reply(banf())
        if(!isPremium)return reply(premi()) 

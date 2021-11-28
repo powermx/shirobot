@@ -6523,9 +6523,9 @@ if(!isVerify) return isUser()
 if (mek.message.extendedTextMessage != undefined){
 mentioned = mek.message.extendedTextMessage.contextInfo.mentionedJid
 	try {
-	pic = await Fg.getProfilePicture(mentioned[0])
+	const pic = await Fg.getProfilePicture(mentioned[0])
 	} catch {
-	pic = 'https://i.ibb.co/9vCxvzL/sinperfil.jpg'
+	const pic = 'https://i.ibb.co/9vCxvzL/sinperfil.jpg'
 	}
 thumb = await getBuffer(pic)
 Fg.sendMessage(from, thumb,image,{quoted : mek})

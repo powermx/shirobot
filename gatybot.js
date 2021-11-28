@@ -6552,11 +6552,11 @@ El archivo se esta enviando espere`
                 }
                 break
 
-case 'playvid':{
-if (isLimit(sender, isPremium, isOwner, limitCount, limit)) return reply (`Limit kamu sudah habis silahkan kirim ${prefix}limit untuk mengecek limit`)
-if (args.length < 1) return reply(`Kirim perintah *${prefix}playmp4 query*`)
-try {
-reply(mess.wait)
+case 'playvid':
+if(!isVerify) return isUser()
+if (isBanned) return reply(banf())
+if (args.length < 1) return reply(`✳️ *Ingresa el nombre de un video*\n\n📌Ejemplo: *${prefix}play* Lil Peep broken smile`)
+reply(wait()) 
 let yut = await yts(q)
 ytv(yut.videos[0].url)
 .then((res) => {
@@ -6564,24 +6564,19 @@ const { dl_link, thumb, title, filesizeF, filesize } = res
 axios.get(`https://tinyurl.com/api-create.php?url=${dl_link}`)
 .then((a) => {
 if (Number(filesize) >= 40000) return sendMediaURL(from, thumb, `*P L A Y  M P 4*\n\n • Judul : ${title}\n • Size : ${filesizeF}\n • Upload : ${yut.videos[0].ago}\n • Ditonton : ${yut.videos[0].views}\n • Duration : ${yut.videos[0].timestamp}\n • Link : ${a.data}\n\n_Ukuran File Terlalu besar, anda bisa download sendiri lewat Link Diatas!!_`)
-                       
 const mp4 = `
 *PLAY MP4*\n\nData DiTemukan!\n • Judul : ${title}\n • Size : ${filesizeF}\n • Upload : ${yut.videos[0].ago}\n • Ditonton : ${yut.videos[0].views}\n • Duration : ${yut.videos[0].timestamp}\n • Url : ${yut.videos[0].url}\n\n_Tunggu Sebentar File sedang Di Kirim!!_`
 sendMediaURL(from, thumb, mp4)
 sendMediaURL(from, dl_link, '')
-limitAdd(sender, limit)
 })
 })
-.catch((err) => reply(`${err}`))
-} catch (err) {
-sendMess(ownerNumber, 'PlayMp4 Error : ' + err)
-console.log(color('[PlayMp4]', 'red'), err)
-reply(mess.error)
-}}
+.catch((err) => {
+            reply(`❎ Error, intente más tarde`); 
+            })
 break
 
 //----
-    case '_______play2':
+    case 'play2':
 if(!isVerify) return isUser()
   if (isBanned) return reply(banf())
   if(!isPremium)return reply(premi())

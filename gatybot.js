@@ -2409,15 +2409,15 @@ Fg.sendMessage(id, buttonMessages, MessageType.buttonsMessage, options)
 //Warns
 const chetwarnx = getWarn(sender)
 var advertencia = 'Undefined'
-            if (chetwarnx.includes("1")) {
+            if (chetwarnx === 1) {
                 advertencia = 'primera'
-            } else if (chetwarnx.includes("2")) {
+            } else if (chetwarnx === 2) {
                 advertencia = 'segunda'
-            } else if (chetwarnx.includes("3")) {
+            } else if (chetwarnx === 3) {
                 advertencia = 'tercera'
-	        } else if (chetwarnx.includes("4")) {
+	        } else if (chetwarnx === 4) {
                 advertencia = 'cuarta'
-            } else if (chetwarnx.includes("5")) {
+            } else if (chetwarnx === 5) {
                 advertencia = 'quinta'
             }
  

@@ -2903,7 +2903,7 @@ break
   ℹ️ ${prefix}join
   ℹ️ ${prefix}ayuda`
 
-py =  await Fg.prepareMessage(from, imgth, image, {quoted: mek, thumbnail: gaty4})
+py =  await Fg.prepareMessage(from, imgth, image, {quoted: mek, thumbnail: gaty4, externalAdReply: {title: `₊· ͟͟͞͞➳ ⃟꫶🐱 gaty ⸸ bot 🤖 ⃟꫶ ᭄⁩࿐`,body: "", previewType: "PHOTO", thumbnail: shiro0, sourceUrl:``}})
 gbutsan = [
 {buttonId: `${prefix}creador`, buttonText: {displayText: '🐱 CREADOR'}, type: 1},
 {buttonId: `${prefix}info`, buttonText: {displayText: '🤖 INFO'}, type: 1}
@@ -2915,7 +2915,7 @@ footerText: `║▌│█║▌│ █║▌│█│║▌║\n║▌│█║�
 buttons: gbutsan,
 headerType: 4
 }
-await Fg.sendMessage(from, gbuttonan, MessageType.buttonsMessage, {contextInfo: {  mentionedJid: [sender]}, quoted: mek, thumbnail: gaty4, externalAdReply: {title: `₊· ͟͟͞͞➳ ⃟꫶🐱 gaty ⸸ bot 🤖 ⃟꫶ ᭄⁩࿐`,body: "", previewType: "PHOTO", thumbnail: shiro0, sourceUrl:``}})
+await Fg.sendMessage(from, gbuttonan, MessageType.buttonsMessage, {contextInfo: {  mentionedJid: [sender]}, quoted: mek, thumbnail: gaty4 })
 } catch (e) {
 	console.log(`Error :`, color(e,'red'))
      reply('❎ Error al mostrar el menú, intenta de nuevo después de este mensaje')

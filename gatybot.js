@@ -2409,16 +2409,18 @@ Fg.sendMessage(id, buttonMessages, MessageType.buttonsMessage, options)
 //Warns
 const chetwarnx = getWarn(sender)
 var advertencia = 'Undefined'
-            if (chetwarnx === 1) {
+            if (chetwarnx === 0) {
                 advertencia = 'primera'
-            } else if (chetwarnx === 2) {
+            } else if (chetwarnx === 1) {
                 advertencia = 'segunda'
-            } else if (chetwarnx === 3) {
+            } else if (chetwarnx === 2) {
                 advertencia = 'tercera'
-	        } else if (chetwarnx === 4) {
+	        } else if (chetwarnx === 3) {
                 advertencia = 'cuarta'
-            } else if (chetwarnx === 5) {
+            } else if (chetwarnx === 4) {
                 advertencia = 'quinta'
+            } else if (chetwarnx === 5) {
+                advertencia = 'sexta'
             }
  
 
@@ -2458,12 +2460,12 @@ var enlace = 'Undefined'
 		Fg.sendMessage(from, `✳️ En este grupo no está permitido los insultos, *${advertencia}* advertencia\n\n*📌Nota:* 3 advertencias = ban`, text, {quoted: mek, contextInfo: {"mentionedJid": [sender]}})
 		if (!isBotGroupAdmins) return reply('🤨 Por suerte no soy  admin, asi que no te expulsare')
 		Fg.updatePresence(from, Presence.composing)
-		if (currentWarn === 2) {
+		if (currentWarn === 3) {
 			var kic = `${sender.split("@")[0]}@s.whatsapp.net`
 			Fg.sendMessage(from, `✅ @${kic.split("@")[0]} has superado las 3 advertencias adiós`, text, {quoted: mek, contextInfo: {"mentionedJid": [kic]}})
 			setTimeout( () => {
 			Fg.groupRemove(from, [kic]).catch((e)=>{reply('❎ Error, no se pudo eliminar al usuario')})
-			addWarn(sender, -3)
+			addWarn(sender, -4)
 			}, 1000)
 			}
 		}

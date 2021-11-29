@@ -6659,7 +6659,7 @@ El vídeo se esta enviando espere`
 sendFileFromUrl(link[0].image, image, {quoted: mek, caption: music})
  res1 = await y2mateV(link[0].url).catch(e => {
                 })
-                sendFileFromUrl(res1[0].link, video, {quoted: mek, mimetype: 'video/mp4', filename: link[0].title, caption: `✅ Video descargado\n\n‣ *Titulo:* ${anu.result.title}`})
+                sendFileFromUrl(res1[0].link, video, {quoted: mek, mimetype: 'video/mp4', filename: link[0].title, caption: `✅ Video descargado\n\n‣ *Titulo:* ${link[0].title}`})
  break
 
 //----
@@ -8459,15 +8459,6 @@ case 'chiste':
 case 'nada':
               if (isBanned) return reply(banf())
               Fg.sendMessage(from, `De nada, disfruta tu estadía el el grupo :3`, text, { quoted: mek })
-              break
-
-case 'faker':
-const faker2 = q.split("|")[1];
-const xxxyz = await getBuffer(`${faker2}`)
-Fg.sendMessage(from, `${q}`, text, {quoted: mek, thumbnail: xxxyz })
-.catch((err) => {
-            reply(`❎ Error, intente de nuevo mas tarde`); 
-            })
               break
 
 //--------------------------------------

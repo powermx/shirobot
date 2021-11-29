@@ -2408,16 +2408,18 @@ Fg.sendMessage(id, buttonMessages, MessageType.buttonsMessage, options)
 //====================================================================================================//
 //Warns
 const chetwarnx = getWarn(sender)
-            if (chetwarnx === 2) {
-                const advertencia = 'primera'
-            } else if (chetwarnx === 3) {
-                const advertencia = 'segunda'
-            } else if (chetwarnx === 4) {
-                const advertencia = 'tercera'
-	        } else if (chetwarnx === 5) {
-                const advertencia = 'cuarta'
+            if (chetwarnx == "1") {
+                var advertencia = 'primera'
+            } else if (chetwarnx == "2") {
+                var advertencia = 'segunda'
+            } else if (chetwarnx == "3") {
+                var advertencia = 'tercera'
+	        } else if (chetwarnx == "4") {
+                var advertencia = 'cuarta'
+            } else if (chetwarnx == "5") {
+                var advertencia = 'quinta'
             }
-var addadv = advertencia
+
 
 //>> Tipo de enlace 
 var enlace = 'WhatsApp'
@@ -2452,7 +2454,7 @@ var enlace = 'WhatsApp'
 		console.log('\x1b[1;31m', color("─────────────────────────────────────────────────────────────────────", "magenta"))
 		console.log('\x1b[1;31m', color("➛ ", "red"), color("Estado: "), color("Groseria detectado", "red"))
 		console.log('\x1b[1;31m', color("➛ ", "red"), color("De: "), color(`${sender.split("@")[0]}`, "orange"))
-		Fg.sendMessage(from, `✳️ En este grupo no está permitido los insultos, *${addadv}* advertencia\n\n*📌Nota:* 3 advertencias = ban`, text, {quoted: mek, contextInfo: {"mentionedJid": [sender]}})
+		Fg.sendMessage(from, `✳️ En este grupo no está permitido los insultos, *${advertencia}* advertencia\n\n*📌Nota:* 3 advertencias = ban`, text, {quoted: mek, contextInfo: {"mentionedJid": [sender]}})
 		if (!isBotGroupAdmins) return reply('🤨 Por suerte no soy  admin, asi que no te expulsare')
 		Fg.updatePresence(from, Presence.composing)
 		if (currentWarn === 2) {
@@ -8354,7 +8356,7 @@ if (mek.message.extendedTextMessage === undefined || mek.message.extendedTextMes
 				const checkIdWWarn = getWarnId(warnuser)
 					if (currentWWarn === undefined && checkIdWWarn === undefined) addWarnId(warnuser)
 					addWarn(warnuser, 1)
-					Fg.sendMessage(from, `✅ Se le dio la *${addadv}* advertencia a @${warnuser.split("@")[0]}`, text, {quoted: mek, contextInfo: {"mentionedJid": [warnuser]}})
+					Fg.sendMessage(from, `✅ Se le dio la *${advertencia}* advertencia a @${warnuser.split("@")[0]}`, text, {quoted: mek, contextInfo: {"mentionedJid": [warnuser]}})
 		if (currentWWarn === 2) {
 			Fg.sendMessage(from, `✅ @${warnuser.split("@")[0]} has superado las 3 advertencias adiós`, text, {quoted: mek, contextInfo: {"mentionedJid": [warnuser]}})
 			setTimeout( () => {

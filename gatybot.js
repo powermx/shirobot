@@ -2457,12 +2457,12 @@ var enlace = 'Undefined'
 		console.log('\x1b[1;31m', color("─────────────────────────────────────────────────────────────────────", "magenta"))
 		console.log('\x1b[1;31m', color("➛ ", "red"), color("Estado: "), color("Groseria detectado", "red"))
 		console.log('\x1b[1;31m', color("➛ ", "red"), color("De: "), color(`${sender.split("@")[0]}`, "orange"))
-		Fg.sendMessage(from, `✳️ En este grupo no está permitido los insultos, *${advertencia}* advertencia\n\n*📌Nota:* 3 advertencias = ban`, text, {quoted: mek, contextInfo: {"mentionedJid": [sender]}})
+		Fg.sendMessage(from, `✳️ En este grupo no está permitido los insultos, *${advertencia}* advertencia\n\n*📌Nota:* 4 advertencias = ban`, text, {quoted: mek, contextInfo: {"mentionedJid": [sender]}})
 		if (!isBotGroupAdmins) return reply('🤨 Por suerte no soy  admin, asi que no te expulsare')
 		Fg.updatePresence(from, Presence.composing)
 		if (currentWarn === 3) {
 			var kic = `${sender.split("@")[0]}@s.whatsapp.net`
-			Fg.sendMessage(from, `✅ @${kic.split("@")[0]} has superado las 3 advertencias adiós`, text, {quoted: mek, contextInfo: {"mentionedJid": [kic]}})
+			Fg.sendMessage(from, `✅ @${kic.split("@")[0]} has superado las 4 advertencias adiós`, text, {quoted: mek, contextInfo: {"mentionedJid": [kic]}})
 			setTimeout( () => {
 			Fg.groupRemove(from, [kic]).catch((e)=>{reply('❎ Error, no se pudo eliminar al usuario')})
 			addWarn(sender, -4)
@@ -8375,9 +8375,9 @@ if (mek.message.extendedTextMessage === undefined || mek.message.extendedTextMes
 
 					if (currentWWarn === undefined && checkIdWWarn === undefined) addWarnId(warnuser)
 					addWarn(warnuser, 1)
-					Fg.sendMessage(from, `✅ Se le dio la *${advertenciaa}* a @${warnuser.split("@")[0]}`, text, {quoted: mek, contextInfo: {"mentionedJid": [warnuser]}})
+					Fg.sendMessage(from, `✅ Se le dio la *${advertenciaa}* a @${warnuser.split("@")[0]}\n\n*📌Nota:* 4 advertencias = ban`, text, {quoted: mek, contextInfo: {"mentionedJid": [warnuser]}})
 		if (currentWWarn === 3) {
-			Fg.sendMessage(from, `✅ @${warnuser.split("@")[0]} has superado las 3 advertencias adiós`, text, {quoted: mek, contextInfo: {"mentionedJid": [warnuser]}})
+			Fg.sendMessage(from, `✅ @${warnuser.split("@")[0]} has superado las 4 advertencias adiós`, text, {quoted: mek, contextInfo: {"mentionedJid": [warnuser]}})
 			setTimeout( () => {
 			Fg.groupRemove(from, [warnuser]).catch((e)=>{reply('❎ Error, no se pudo eliminar al usuario')})
 			addWarn(`${warnuser}`, -4)

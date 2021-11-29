@@ -2408,21 +2408,22 @@ Fg.sendMessage(id, buttonMessages, MessageType.buttonsMessage, options)
 //====================================================================================================//
 //Warns
 const chetwarnx = getWarn(sender)
-            if (chetwarnx == "1") {
-                const advertencia = 'primera'
-            } else if (chetwarnx == "2") {
-                const advertencia = 'segunda'
-            } else if (chetwarnx == "3") {
-                const advertencia = 'tercera'
-	        } else if (chetwarnx == "4") {
-                const advertencia = 'cuarta'
-            } else if (chetwarnx == "5") {
-                const advertencia = 'quinta'
+var advertencia = 'Undefined'
+            if (chetwarnx.includes("1")) {
+                advertencia = 'primera'
+            } else if (chetwarnx.includes("2")) {
+                advertencia = 'segunda'
+            } else if (chetwarnx.includes("3")) {
+                advertencia = 'tercera'
+	        } else if (chetwarnx.includes("4")) {
+                advertencia = 'cuarta'
+            } else if (chetwarnx.includes("5")) {
+                advertencia = 'quinta'
             }
  
 
 //>> Tipo de enlace 
-var enlace = 'WhatsApp'
+var enlace = 'Undefined'
             if (budy.includes("chat.whatsapp.com")) {
                 enlace = 'WhatsApp'
             } else if (budy.includes("m.kwai.me")) {
@@ -8361,7 +8362,7 @@ if (mek.message.extendedTextMessage === undefined || mek.message.extendedTextMes
 			Fg.sendMessage(from, `✅ @${warnuser.split("@")[0]} has superado las 3 advertencias adiós`, text, {quoted: mek, contextInfo: {"mentionedJid": [warnuser]}})
 			setTimeout( () => {
 			Fg.groupRemove(from, [warnuser]).catch((e)=>{reply('❎ Error, no se pudo eliminar al usuario')})
-			addWarn(sender, -3)
+			addWarn(`${warnuser}`, -3)
 			}, 1000)
 			}
 break

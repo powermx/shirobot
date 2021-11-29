@@ -219,6 +219,7 @@ const soportefg = 'https://chat.whatsapp.com/KQLMoi0FX0JHWBzRPOwJ31'
 
 //====================[ ALMACENAMIENTO ]====================//
 fakefg = fs.readFileSync('./image/fake.jpg')
+shiro0 = fs.readFileSync('./storage/image/shiro_0.jpg')
 fakelogo = fs.readFileSync('./almacenamiento/imagenes/gaty_2.jpg')
 gaty4 = fs.readFileSync('./almacenamiento/imagenes/gaty_4.jpg')
 fglogo = fs.readFileSync('./almacenamiento/imagenes/gaty_0.jpg')
@@ -2914,7 +2915,7 @@ footerText: `║▌│█║▌│ █║▌│█│║▌║\n║▌│█║�
 buttons: gbutsan,
 headerType: 4
 }
-await Fg.sendMessage(from, gbuttonan, MessageType.buttonsMessage, {contextInfo: {  mentionedJid: [sender]}, quoted: mek, thumbnail: gaty4, externalAdReply: {title: `₊· ͟͟͞͞➳ ⃟꫶🐱 gaty ⸸ bot 🤖 ⃟꫶ ᭄⁩࿐`,body: "", previewType: "PHOTO", thumbnail: reusesr, sourceUrl:``}})
+await Fg.sendMessage(from, gbuttonan, MessageType.buttonsMessage, {contextInfo: {  mentionedJid: [sender]}, quoted: mek, thumbnail: gaty4, externalAdReply: {title: `₊· ͟͟͞͞➳ ⃟꫶🐱 gaty ⸸ bot 🤖 ⃟꫶ ᭄⁩࿐`,body: "", previewType: "PHOTO", thumbnail: shiro0, sourceUrl:``}})
 } catch (e) {
 	console.log(`Error :`, color(e,'red'))
      reply('❎ Error al mostrar el menú, intenta de nuevo después de este mensaje')

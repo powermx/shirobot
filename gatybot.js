@@ -2903,7 +2903,8 @@ break
   ℹ️ ${prefix}join
   ℹ️ ${prefix}ayuda`
 
-py =  await Fg.prepareMessage(from, imgth, image, {quoted: mek, thumbnail: gaty4, externalAdReply: {title: `₊· ͟͟͞͞➳ ⃟꫶🐱 gaty ⸸ bot 🤖 ⃟꫶ ᭄⁩࿐`,body: "", previewType: "PHOTO", thumbnail: shiro0, sourceUrl:``}})
+py =  await Fg.prepareMessage(from, imgth, image, {quoted: mek, thumbnail: gaty4, contextInfo: {externalAdReply: {title: `₊· ͟͟͞͞➳ ⃟꫶🐱 gaty ⸸ bot 🤖 ⃟꫶ ᭄⁩࿐`,body: "", previewType: "PHOTO", thumbnail: shiro0, sourceUrl:``}}})
+
 gbutsan = [
 {buttonId: `${prefix}creador`, buttonText: {displayText: '🐱 CREADOR'}, type: 1},
 {buttonId: `${prefix}info`, buttonText: {displayText: '🤖 INFO'}, type: 1}

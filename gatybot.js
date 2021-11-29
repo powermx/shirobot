@@ -2444,7 +2444,7 @@ var enlace = 'WhatsApp'
 //====================================================================================================//
 
 //>> Anti groseria
-	if (budy.includes("puto") || (budy.includes("mierda") || (budy.includes("Puto") || (budy.includes("puta") || (budy.includes("Puta") || (budy.includes("Estupido") || (budy.includes("Calla gay") || (budy.includes("estupido") || (budy.includes("Mierda") || (budy.includes("mrd") || (budy.includes("Mrd")))))))))))){
+	if (budy.includes("puto") || (budy.includes("mierda") || (budy.includes("Puto") || (budy.includes("puta") || (budy.includes("Puta") || (budy.includes("Estupido") || (budy.includes("Calla gay") || (budy.includes("estupido") || (budy.includes("Mierda") || (budy.includes("mrd ") || (budy.includes("Mrd ")))))))))))){
 		const currentWarn = getWarn(sender)
 				const checkIdWarn = getWarnId(sender)
 					if (currentWarn === undefined && checkIdWarn === undefined) addWarnId(sender)
@@ -8354,7 +8354,7 @@ if (mek.message.extendedTextMessage === undefined || mek.message.extendedTextMes
 				const checkIdWWarn = getWarnId(warnuser)
 					if (currentWWarn === undefined && checkIdWWarn === undefined) addWarnId(warnuser)
 					addWarn(warnuser, 1)
-					Fg.sendMessage(from, `✅ Se le dio una advertencia a @${warnuser.split("@")[0]}`, text, {quoted: mek, contextInfo: {"mentionedJid": [warnuser]}})
+					Fg.sendMessage(from, `✅ Se le dio la ${advertencia} advertencia a @${warnuser.split("@")[0]}`, text, {quoted: mek, contextInfo: {"mentionedJid": [warnuser]}})
 		if (currentWWarn === 3) {
 			Fg.sendMessage(from, `✅ @${warnuser.split("@")[0]} has superado las 3 advertencias adiós`, text, {quoted: mek, contextInfo: {"mentionedJid": [warnuser]}})
 			setTimeout( () => {

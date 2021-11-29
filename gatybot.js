@@ -8462,7 +8462,7 @@ case 'nada':
               break
 
 case 'faker':
-const faker2 = pll.split("|")[1];
+const faker2 = q.split("|")[1];
 const xxxyz = await getBuffer(`${faker2}`)
 Fg.sendMessage(from, `${q}`, text, {quoted: mek, thumbnail: xxxyz })
 .catch((err) => {

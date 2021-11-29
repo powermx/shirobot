@@ -220,7 +220,7 @@ const soportefg = 'https://chat.whatsapp.com/KQLMoi0FX0JHWBzRPOwJ31'
 //====================[ ALMACENAMIENTO ]====================//
 fakefg = fs.readFileSync('./image/fake.jpg')
 fakelogo = fs.readFileSync('./almacenamiento/imagenes/gaty_2.jpg')
-gaty4 = fs.readFileSync('./storage/image/gaty_4.jpg')
+gaty4 = fs.readFileSync('./almacenamiento/imagenes/gaty_4.jpg')
 fglogo = fs.readFileSync('./almacenamiento/imagenes/gaty_0.jpg')
 gatylogo = fs.readFileSync('./almacenamiento/imagenes/gaty_2.jpg')
 minecraft = fs.readFileSync('./almacenamiento/imagenes/minecraft_0.jpg')
@@ -2640,7 +2640,7 @@ break
       	lvlh = getLevelingLevel(sender)
           infost = await Fg.getStatus(`${sender.split('@')[0]}@c.us`)
 	      infost = infost.status == 401 ? 'sin info' : infost.status
-          imgth = fs.readFileSync('./storage/image/gaty_4.jpg')
+          imgth = fs.readFileSync('./almacenamiento/imagenes/gaty_4.jpg')
           autorfg = `${sender.split("@")[0]}`
         
           helfxz = `Hola @${autorfg} ${saludo}
@@ -2914,7 +2914,7 @@ footerText: `║▌│█║▌│ █║▌│█│║▌║\n║▌│█║�
 buttons: gbutsan,
 headerType: 4
 }
-await Fg.sendMessage(from, gbuttonan, MessageType.buttonsMessage, {contextInfo: {  mentionedJid: [sender]}, quoted: mek})
+await Fg.sendMessage(from, gbuttonan, MessageType.buttonsMessage, {contextInfo: {  mentionedJid: [sender]}, quoted: mek, thumbnail: imgth})
 } catch (e) {
 	console.log(`Error :`, color(e,'red'))
      reply('❎ Error al mostrar el menú, intenta de nuevo después de este mensaje')

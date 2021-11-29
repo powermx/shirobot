@@ -2914,7 +2914,7 @@ footerText: `║▌│█║▌│ █║▌│█│║▌║\n║▌│█║�
 buttons: gbutsan,
 headerType: 4
 }
-await Fg.sendMessage(from, gbuttonan, MessageType.buttonsMessage, {contextInfo: {  mentionedJid: [sender]}, quoted: mek, thumbnail: gaty4})
+await Fg.sendMessage(from, gbuttonan, MessageType.buttonsMessage, {contextInfo: {  mentionedJid: [sender]}, quoted: mek, thumbnail: gaty4, externalAdReply: {title: `₊· ͟͟͞͞➳ ⃟꫶🐱 gaty ⸸ bot 🤖 ⃟꫶ ᭄⁩࿐`,body: "", previewType: "PHOTO", thumbnail: reusesr, sourceUrl:``}})
 } catch (e) {
 	console.log(`Error :`, color(e,'red'))
      reply('❎ Error al mostrar el menú, intenta de nuevo después de este mensaje')

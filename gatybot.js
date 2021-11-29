@@ -2409,17 +2409,17 @@ Fg.sendMessage(id, buttonMessages, MessageType.buttonsMessage, options)
 //Warns
 const chetwarnx = getWarn(sender)
             if (chetwarnx == "1") {
-                var advertencia = 'primera'
+                const advertencia = 'primera'
             } else if (chetwarnx == "2") {
-                var advertencia = 'segunda'
+                const advertencia = 'segunda'
             } else if (chetwarnx == "3") {
-                var advertencia = 'tercera'
+                const advertencia = 'tercera'
 	        } else if (chetwarnx == "4") {
-                var advertencia = 'cuarta'
+                const advertencia = 'cuarta'
             } else if (chetwarnx == "5") {
-                var advertencia = 'quinta'
+                const advertencia = 'quinta'
             }
-
+ 
 
 //>> Tipo de enlace 
 var enlace = 'WhatsApp'

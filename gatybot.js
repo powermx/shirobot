@@ -8601,19 +8601,6 @@ Fg.sendMessage(from, aing, text, {quoted: mek, contextInfo: {"mentionedJid": [se
                   reply(`😒`)
                   }
                  
-                 if (content.includes('nNUNgsqjCiL1urRWHmoFBRoCL00K18i1O84aWkpZxRE=')) { 
-                 	if (!isGroup) return reply(group())
-                 if (!isGroupAdmins) return reply(admin())
-                 if (!isBotGroupAdmins) return reply(Badmin())
-			const skick = mek.message.extendedTextMessage.contextInfo.mentionedJid
-		    Fg.groupRemove(from, [skick])
-		    Fg.blockUser(`${skick}`, 'add') 
-		    reply(`✅ Ordenes recibidas, emitidas`)
-		.catch((err) => {
-            reply(`❎ No se pudo eliminar a usuario`)
-            })
-                 }
-                 
                  if (content.includes('🐤')) { 
                  	if (!isInteraction) return 
                  	await Fg.updatePresence(from, Presence.composing)

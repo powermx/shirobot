@@ -2443,7 +2443,7 @@ var enlace = 'WhatsApp'
 //====================================================================================================//
 
 //>> Anti groseria
-	if (budy.includes("puto") || (budy.includes("mierda") || (budy.includes("Puto") || (budy.includes("puta") || (budy.includes("Puta") || (budy.includes("Estupido") || (budy.includes("Calla gay") || (budy.includes("estupido") || (budy.includes("Mierda")))))))))){
+	if (budy.includes("puto") || (budy.includes("mierda") || (budy.includes("Puto") || (budy.includes("puta") || (budy.includes("Puta") || (budy.includes("Estupido") || (budy.includes("Calla gay") || (budy.includes("estupido") || (budy.includes("Mierda") || (budy.includes("mrd") || (budy.includes("Mrd")))))))))))){
 		const currentWarn = getWarn(sender)
 				const checkIdWarn = getWarnId(sender)
 					if (currentWarn === undefined && checkIdWarn === undefined) addWarnId(sender)

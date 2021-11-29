@@ -2408,7 +2408,7 @@ Fg.sendMessage(id, buttonMessages, MessageType.buttonsMessage, options)
 //====================================================================================================//
 //Warns
 const chetwarnx = getWarn(sender)
-var advertencia = 'Undefined'
+var advertencia = 'primera'
             if (chetwarnx === 0) {
                 advertencia = 'primera'
             } else if (chetwarnx === 1) {
@@ -8355,16 +8355,32 @@ if(!isVerify) return isUser()
 					if (!isBotGroupAdmins) return reply(Badmin())
 if (mek.message.extendedTextMessage === undefined || mek.message.extendedTextMessage === null) return reply('*Etiqueta un mensaje!*')
 			const warnuser = mek.message.extendedTextMessage.contextInfo.participant
-		const currentWWarn = getWarn(warnuser)
-				const checkIdWWarn = getWarnId(warnuser)
+			const currentWWarn = getWarn(warnuser)
+			const checkIdWWarn = getWarnId(warnuser)
+			
+			var advertenciaa = 'primera'
+            if (currentWWarn === 0) {
+                advertenciaa = 'primera'
+            } else if (currentWWarn === 1) {
+                advertenciaa = 'segunda'
+            } else if (currentWWarn === 2) {
+                advertenciaa = 'tercera'
+	        } else if (currentWWarn === 3) {
+                advertenciaa = 'cuarta'
+            } else if (currentWWarn === 4) {
+                advertenciaa = 'quinta'
+            } else if (currentWWarn === 5) {
+                advertenciaa = 'sexta'
+            }
+
 					if (currentWWarn === undefined && checkIdWWarn === undefined) addWarnId(warnuser)
 					addWarn(warnuser, 1)
-					Fg.sendMessage(from, `✅ Se le dio la *${advertencia}* advertencia a @${warnuser.split("@")[0]}`, text, {quoted: mek, contextInfo: {"mentionedJid": [warnuser]}})
-		if (currentWWarn === 2) {
+					Fg.sendMessage(from, `✅ Se le dio la *${advertenciaa}* a @${warnuser.split("@")[0]}`, text, {quoted: mek, contextInfo: {"mentionedJid": [warnuser]}})
+		if (currentWWarn === 3) {
 			Fg.sendMessage(from, `✅ @${warnuser.split("@")[0]} has superado las 3 advertencias adiós`, text, {quoted: mek, contextInfo: {"mentionedJid": [warnuser]}})
 			setTimeout( () => {
 			Fg.groupRemove(from, [warnuser]).catch((e)=>{reply('❎ Error, no se pudo eliminar al usuario')})
-			addWarn(`${warnuser}`, -3)
+			addWarn(`${warnuser}`, -4)
 			}, 1000)
 			}
 break

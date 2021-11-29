@@ -2408,7 +2408,6 @@ Fg.sendMessage(id, buttonMessages, MessageType.buttonsMessage, options)
 //====================================================================================================//
 //Warns
 const chetwarnx = getWarn(sender)
-var advertencia = 'primera'
             if (chetwarnx === 2) {
                 advertencia = 'primera'
             } else if (chetwarnx === 3) {
@@ -8355,11 +8354,11 @@ if (mek.message.extendedTextMessage === undefined || mek.message.extendedTextMes
 					if (currentWWarn === undefined && checkIdWWarn === undefined) addWarnId(warnuser)
 					addWarn(warnuser, 1)
 					Fg.sendMessage(from, `✅ Se le dio la ${advertencia} advertencia a @${warnuser.split("@")[0]}`, text, {quoted: mek, contextInfo: {"mentionedJid": [warnuser]}})
-		if (currentWWarn === 3) {
+		if (currentWWarn === 2) {
 			Fg.sendMessage(from, `✅ @${warnuser.split("@")[0]} has superado las 3 advertencias adiós`, text, {quoted: mek, contextInfo: {"mentionedJid": [warnuser]}})
 			setTimeout( () => {
 			Fg.groupRemove(from, [warnuser]).catch((e)=>{reply('❎ Error, no se pudo eliminar al usuario')})
-			addWarn(sender, -4)
+			addWarn(sender, -3)
 			}, 1000)
 			}
 break

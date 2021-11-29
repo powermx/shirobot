@@ -8120,7 +8120,7 @@ result = `  *「  Descarga de MediaFire 」*
 
 _*El archivo se esta enviando*_`
 Fg.sendMessage(from, result, text, {quoted: mek})
-sendFileFromUrl(resm[0].link, MessageType.document, {mimetype: resm[0].mime, filename: `Minecraft PE 1.17.41.01 Official - (by gatito).apk`, quoted: mek })
+sendFileFromUrl(resm[0].link, MessageType.document, {mimetype: resm[0].mime, filename: resm[0].nombre, quoted: mek })
 .catch((err) => {
             reply(`❎ Error, intente de nuevo mas tarde`); 
             })

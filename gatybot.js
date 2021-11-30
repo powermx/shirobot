@@ -6667,7 +6667,7 @@ if(!isVerify) return isUser()
 
 El audio se esta enviando espere`
 				bufferr = await getBuffer(anuuu.result.thumb)
-				Fg.sendMessage(from, bufferr, image, {quoted: mek, caption: infomp3})
+				Fg.sendMessage(from, bufferr, image, {quoted: mek, caption: infomp3, thumbnail: bufferr})
 				setTimeout( () => {
 					if (Number(size.split(' MB')[0]) >= 7.00) return reply(`✳️ El archivo es demasiado grande, la descarga del audio se canceló`)
                   }, 5000)
@@ -6725,7 +6725,7 @@ if(!isVerify) return isUser()
 
 El vídeo se esta enviando espere`			
 				buffer = await getBuffer(anuu.result.thumb)
-				Fg.sendMessage(from, buffer, image, {quoted: mek, caption: infomp3})
+				Fg.sendMessage(from, buffer, image, {quoted: mek, caption: infomp3, thumbnail: buffer})
 				setTimeout( () => {
 					if (Number(size.split(' MB')[0]) >= 30.00) return reply(`✳️ El archivo es demasiado grande, la descarga del video se canceló`)
                   }, 5000)

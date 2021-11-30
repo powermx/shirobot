@@ -220,6 +220,9 @@ const soportefg = 'https://chat.whatsapp.com/KQLMoi0FX0JHWBzRPOwJ31'
 //====================[ ALMACENAMIENTO ]====================//
 fakefg = fs.readFileSync('./image/fake.jpg')
 shiro0 = fs.readFileSync('./storage/image/shiro_0.jpg')
+loli0 = fs.readFileSync('./storage/image/loli_0.jpg')
+loli1 = fs.readFileSync('./storage/image/loli_1.jpg')
+
 fakelogo = fs.readFileSync('./almacenamiento/imagenes/gaty_2.jpg')
 gaty4 = fs.readFileSync('./almacenamiento/imagenes/gaty_4.jpg')
 fglogo = fs.readFileSync('./almacenamiento/imagenes/gaty_0.jpg')
@@ -2646,6 +2649,8 @@ break
       	lvlh = getLevelingLevel(sender)
           infost = await Fg.getStatus(`${sender.split('@')[0]}@c.us`)
 	      infost = infost.status == 401 ? 'sin info' : infost.status
+	      const loliranx =['shiro0', 'loli0', 'loli1']
+	      loliranz = loliranx[Math.floor(Math.random() * loliranx.length)]
           imgth = fs.readFileSync('./almacenamiento/imagenes/gaty_4.jpg')
           autorfg = `${sender.split("@")[0]}`
         
@@ -2911,7 +2916,7 @@ break
   ℹ️ ${prefix}join
   ℹ️ ${prefix}ayuda`
 
-py =  await Fg.prepareMessage(from, imgth, image, {quoted: mek, thumbnail: gaty4, contextInfo: {externalAdReply: {title: `✣᳙᳓gaty ᭲ bot͢ 式⁩`,body: "© Created by gatito", previewType: "PHOTO", thumbnail: shiro0, sourceUrl:``}}})
+py =  await Fg.prepareMessage(from, imgth, image, {quoted: mek, thumbnail: gaty4, contextInfo: {externalAdReply: {title: `>⃗✗᳙᳓gaty ᭲ bot͢ 式⁩`,body: "© Created by gatito", previewType: "PHOTO", thumbnail: loliranz, sourceUrl:``}}})
 
 gbutsan = [
 {buttonId: `${prefix}creador`, buttonText: {displayText: '🐱 CREADOR'}, type: 1},

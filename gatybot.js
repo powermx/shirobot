@@ -6772,7 +6772,7 @@ El vídeo se esta enviando espere`
 					if (Number(size.split(' MB')[0]) >= 30.00) return reply(`✳️ El archivo es demasiado grande, la descarga del video se canceló`)
                   }, 5000)
                   if (Number(size.split(' MB')[0]) >= 30.00) return 
-				buffer1 = await getBuffer(anuuu.result.link)
+				buffer1 = await getBuffer(anuu.result.link)
 				Fg.sendMessage(from, buffer1, video, {mimetype: 'video/mp4', filename: `${anuu.result.video}.mp4`, quoted: mek, caption: `✅ Video descargado\n\n‣ *Titulo:* ${anuu.result.title}`})
 				.catch((err) => {
 					reply(`❎ Error, intente de nuevo mas tarde`); 

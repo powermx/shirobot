@@ -5815,6 +5815,12 @@ if(!isVerify) return isUser()
   if (isBanned) return reply(banf())
   if (isLimit(sender, isPremium, isOwner, limitCount, limit)) return reply(fdiama(prefix))
 if (!isQuotedSticker) return reply(`✳️ Responde a un sticker\n\n*USO DEL COMAMDO*\n*${prefix + command}* Nombre|Autor\n\n📌Ejemplo *${prefix + command}* ${botname}|${ownername2}`);
+try {
+  	ppimg = await Fg.getProfilePicture(`${sender.split('@')[0]}@c.us`)
+  } catch {
+  	ppimg = 'https://i.ibb.co/rksd9bC/gaty-2.jpg'
+  }
+  takesx = await getBuffer(ppimg)
 const encmediats = isQuotedSticker ? JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo : mek
 var kls = q
 var pack = kls.split("|")[0];
@@ -5827,7 +5833,7 @@ reply(wait())
 const bas64 = `data:image/jpeg;base64,${dlfile.toString('base64')}`
 var mantap = await convertSticker(bas64, `${author2}`, `${pack}`)
 var imageBuffer = new Buffer.from(mantap, 'base64');
-Fg.sendMessage(from, imageBuffer, sticker, { quoted: mek, contextInfo: { externalAdReply:{title: `${botname3} by ${ownername}`,body:"", previewType:"PHOTO",thumbnail: gatylogo, sourceUrl:`${grupomc}`}}})
+Fg.sendMessage(from, imageBuffer, sticker, { quoted: mek, contextInfo: { externalAdReply:{title: `${author2}|${pack}`,body:"", previewType:"PHOTO",thumbnail: takesx, sourceUrl:`${grupomc}`}}})
 .catch((err) => {
             reply(`❎ Error, intente más tarde`); 
             })

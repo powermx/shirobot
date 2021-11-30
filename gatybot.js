@@ -6657,6 +6657,7 @@ if(!isVerify) return isUser()
 				play8 = args.join(" ")
 				const anuuu = await fetchJson(`https://api.zeks.me/api/ytplaymp4?apikey=apivinz&q=${play8}`)
 				if (anuuu.error) return reply(anuuu.error)
+				size = anuuu.result.size
 				infomp3 = `❒════❬ *AUDIO* ❭═════╾❒
 ├‣ *Nombre* : ${anuuu.result.title}
 ├‣ *Fuente* : ${anuuu.result.source}
@@ -6665,8 +6666,11 @@ if(!isVerify) return isUser()
 				bufferr = await getBuffer(anuuu.result.thumbnail)
 				bufferr1 = await getBuffer(anuuu.result.url_video)
 				Fg.sendMessage(from, bufferr, image, {quoted: mek, caption: infomp3})
-				if (Number(anuuu.result.size) >= 5.00) return reply(`✳️ El archivo es demasiado grande, la descarga del audio se canceló`)
+				if (Number(size) >= 5.00) return reply(`✳️ El archivo es demasiado grande, la descarga del audio se canceló`)
 				Fg.sendMessage(from, bufferr1, audio, { mimetype: 'audio/mp4', quoted: mek})
+				.catch((err) => {
+					reply(`❎ Error, intente de nuevo mas tarde`); 
+					})
           break
 
 case 'playvid': 
@@ -6706,6 +6710,7 @@ if(!isVerify) return isUser()
 				play7 = args.join(" ")
 				const anuu = await fetchJson(`https://api.zeks.xyz/api/ytplaymp4?q=${play7}&apikey=oCHDwj8ggZGBGjU5WIaK5Rctu6c`)
 				if (anuu.error) return reply(anuu.error)
+				size = anuu.result.size
 				infomp3 = `❒════❬ *VIDEO* ❭═════╾❒
 ├‣ *Nombre* : ${anuu.result.title}
 ├‣ *Fuente* : ${anuu.result.source}
@@ -6714,8 +6719,11 @@ if(!isVerify) return isUser()
 				buffer = await getBuffer(anuu.result.thumbnail)
 				buffer1 = await getBuffer(anuu.result.url_video)
 				Fg.sendMessage(from, buffer, image, {quoted: mek, caption: infomp3})
-				if (Number(anuu.result.size) >= 30.00) return reply(`✳️ El archivo es demasiado grande, la descarga del video se canceló`)
+				if (Number(size) >= 30.00) return reply(`✳️ El archivo es demasiado grande, la descarga del video se canceló`)
 				Fg.sendMessage(from, buffer1, video, {mimetype: 'video/mp4', filename: `${anuu.result.video}.mp4`, quoted: mek, caption: `✅ Video descargado\n\n‣ *Titulo:* ${anuu.result.title}`})
+				.catch((err) => {
+					reply(`❎ Error, intente de nuevo mas tarde`); 
+					})
           break
 
         

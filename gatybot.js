@@ -8174,14 +8174,18 @@ if(!args[0].includes('mediafire')) return reply('Link invalido, el link debe ser
 reply(wait())
 let ment = args.join(' ')
 const resm = await mediafire(ment)
+size = resm[0].size
 result = `  *「  Descarga de MediaFire 」*
 
-• *Nombre:* ${resm[0].nombre}
-• *Tamaño:* ${resm[0].size}
-• *Enlace:* ${resm[0].link}
+• *📌Nombre:* ${resm[0].nombre}
+• *⚖️Tamaño:* ${resm[0].size}
+• *🔗Link:* ${resm[0].link}
 
-_*El archivo se esta enviando*_`
+El archivo se esta enviando`
 Fg.sendMessage(from, result, text, {quoted: mek})
+setTimeout( () => {
+	if (Number(size.split('MB')[0]) >= 30.00) return reply(`✳️ El archivo es demasiado grande, la descarga se canceló`)
+    }, 5000)
 sendFileFromUrl(resm[0].link, MessageType.document, {mimetype: resm[0].mime, filename: resm[0].nombre, quoted: mek })
 .catch((err) => {
             reply(`❎ Error, intente de nuevo mas tarde`); 

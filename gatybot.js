@@ -2738,6 +2738,8 @@ break
   🧩 ${prefix}3dbox
   🧩 ${prefix}flame
   🧩 ${prefix}matrix
+  🧩 ${prefix}breakwall
+  🧩 ${prefix}bneon
 
     *MEDIA*
   🎥 ${prefix}screenshot
@@ -3498,6 +3500,36 @@ Fg.sendMessage(from, bpz3, image, {quoted: mek, caption: `${isPremium ? '💎No 
 limitAdd(sender, limit)
 break
 
+case 'breakwall':
+ if(!isVerify) return isUser()
+  if (isBanned) return reply(banf())
+if (isLimit(sender, isPremium, isOwner, limitCount, limit)) return reply(fdiama(prefix))
+if (args.length < 1) return reply(`*✳️ Ingrese el texto*\n\n📌Ejemplo: ${prefix + command} Texto`)
+reply(wait())
+bp = args.join(" ")
+const bpz6 = await getBuffer(`https://api.zeks.me/api/breakwall?apikey=apivinz&text=${bp}`)
+Fg.sendMessage(from, bpz6, image, {quoted: mek, caption: `${isPremium ? '💎No se te descontará ningún Diamante' : `💎-1 Diamante por utilizar esta función`}\n\n✅ Listo : *${bp}*`})
+.catch((err) => {
+            reply(`❎ Error, intente más tarde`); 
+            })
+limitAdd(sender, limit)
+break
+
+case 'bneon':
+ if(!isVerify) return isUser()
+  if (isBanned) return reply(banf())
+if (isLimit(sender, isPremium, isOwner, limitCount, limit)) return reply(fdiama(prefix))
+if (args.length < 1) return reply(`*✳️ Ingrese el texto*\n\n📌Ejemplo: ${prefix + command} Texto`)
+reply(wait())
+bp = args.join(" ")
+const bpz5 = await getBuffer(`https://api.zeks.me/api/bneon?apikey=apivinz&text=${bp}`)
+Fg.sendMessage(from, bpz5, image, {quoted: mek, caption: `${isPremium ? '💎No se te descontará ningún Diamante' : `💎-1 Diamante por utilizar esta función`}\n\n✅ Listo : *${bp}*`})
+.catch((err) => {
+            reply(`❎ Error, intente más tarde`); 
+            })
+limitAdd(sender, limit)
+break
+
 case 'flame':
  if(!isVerify) return isUser()
   if (isBanned) return reply(banf())
@@ -3525,7 +3557,7 @@ if (isLimit(sender, isPremium, isOwner, limitCount, limit)) return reply(fdiama(
             const preffk = `*✳️ Ingrese el texto*\n\n📌Ejemplo: ${prefix + command} Texto|Texto2`
 					  if (args.length < 1) return reply(preffk)
 					reply(wait())
-            const rakz3 = await getBuffer(`https://ferdiz-afk.my.id/api/maker/pornhub?text=${plo}&text2=${plo2}`)
+            const rakz3 = await getBuffer(`https://api.zeks.me/api/phlogo?apikey=apivinz&text1=${plo}&text2=${plo2}`)
             Fg.sendMessage(from, rakz3, image, {quoted: mek, caption: `${isPremium ? '💎No se te descontará ningún Diamante' : `💎-1 Diamante por utilizar esta función`}\n\n✅ Listo : *${plo} ${plo2}*`})
             .catch((err) => {
             reply(`❎ Error, intente más tarde`); 

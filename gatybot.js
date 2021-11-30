@@ -2994,7 +2994,7 @@ _Base oficial del bot_
 
 • *Edgar :* @${ayudante.split("@s.whatsapp.net")[0]}
 _Ayuda en algunos comandos_`
-Fg.sendMessage(from, inifernazer, text, { quoted: mek, contextInfo: { externalAdReply:{title: `式⃟🐱INFORMACIÓNES🐱⃟式`,body: `• Fecha : ${fecha2}\n• Hora : ${hora2}`, previewType:"PHOTO",thumbnail: gatylogo, sourceUrl:``}, "mentionedJid": [fgnum, ayudante, botnum]}})
+Fg.sendMessage(from, inifernazer, text, { quoted: mek, contextInfo: { externalAdReply:{title: `式⃟🐱INFORMACIÓNES🐱⃟式`,body: `• Fecha : ${fecha2}\n• Hora : ${hora2}`, previewType:"PHOTO",thumbnail: gatylogo, sourceUrl:``}, "mentionedJid": [fgnum, fg, ayudante]}})
              
            break
 

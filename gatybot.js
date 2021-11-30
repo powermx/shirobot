@@ -8478,12 +8478,18 @@ case 'chiste':
               answer = chiste[Math.floor(Math.random() * chiste.length)]
               Fg.sendMessage(from, `*◼️CHISTE*\n\n${answer}`, text, { quoted: mek })
               break
-              
-case 'nada':
-              if (isBanned) return reply(banf())
-              Fg.sendMessage(from, `De nada, disfruta tu estadía el el grupo :3`, text, { quoted: mek })
-              break
 
+case 'nada'
+                    const welcomeaa =['https://i.ibb.co/6RK4M8v/welcome-0.webp', 'https://i.ibb.co/PwNmbvg/welcome-1.webp', 'https://i.ibb.co/zsTmfcY/welcome-2.webp']
+                    welcomexx = welcomeaa[Math.floor(Math.random() * welcomeaa.length)]
+                    welcomezz = await getBuffer(welcomexx)
+                    Fg.sendMessage(from, welcomezz, MessageType.sticker, {quoted: mek})
+                    .catch((err) => {
+                    	console.log('\x1b[1;31m', color("─────────────────────────────────────────────────────────────────────", "magenta"))
+                        console.log('\x1b[1;31m', color("➛ ", "red"), color("Estado: "), color("Error al enviar el sticker de bienvenida", "red"))
+                    })
+                    break
+                    
 //--------------------------------------
       default:
  

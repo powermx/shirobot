@@ -2937,8 +2937,9 @@ if(!isVerify) return isUser()
 const fgnum = "51940617554@s.whatsapp.net"
 const botnum = "51988050859"
 const ayudante = "5216221512187@s.whatsapp.net"
+const fg = "59172945992@s.whatsapp.net"
 const unread = await Fg.loadAllUnreadMessages ();
-const timestampp = speed();
+const timestampp = speed();59172945992
 const latensii = speed() - timestampp
                    let totalchat = await Fg.chats.all()
                    let i = []
@@ -2986,7 +2987,10 @@ const latensii = speed() - timestampp
 *🐱〝 Agradecimientos 〞🐱*
 
 • *Gatito :* @${fgnum.split("@s.whatsapp.net")[0]}
-_Diseñador del bot_
+_Recodificardor del bot (dueño)_
+
+• *FG :* @${fg.split("@s.whatsapp.net")[0]}
+_Base oficial del bot_
 
 • *Edgar :* @${ayudante.split("@s.whatsapp.net")[0]}
 _Ayuda en algunos comandos_`

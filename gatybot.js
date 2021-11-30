@@ -6665,6 +6665,7 @@ if(!isVerify) return isUser()
 				bufferr = await getBuffer(anuuu.result.thumbnail)
 				bufferr1 = await getBuffer(anuuu.result.url_video)
 				Fg.sendMessage(from, bufferr, image, {quoted: mek, caption: infomp3})
+				if (Number(anuuu.result.size) >= 5.00) return reply(`✳️ El archivo es demasiado grande, la descarga del audio se canceló`)
 				Fg.sendMessage(from, bufferr1, audio, { mimetype: 'audio/mp4', quoted: mek})
           break
 
@@ -6713,6 +6714,7 @@ if(!isVerify) return isUser()
 				buffer = await getBuffer(anuu.result.thumbnail)
 				buffer1 = await getBuffer(anuu.result.url_video)
 				Fg.sendMessage(from, buffer, image, {quoted: mek, caption: infomp3})
+				if (Number(anuu.result.size) >= 30.00) return reply(`✳️ El archivo es demasiado grande, la descarga del video se canceló`)
 				Fg.sendMessage(from, buffer1, video, {mimetype: 'video/mp4', filename: `${anuu.result.video}.mp4`, quoted: mek, caption: `✅ Video descargado\n\n‣ *Titulo:* ${anuu.result.title}`})
           break
 
@@ -8809,9 +8811,7 @@ Fg.sendMessage(from, aing, text, {quoted: mek, contextInfo: {"mentionedJid": [se
       setTimeout( () => {
       	Fg.blockUser(sender, 'add') 
                   }, 1000)
-      setTimeout( () => {
-                  Fg.modifyChat(from, ChatModification.delete)
-                  }, 5000)
+                  //Fg.modifyChat(from, ChatModification.delete)
                   
     }
 } catch (e) { 

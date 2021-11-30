@@ -5833,7 +5833,7 @@ reply(wait())
 const bas64 = `data:image/jpeg;base64,${dlfile.toString('base64')}`
 var mantap = await convertSticker(bas64, `${author2}`, `${pack}`)
 var imageBuffer = new Buffer.from(mantap, 'base64');
-Fg.sendMessage(from, imageBuffer, sticker, { quoted: mek, contextInfo: { externalAdReply:{title: `${author2}|${pack}`,body:"", previewType:"PHOTO",thumbnail: takesx, sourceUrl:`${grupomc}`}}})
+Fg.sendMessage(from, imageBuffer, sticker, { quoted: mek, contextInfo: { externalAdReply:{title: `${pack}|${author2}`,body:"", previewType:"PHOTO",thumbnail: takesx, sourceUrl:`${grupomc}`}}})
 .catch((err) => {
             reply(`❎ Error, intente más tarde`); 
             })

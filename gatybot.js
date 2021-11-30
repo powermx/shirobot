@@ -6700,9 +6700,7 @@ if(!isVerify) return isUser()
 El audio se esta enviando espere`
 				bufferr = await getBuffer(anuuu.result.thumb)
 				Fg.sendMessage(from, bufferr, image, {quoted: mek, caption: infomp3, thumbnail: bufferr})
-				setTimeout( () => {
-					if (Number(size.split(' MB')[0]) >= 7.00) return reply(`✳️ El archivo es demasiado grande, la descarga del audio se canceló`)
-                  }, 5000)
+				if (Number(size.split(' MB')[0]) >= 7.00) return reply(`✳️ El archivo es demasiado grande, la descarga del audio se canceló`)
 				bufferr1 = await getBuffer(anuuu.result.link)
 				Fg.sendMessage(from, bufferr1, audio, { mimetype: 'audio/mp4', quoted: mek})
 				.catch((err) => {
@@ -6758,9 +6756,7 @@ if(!isVerify) return isUser()
 El vídeo se esta enviando espere`			
 				buffer = await getBuffer(anuu.result.thumb)
 				Fg.sendMessage(from, buffer, image, {quoted: mek, caption: infomp3, thumbnail: buffer})
-				setTimeout( () => {
-					if (Number(size.split(' MB')[0]) >= 30.00) return reply(`✳️ El archivo es demasiado grande, la descarga del video se canceló`)
-                  }, 5000)
+				if (Number(size.split(' MB')[0]) >= 30.00) return reply(`✳️ El archivo es demasiado grande, la descarga del video se canceló`)
 				buffer1 = await getBuffer(anuuu.result.link)
 				Fg.sendMessage(from, buffer1, video, {mimetype: 'video/mp4', filename: `${anuu.result.video}.mp4`, quoted: mek, caption: `✅ Video descargado\n\n‣ *Titulo:* ${anuu.result.title}`})
 				.catch((err) => {
@@ -8215,9 +8211,7 @@ result = `  *「  Descarga de MediaFire 」*
 
 El archivo se esta enviando`
 Fg.sendMessage(from, result, text, {quoted: mek})
-setTimeout( () => {
-	if (Number(size.split('MB')[0]) >= 30.00) return reply(`✳️ El archivo es demasiado grande, la descarga se canceló`)
-    }, 5000)
+if (Number(size.split('MB')[0]) >= 30.00) return reply(`✳️ El archivo es demasiado grande, la descarga se canceló`)
 sendFileFromUrl(resm[0].link, MessageType.document, {mimetype: resm[0].mime, filename: resm[0].nombre, quoted: mek })
 .catch((err) => {
             reply(`❎ Error, intente de nuevo mas tarde`); 

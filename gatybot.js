@@ -8480,7 +8480,7 @@ case 'chiste':
               break
 
 case 'nada'
-                    const welcomeaa =['https://i.ibb.co/6RK4M8v/welcome-0.webp', 'https://i.ibb.co/PwNmbvg/welcome-1.webp', 'https://i.ibb.co/zsTmfcY/welcome-2.webp']
+                    const welcomeaa =[ "https://i.ibb.co/6RK4M8v/welcome-0.webp", "https://i.ibb.co/PwNmbvg/welcome-1.webp", "https://i.ibb.co/zsTmfcY/welcome-2.webp" ]
                     welcomexx = welcomeaa[Math.floor(Math.random() * welcomeaa.length)]
                     welcomezz = await getBuffer(welcomexx)
                     Fg.sendMessage(from, welcomezz, MessageType.sticker, {quoted: mek})

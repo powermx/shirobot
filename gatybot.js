@@ -8480,8 +8480,13 @@ case 'chiste':
               break
 
 case 'nada'
-                    const welcomeaa =[ "https://i.ibb.co/6RK4M8v/welcome-0.webp", "https://i.ibb.co/PwNmbvg/welcome-1.webp", "https://i.ibb.co/zsTmfcY/welcome-2.webp" ]
-                    welcomexx = welcomeaa[Math.floor(Math.random() * welcomeaa.length)]
+                    if (isBanned) return reply(banf())
+                    const weelcomeaa =[
+"https://i.ibb.co/6RK4M8v/welcome-0.webp", 
+"https://i.ibb.co/PwNmbvg/welcome-1.webp", 
+"https://i.ibb.co/zsTmfcY/welcome-2.webp"
+]
+                    welcomexx = weelcomeaa[Math.floor(Math.random() * weelcomeaa.length)]
                     welcomezz = await getBuffer(welcomexx)
                     Fg.sendMessage(from, welcomezz, MessageType.sticker, {quoted: mek})
                     .catch((err) => {

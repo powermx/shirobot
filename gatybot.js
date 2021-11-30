@@ -6655,15 +6655,15 @@ if(!isVerify) return isUser()
 		if (args.length < 1) return reply(`✳️ *Ingresa el nombre de una música*\n\n📌Ejemplo: *${prefix + command}* Lil Peep broken smile`)
 				reply(wait()) 
 				play8 = args.join(" ")
-				const anu = await fetchJson(`https://api.zeks.me/api/ytplaymp4?apikey=apivinz&q=${play8}`)
-				if (anu.error) return reply(anu.error)
+				const anuuu = await fetchJson(`https://api.zeks.me/api/ytplaymp4?apikey=apivinz&q=${play8}`)
+				if (anuuu.error) return reply(anuuu.error)
 				infomp3 = `❒════❬ *AUDIO* ❭═════╾❒
-├‣ *Nombre* : ${anu.result.title}
-├‣ *Fuente* : ${anu.result.source}
-├‣ *Tamaño* : ${anu.result.size}
+├‣ *Nombre* : ${anuuu.result.title}
+├‣ *Fuente* : ${anuuu.result.source}
+├‣ *Tamaño* : ${anuuu.result.size}
 ❒════════════════╾❒`			
-				bufferr = await getBuffer(anu.result.thumbnail)
-				bufferr1 = await getBuffer(anu.result.url_video)
+				bufferr = await getBuffer(anuuu.result.thumbnail)
+				bufferr1 = await getBuffer(anuuu.result.url_video)
 				Fg.sendMessage(from, bufferr, image, {quoted: mek, caption: infomp3})
 				Fg.sendMessage(from, bufferr1, audio, { mimetype: 'audio/mp4', quoted: mek})
           break
@@ -6704,7 +6704,7 @@ if(!isVerify) return isUser()
 				reply(wait()) 
 				play7 = args.join(" ")
 				const anuu = await fetchJson(`https://api.zeks.xyz/api/ytplaymp4?q=${play7}&apikey=oCHDwj8ggZGBGjU5WIaK5Rctu6c`)
-				if (anuu.error) return reply(anu.error)
+				if (anuu.error) return reply(anuu.error)
 				infomp3 = `❒════❬ *VIDEO* ❭═════╾❒
 ├‣ *Nombre* : ${anuu.result.title}
 ├‣ *Fuente* : ${anuu.result.source}

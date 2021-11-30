@@ -2650,7 +2650,8 @@ break
           infost = await Fg.getStatus(`${sender.split('@')[0]}@c.us`)
 	      infost = infost.status == 401 ? 'sin info' : infost.status
 	      const loliranx =['shiro0', 'loli0', 'loli1']
-	      loliranz = loliranx[Math.floor(Math.random() * loliranx.length)]
+	      const loliranz = loliranx[Math.floor(Math.random() * loliranx.length)]
+	      lolixdv = loliranz
           imgth = fs.readFileSync('./almacenamiento/imagenes/gaty_4.jpg')
           autorfg = `${sender.split("@")[0]}`
         
@@ -2916,7 +2917,7 @@ break
   ℹ️ ${prefix}join
   ℹ️ ${prefix}ayuda`
 
-py =  await Fg.prepareMessage(from, imgth, image, {quoted: mek, thumbnail: gaty4, contextInfo: {externalAdReply: {title: `>⃗✗᳙᳓gaty ᭲ bot͢ 式⁩`,body: "© Created by gatito", previewType: "PHOTO", thumbnail: loliranz, sourceUrl:``}}})
+py =  await Fg.prepareMessage(from, imgth, image, {quoted: mek, thumbnail: gaty4, contextInfo: {externalAdReply: {title: `>⃗✗᳙᳓gaty ᭲ bot͢ 式⁩`,body: "© Created by gatito", previewType: "PHOTO", thumbnail: lolixdv, sourceUrl:``}}})
 
 gbutsan = [
 {buttonId: `${prefix}creador`, buttonText: {displayText: '🐱 CREADOR'}, type: 1},

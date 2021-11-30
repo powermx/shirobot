@@ -2698,6 +2698,7 @@ break
 
     *DESCARGAS*
   📥 ${prefix}play
+  📥 ${prefix}play2
   📥 ${prefix}playvid
   📥 ${prefix}playvid2
   📥 ${prefix}ytmp3
@@ -2987,7 +2988,7 @@ const latensii = speed() - timestampp
 *🐱〝 Agradecimientos 〞🐱*
 
 • *Gatito :* @${fgnum.split("@s.whatsapp.net")[0]}
-_Recodificardor del bot (dueño)_
+_Recodificador del bot (dueño)_
 
 • *FG :* @${fg.split("@s.whatsapp.net")[0]}
 _Base oficial del bot_
@@ -6647,7 +6648,26 @@ El archivo se esta enviando espere`
                 sendFileFromUrl(res1[0].link, audio, {quoted: mek, mimetype: 'audio/mp4', filename: res1[0].output})
                 }
                 break
-                
+
+case 'play2':
+if(!isVerify) return isUser()
+  if (isBanned) return reply(banf())
+		if (args.length < 1) return reply(`✳️ *Ingresa el nombre de una música*\n\n📌Ejemplo: *${prefix + command}* Lil Peep broken smile`)
+				reply(wait()) 
+				play8 = args.join(" ")
+				const anu = await fetchJson(`https://api.zeks.me/api/ytplaymp4?apikey=apivinz&q=${play8}`)
+				if (anu.error) return reply(anu.error)
+				infomp3 = `❒════❬ *AUDIO* ❭═════╾❒
+├‣ *Nombre* : ${anu.result.title}
+├‣ *Fuente* : ${anu.result.source}
+├‣ *Tamaño* : ${anu.result.size}
+❒════════════════╾❒`			
+				bufferr = await getBuffer(anu.result.thumbnail)
+				bufferr1 = await getBuffer(anu.result.url_video)
+				Fg.sendMessage(from, bufferr, image, {quoted: mek, caption: infomp3})
+				Fg.sendMessage(from, bufferr1, audio, { mimetype: 'audio/mp4', quoted: mek})
+          break
+
 case 'playvid': 
  case 'playmp4': 
  case 'playvideo': 
@@ -6683,17 +6703,17 @@ if(!isVerify) return isUser()
 		if (args.length < 1) return reply(`✳️ *Ingresa el nombre de un video*\n\n📌Ejemplo: *${prefix + command}* Lil Peep broken smile`)
 				reply(wait()) 
 				play7 = args.join(" ")
-				anu = await fetchJson(`https://api.zeks.xyz/api/ytplaymp4?q=${play7}&apikey=oCHDwj8ggZGBGjU5WIaK5Rctu6c`)
-				if (anu.error) return reply(anu.error)
+				const anuu = await fetchJson(`https://api.zeks.xyz/api/ytplaymp4?q=${play7}&apikey=oCHDwj8ggZGBGjU5WIaK5Rctu6c`)
+				if (anuu.error) return reply(anu.error)
 				infomp3 = `❒════❬ *VIDEO* ❭═════╾❒
-├‣ *Nombre* : ${anu.result.title}
-├‣ *Fuente* : ${anu.result.source}
-├‣ *Tamaño* : ${anu.result.size}
+├‣ *Nombre* : ${anuu.result.title}
+├‣ *Fuente* : ${anuu.result.source}
+├‣ *Tamaño* : ${anuu.result.size}
 ❒════════════════╾❒`			
-				buffer = await getBuffer(anu.result.thumbnail)
-				buffer1 = await getBuffer(anu.result.url_video)
+				buffer = await getBuffer(anuu.result.thumbnail)
+				buffer1 = await getBuffer(anuu.result.url_video)
 				Fg.sendMessage(from, buffer, image, {quoted: mek, caption: infomp3})
-				Fg.sendMessage(from, buffer1, video, {mimetype: 'video/mp4', filename: `${anu.result.video}.mp4`, quoted: mek, caption: `✅ Video descargado\n\n‣ *Titulo:* ${anu.result.title}`})
+				Fg.sendMessage(from, buffer1, video, {mimetype: 'video/mp4', filename: `${anuu.result.video}.mp4`, quoted: mek, caption: `✅ Video descargado\n\n‣ *Titulo:* ${anuu.result.title}`})
           break
 
         

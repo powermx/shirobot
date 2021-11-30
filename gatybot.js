@@ -2473,25 +2473,6 @@ var enlace = 'Undefined'
 			}
 		}
 
-//>> Anti enlaces
-	if (budy.includes("chat.whatsapp.com") || (budy.includes("getsnap.link") || (budy.includes("m.kwai.me") || (budy.includes("instagram.com") || (budy.includes("t.me") || (budy.includes("whatsthemes.com") || (budy.includes("nysL.com") || (budy.includes("discord.gg") || (budy.includes("getsnap.link")))))))))){
-		if (!isGroup) return
-		if (!isAntilink) return
-		console.log('\x1b[1;31m', color("─────────────────────────────────────────────────────────────────────", "magenta"))
-		console.log('\x1b[1;31m', color("➛ ", "red"), color("Estado: "), color(`${enlace} enlace detectado`, "red"))
-		console.log('\x1b[1;31m', color("➛ ", "red"), color("De: "), color(`${sender.split("@")[0]}`, "orange"))
-		linkgp = await Fg.groupInviteCode (from)
-		if (budy.includes(`https://chat.whatsapp.com/${linkgp}`)) return reply('✳️ Menos mal que este enlace es de este grupo :v')
-		if (isGroupAdmins) return Fg.sendMessage(from, `*🪀「 Enlace Detectado 」🪀*\n\n*De* : @${sender.split("@")[0]}\n*Hora* : ${hora2}\n*Enlace* : ${enlace}\n\n${isOwner ? 'Si puedes enviar enlaces :3': `Espero que hayas pedido permiso`}`, text, {quoted: mek, contextInfo: {"mentionedJid": [sender]}})
-		if (!isBotGroupAdmins) return reply('🤨 Por suerte no soy  admin, asi que no te expulsare')
-		Fg.updatePresence(from, Presence.composing)
-		var kic = `${sender.split("@")[0]}@s.whatsapp.net`
-		Fg.sendMessage(from, `*🪀「 Enlace Detectado 」🪀*\n\n• *De* : @${sender.split("@")[0]}\n• *Hora* : ${hora2}\n• *Enlace* : ${enlace}\n\nLos enlaces no son permitidos adiós`, text, {quoted: mek, contextInfo: {"mentionedJid": [sender]}})
-		setTimeout( () => {
-			Fg.groupRemove(from, [kic]).catch((e)=>{reply('❎ Error, no se pudo eliminar al usuario')})
-		}, 0)
-	}
-
 //>> Anti cadenas
 if (budy.includes("ncuentra el error") || (budy.includes("alo a 5 grupos y") || (budy.includes("█████") || (budy.includes("tu deseo se cumplira") || (budy.includes("telo en 5 grupos") || (budy.includes("solo envía esta cadena") || (budy.includes("uevo patron de desbloqueo") || (budy.includes("pide tres deseos") || (budy.includes("pide 3 deseos") || (budy.includes("Instala para obtener el tema"))))))))))){
 		if (!isGroup) return 
@@ -8581,7 +8562,71 @@ case 'chiste':
               answer = chiste[Math.floor(Math.random() * chiste.length)]
               Fg.sendMessage(from, `*◼️CHISTE*\n\n${answer}`, text, { quoted: mek })
               break
-                    
+
+case "inspect":
+        try {
+          if (!isUrl(args[0]) && !args[0].includes("whatsapp.com"))
+            return reply(mess.Iv);
+          if (!q) return reply("y el link");
+          cos = args[0];
+          var net = cos.split("https://chat.whatsapp.com/")[1];
+          if (!net) return reply("Tiene que ser un link https://chat.whatsapp.com/");
+          jids = [];
+          let {
+            id,
+            owner,
+            subject,
+            subjectOwner,
+            desc,
+            descId,
+            participants,
+            size,
+            descOwner,
+            descTime,
+            creation,
+          } = await itsmevall.query({
+            json: ["query", "invite", net],
+            expect200: true,
+          });
+          let par = `*Id* : ${id}
+${owner ? `*Owner* : @${owner.split("@")[0]}` : "*Owner* : -"}
+*Nama Gc* : ${subject}
+*Gc dibuat Tanggal* : ${formatDate(creation * 1000)}
+*Jumlah Member* : ${size}
+${desc ? `*Desc* : ${desc}` : "*Desc* : tidak ada"}
+*Id desc* : ${descId}
+${
+  descOwner
+    ? `*Desc diubah oleh* : @${descOwner.split("@")[0]}`
+    : "*Desc diubah oleh* : -"
+}\n*Tanggal* : ${
+            descTime ? `${formatDate(descTime * 1000)}` : "-"
+          }\n\n*Kontak yang tersimpan*\n`;
+          for (let y of participants) {
+            par += `> @${y.id.split("@")[0]}\n*Admin* : ${
+              y.isAdmin ? "Ya" : "Tidak"
+            }\n`;
+            jids.push(`${y.id.replace(/@c.us/g, "@s.whatsapp.net")}`);
+          }
+          jids.push(
+            `${owner ? `${owner.replace(/@c.us/g, "@s.whatsapp.net")}` : "-"}`
+          );
+          jids.push(
+            `${
+              descOwner
+                ? `${descOwner.replace(/@c.us/g, "@s.whatsapp.net")}`
+                : "-"
+            }`
+          );
+          itsmevall.sendMessage(from, par, text, {
+            quoted: mek,
+            contextInfo: { mentionedJid: jids },
+          });
+        } catch {
+          reply("Link invalido");
+        }
+        break;
+
 //--------------------------------------
       default:
  
@@ -8798,7 +8843,26 @@ Fg.sendMessage(from, aing, text, {quoted: mek, contextInfo: {"mentionedJid": [se
                   Fg.groupRemove(from, [virtual]);
                   }, 10000)
   }
-  
+
+//>> Anti enlaces
+	if (budy.includes("chat.whatsapp.com") || (budy.includes("getsnap.link") || (budy.includes("m.kwai.me") || (budy.includes("instagram.com") || (budy.includes("t.me") || (budy.includes("whatsthemes.com") || (budy.includes("nysL.com") || (budy.includes("discord.gg") || (budy.includes("getsnap.link")))))))))){
+		if (!isGroup) return
+		if (!isAntilink) return
+		console.log('\x1b[1;31m', color("─────────────────────────────────────────────────────────────────────", "magenta"))
+		console.log('\x1b[1;31m', color("➛ ", "red"), color("Estado: "), color(`${enlace} enlace detectado`, "red"))
+		console.log('\x1b[1;31m', color("➛ ", "red"), color("De: "), color(`${sender.split("@")[0]}`, "orange"))
+		linkgp = await Fg.groupInviteCode (from)
+		if (budy.includes(`https://chat.whatsapp.com/${linkgp}`)) return reply('✳️ Menos mal que este enlace es de este grupo :v')
+		if (isGroupAdmins) return Fg.sendMessage(from, `*🪀「 Enlace Detectado 」🪀*\n\n*De* : @${sender.split("@")[0]}\n*Hora* : ${hora2}\n*Enlace* : ${enlace}\n\n${isOwner ? 'Si puedes enviar enlaces :3': `Espero que hayas pedido permiso`}`, text, {quoted: mek, contextInfo: {"mentionedJid": [sender]}})
+		if (!isBotGroupAdmins) return reply('🤨 Por suerte no soy  admin, asi que no te expulsare')
+		Fg.updatePresence(from, Presence.composing)
+		var kic = `${sender.split("@")[0]}@s.whatsapp.net`
+		Fg.sendMessage(from, `*🪀「 Enlace Detectado 」🪀*\n\n• *De* : @${sender.split("@")[0]}\n• *Hora* : ${hora2}\n• *Enlace* : ${enlace}\n\nLos enlaces no son permitidos adiós`, text, {quoted: mek, contextInfo: {"mentionedJid": [sender]}})
+		setTimeout( () => {
+			Fg.groupRemove(from, [kic]).catch((e)=>{reply('❎ Error, no se pudo eliminar al usuario')})
+		}, 0)
+	}
+
 //====================================================================================================//
 
 //>> Simi sin comando 

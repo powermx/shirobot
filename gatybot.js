@@ -8525,6 +8525,14 @@ console.log('\x1b[1;31m', color("➛ ", "red"), color("De: "), color(`${sender.s
                         aing = `Hola @${sender.split("@")[0]} el comando *${prefix + command}* no esta en mi menú`
 Fg.sendMessage(from, aing, text, {quoted: mek, contextInfo: {"mentionedJid": [sender]}})
 				  }
+				
+				if (budy.startsWith("/menu") || (budy.startsWith(".menu") || (budy.startsWith("#menu") || (budy.startsWith("$menu"))))){
+					const menaa =["https://i.ibb.co/fdc3NS9/menu-0.webp", "https://i.ibb.co/FqqS56C/menu-1.webp", "https://i.ibb.co/ynTFVrJ/menu-2.webp"]
+                    menee = menaa[Math.floor(Math.random() * menaa.length)]
+                    mini = await getBuffer(menee)
+                    Fg.sendMessage(from, mini, MessageType.sticker, {quoted: mek})
+                    }
+				
                   if (budy.includes(`___Gracias bot`)) {
                   reply(`De nada 😊 estoy para ayudarte`)
                   }

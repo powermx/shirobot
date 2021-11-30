@@ -2649,9 +2649,6 @@ break
       	lvlh = getLevelingLevel(sender)
           infost = await Fg.getStatus(`${sender.split('@')[0]}@c.us`)
 	      infost = infost.status == 401 ? 'sin info' : infost.status
-	      const loliranx =['shiro0', 'loli0', 'loli1']
-	      const loliranz = loliranx[Math.floor(Math.random() * loliranx.length)]
-	      lolixdv = loliranz
           imgth = fs.readFileSync('./almacenamiento/imagenes/gaty_4.jpg')
           autorfg = `${sender.split("@")[0]}`
         
@@ -2917,7 +2914,7 @@ break
   ℹ️ ${prefix}join
   ℹ️ ${prefix}ayuda`
 
-py =  await Fg.prepareMessage(from, imgth, image, {quoted: mek, thumbnail: gaty4, contextInfo: {externalAdReply: {title: `>⃗✗᳙᳓gaty ᭲ bot͢ 式⁩`,body: "© Created by gatito", previewType: "PHOTO", thumbnail: lolixdv, sourceUrl:``}}})
+py =  await Fg.prepareMessage(from, imgth, image, {quoted: mek, thumbnail: gaty4, contextInfo: {externalAdReply: {title: `>⃗✗᳙᳓gaty ᭲ bot͢ 式⁩`,body: "© Created by gatito", previewType: "PHOTO", thumbnail: shiro0, sourceUrl:``}}})
 
 gbutsan = [
 {buttonId: `${prefix}creador`, buttonText: {displayText: '🐱 CREADOR'}, type: 1},
@@ -4917,7 +4914,7 @@ await Fg.sendMessage(from, options, text)
 break
 ;
 
-//-------(𝗗𝗘𝗦𝗖𝗔𝗥𝗚A𝗦 -  𝗦𝗧𝗔𝗟𝗞𝗦) 𝗜𝗡𝗦𝗧𝗔 - 𝗧𝗜𝗞𝗧𝗢𝗞------
+//-------(𝗗𝗘𝗦𝗖𝗔𝗥??A𝗦 -  𝗦𝗧𝗔𝗟𝗞𝗦) 𝗜𝗡𝗦𝗧𝗔 - 𝗧𝗜𝗞𝗧𝗢𝗞------
       case 'tiktok':
       if(!isVerify) return isUser()
   if (isBanned) return reply(banf())

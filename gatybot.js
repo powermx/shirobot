@@ -6655,7 +6655,7 @@ if(!isVerify) return isUser()
 		if (args.length < 1) return reply(`✳️ *Ingresa el nombre de una música*\n\n📌Ejemplo: *${prefix + command}* Lil Peep broken smile`)
 				reply(wait()) 
 				play8 = args.join(" ")
-				const anuuu = await fetchJson(`https://api.zeks.me/api/ytplaymp4?apikey=apivinz&q=${play8}`)
+				const anuuu = await fetchJson(`https://api.zeks.me/api/ytplaymp3/2?apikey=apivinz&q=${play8}`)
 				if (anuuu.error) return reply(anuuu.error)
 				size = anuuu.result.size
 				infomp3 = `*🎶Musica encontrada*
@@ -6669,7 +6669,7 @@ El audio se esta enviando espere`
 				bufferr = await getBuffer(anuuu.result.thumbnail)
 				Fg.sendMessage(from, bufferr, image, {quoted: mek, caption: infomp3})
 				setTimeout( () => {
-					if (Number(size.split(' MB')[0]) >= 30.00) return reply(`✳️ El archivo es demasiado grande, la descarga del audio se canceló`)
+					if (Number(size.split(' MB')[0]) >= 7.00) return reply(`✳️ El archivo es demasiado grande, la descarga del audio se canceló`)
                   }, 5000)
 				bufferr1 = await getBuffer(anuuu.result.url_video)
 				Fg.sendMessage(from, bufferr1, audio, { mimetype: 'audio/mp4', quoted: mek})
@@ -6713,7 +6713,7 @@ if(!isVerify) return isUser()
 		if (args.length < 1) return reply(`✳️ *Ingresa el nombre de un video*\n\n📌Ejemplo: *${prefix + command}* Lil Peep broken smile`)
 				reply(wait()) 
 				play7 = args.join(" ")
-				const anuu = await fetchJson(`https://api.zeks.xyz/api/ytplaymp4?q=${play7}&apikey=oCHDwj8ggZGBGjU5WIaK5Rctu6c`)
+				const anuu = await fetchJson(`https://api.zeks.me/api/ytplaymp4/2?apikey=apivinz&q=${play7}`)
 				if (anuu.error) return reply(anuu.error)
 				size = anuu.result.size
 				infomp3 = `*🎥Vídeo encontrado*

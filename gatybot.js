@@ -6624,7 +6624,7 @@ console.log(e)
 }
 break
 
-case 'play':
+case 'play2':
                 if(!isVerify) return isUser()
                 if (isBanned) return reply(banf())
                 if (args.length < 1) return reply(`✳️ *Ingresa el nombre de una música*\n\n📌Ejemplo: *${prefix + command}* Lil Peep broken smile`)
@@ -6641,7 +6641,7 @@ case 'play':
 ‣ *⏰Duración* : ${res1.all[0].timestamp}
 ‣ *🔗Link* : ${res1.all[0].author.url}
 
-El archivo se esta enviando espere` 
+El audio se esta enviando espere` 
                 sendFileFromUrl(res1.all[0].image, image, {quoted: mek, caption: thumbInfo})
                 res1 = await y2mateA(res1.all[0].url).catch(e => {
                 })
@@ -6649,7 +6649,7 @@ El archivo se esta enviando espere`
                 }
                 break
 
-case 'play2':
+case 'play':
 if(!isVerify) return isUser()
   if (isBanned) return reply(banf())
 		if (args.length < 1) return reply(`✳️ *Ingresa el nombre de una música*\n\n📌Ejemplo: *${prefix + command}* Lil Peep broken smile`)
@@ -6658,14 +6658,19 @@ if(!isVerify) return isUser()
 				const anuuu = await fetchJson(`https://api.zeks.me/api/ytplaymp4?apikey=apivinz&q=${play8}`)
 				if (anuuu.error) return reply(anuuu.error)
 				size = anuuu.result.size
-				infomp3 = `❒════❬ *AUDIO* ❭═════╾❒
-├‣ *Nombre* : ${anuuu.result.title}
-├‣ *Fuente* : ${anuuu.result.source}
-├‣ *Tamaño* : ${anuuu.result.size}
-❒════════════════╾❒`
+				infomp3 = `*🎶Musica encontrada*
+				
+‣ *📌Título* : ${anuuu.result.title}
+‣ *📂Archivo* : Mp3
+‣ *⚖️Tamaño* : ${anuuu.result.size}
+‣ *🔗Link* : ${anuuu.result.source}
+
+El audio se esta enviando espere`
 				bufferr = await getBuffer(anuuu.result.thumbnail)
 				Fg.sendMessage(from, bufferr, image, {quoted: mek, caption: infomp3})
-				if (Number(size.split(' MB')[0]) >= 5.00) return reply(`✳️ El archivo es demasiado grande, la descarga del audio se canceló`)
+				setTimeout( () => {
+					if (Number(size.split(' MB')[0]) >= 30.00) return reply(`✳️ El archivo es demasiado grande, la descarga del audio se canceló`)
+                  }, 5000)
 				bufferr1 = await getBuffer(anuuu.result.url_video)
 				Fg.sendMessage(from, bufferr1, audio, { mimetype: 'audio/mp4', quoted: mek})
 				.catch((err) => {
@@ -6673,9 +6678,9 @@ if(!isVerify) return isUser()
 					})
           break
 
-case 'playvid': 
- case 'playmp4': 
- case 'playvideo': 
+case 'playvid2': 
+ case 'playmp42': 
+ case 'playvideo2': 
 if(!isVerify) return isUser()
 if (isBanned) return reply(banf())
 if (args.length < 1) return reply(`✳️ *Ingresa el nombre de un video*\n\n📌Ejemplo: *${prefix + command}* Lil Peep broken smile`)
@@ -6687,7 +6692,7 @@ reply(wait())
    music = `*🎥Vídeo encontrado*
 
 ‣ *📌Título* : ${link[0].title}
-‣ *📂Archivo* : Mp3
+‣ *📂Archivo* : Mp4
 ‣ *⏰Duración* : ${link[0].timestamp}
 ‣ *🔗Link* : ${link[0].url}
 
@@ -6700,9 +6705,9 @@ sendFileFromUrl(link[0].image, image, {quoted: mek, caption: music})
 
 //----
 
-case 'playvid2':
-case 'video2':
-case 'playvideo2': 
+case 'playvid':
+case 'video':
+case 'playvideo': 
 if(!isVerify) return isUser()
   if (isBanned) return reply(banf())
 		if (args.length < 1) return reply(`✳️ *Ingresa el nombre de un video*\n\n📌Ejemplo: *${prefix + command}* Lil Peep broken smile`)
@@ -6711,14 +6716,19 @@ if(!isVerify) return isUser()
 				const anuu = await fetchJson(`https://api.zeks.xyz/api/ytplaymp4?q=${play7}&apikey=oCHDwj8ggZGBGjU5WIaK5Rctu6c`)
 				if (anuu.error) return reply(anuu.error)
 				size = anuu.result.size
-				infomp3 = `❒════❬ *VIDEO* ❭═════╾❒
-├‣ *Nombre* : ${anuu.result.title}
-├‣ *Fuente* : ${anuu.result.source}
-├‣ *Tamaño* : ${anuu.result.size}
-❒════════════════╾❒`			
+				infomp3 = `*🎥Vídeo encontrado*
+				
+‣ *📌Título* : ${anuu.result.title}
+‣ *📂Archivo* : Mp4
+‣ *⚖️Tamaño* : ${anuu.result.size}
+‣ *🔗Link* : ${anuu.result.source}
+
+El vídeo se esta enviando espere`			
 				buffer = await getBuffer(anuu.result.thumbnail)
 				Fg.sendMessage(from, buffer, image, {quoted: mek, caption: infomp3})
-				if (Number(size.split(' MB')[0]) >= 30.00) return reply(`✳️ El archivo es demasiado grande, la descarga del video se canceló`)
+				setTimeout( () => {
+					if (Number(size.split(' MB')[0]) >= 30.00) return reply(`✳️ El archivo es demasiado grande, la descarga del video se canceló`)
+                  }, 5000)
 				buffer1 = await getBuffer(anuu.result.url_video)
 				Fg.sendMessage(from, buffer1, video, {mimetype: 'video/mp4', filename: `${anuu.result.video}.mp4`, quoted: mek, caption: `✅ Video descargado\n\n‣ *Titulo:* ${anuu.result.title}`})
 				.catch((err) => {

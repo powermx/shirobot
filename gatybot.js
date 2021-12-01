@@ -4971,25 +4971,25 @@ if(!isVerify) return isUser()
 		if (args.length < 1) return reply(`✳️ *Ingresa el nombre de un video*\n\n📌Ejemplo: *${prefix + command}* [link]`)
 				reply(wait()) 
 				play7 = args.join(" ")
-				const anuee = await fetchJson(`https://api.zeks.me/api/ytplaymp4/2?apikey=apivinz&q=${play7}`)
-				if (anue.error) return reply(anuee.error)
-				size = anuee.result.size
+				const anua = await fetchJson(`https://api.zeks.me/api/ytplaymp4/2?apikey=apivinz&q=${play7}`)
+				if (anua.error) return reply(anua.error)
+				size = anua.result.size
 				infomp3 = `*🎥Vídeo encontrado*
 				
-‣ *📌Título* : ${anuee.result.title}
+‣ *📌Título* : ${anua.result.title}
 ‣ *📂Archivo* : Mp4
-‣ *⚖️Tamaño* : ${anuee.result.size}
-‣ *🔗Link* : ${anuee.result.source}
+‣ *⚖️Tamaño* : ${anua.result.size}
+‣ *🔗Link* : ${anua.result.source}
 
 El vídeo se esta enviando espere`			
-				buffer = await getBuffer(anuee.result.thumb)
+				buffer = await getBuffer(anua.result.thumb)
 				Fg.sendMessage(from, buffer, image, {quoted: mek, caption: infomp3, thumbnail: buffer})
 				setTimeout( () => {
 					if (Number(size.split(' MB')[0]) >= 30.00) return reply(`✳️ El archivo es demasiado grande, la descarga del video se canceló`)
                   }, 5000)
                   if (Number(size.split(' MB')[0]) >= 30.00) return 
-				buffer1 = await getBuffer(anuee.result.link)
-				Fg.sendMessage(from, buffer1, video, {mimetype: 'video/mp4', filename: `${anuee.result.video}.mp4`, quoted: mek, caption: `✅ Video descargado\n\n‣ *Titulo:* ${anuee.result.title}`, thumbnail: buffer})
+				buffer1 = await getBuffer(anua.result.link)
+				Fg.sendMessage(from, buffer1, video, {mimetype: 'video/mp4', filename: `${anua.result.video}.mp4`, quoted: mek, caption: `✅ Video descargado\n\n‣ *Titulo:* ${anua.result.title}`, thumbnail: buffer})
 				.catch((err) => {
 					reply(`❎ Error, intente de nuevo mas tarde`); 
 					})

@@ -8207,7 +8207,11 @@ result = `  *「  Descarga de MediaFire 」*
 
 El archivo se esta enviando`
 Fg.sendMessage(from, result, text, {quoted: mek})
-sendFileFromUrl(resm[0].link, MessageType.document, {mimetype: resm[0].mime, filename: 'Minecraft PE 1.18.0.02 Oficial - (by gatito).apk', quoted: mek })
+setTimeout( () => {
+	if (Number(size.split('MB')[0]) >= 30.00) return reply(`✳️ El archivo es demasiado grande, la descarga se canceló`)
+	}, 10000)
+	if (Number(size.split('MB')[0]) >= 30.00) return 
+sendFileFromUrl(resm[0].link, MessageType.document, {mimetype: resm[0].mime, filename: resm[0].nombre, quoted: mek })
 .catch((err) => {
             reply(`❎ Error, intente de nuevo mas tarde`); 
             })

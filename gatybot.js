@@ -2687,10 +2687,10 @@ break
   📥 ${prefix}playvid2
   📥 ${prefix}ytmp3
   📥 ${prefix}ytmp4
-  📥 ${prefix}instagram
-  📥 ${prefix}igstory
-  📥 ${prefix}tiktok
-  📥 ${prefix}tiktokaudio
+  📥 ${prefix}instagram [error]
+  📥 ${prefix}igstory [error]
+  📥 ${prefix}tiktok [error]
+  📥 ${prefix}tiktokaudio [error]
   📥 ${prefix}mdfire
 
     *BUSQUEDA*
@@ -4935,94 +4935,66 @@ break
      limitAdd(sender, limit)
      		break
         
-      case 'ytmp3':
-			  if(!isVerify) return isUser()
+     case 'ytmp3':
+if(!isVerify) return isUser()
   if (isBanned) return reply(banf())
-  if(!isPremium)return reply(premi())
-  if (isLimit(sender, isPremium, isOwner, limitCount, limit)) return reply(fdiama(prefix))
-					if (args.length < 1) return reply(`✳️ Use en comando más el link de YouTube\n\n📌 Ejemplo: *${prefix + command}* https://www.youtube.com/watch?v=_aelrhBsIRE`)
-			let isLinks = args[0].match(/(?:https?:\/{2})?(?:w{3}\.)?youtu(?:be)?\.(?:com|be)(?:\/watch\?v=|\/)([^\s&]+)/)
-			if (!isLinks) return reply(err(prefix))
-				try {
+		if (args.length < 1) return reply(`✳️ *Ingresa el nombre de una música*\n\n📌Ejemplo: *${prefix + command}* [link]`)
 				reply(wait()) 
-				yta(args[0])
-				.then((res) => {
-				const { dl_link, thumb, title, filesizeF, filesize } = res
-				axios.get(`https://tinyurl.com/api-create.php?url=${dl_link}`)
-				.then((a) => {
-					
-			    if (Number(filesize) >= 30000) return sendMediaURL(from, thumb, `
-*✅ Descarga Completa*
-
-‣ *📌Título* : ${title}
-‣ *📟 Ext* : mp3
-‣ *⚖️Tamaño* : ${filesizeF}
-‣ *🔗 Link* : ${a.data}
-
-_📤 La música se está enviando, si no llega descargue por el link_`)
-				const captions = `
-*✅ Descarga Completa*
-
-‣ *📌Título* : ${title}
-‣ *📟 Ext* : mp3
-‣ *⚖️Tamaño* : ${filesizeF}
-‣ *🔗 Link* : ${a.data}
-
-_📤 La música se está enviando, si no llega descargue por el link_`
-				sendMediaURL(from, thumb, captions)
-				sendMediaURL(from, dl_link).catch(() => reply(mess.error.api))
-				limitAdd(sender, limit)
-				})
-				})
-				} catch (err) {
-				reply(mess.error.api)}
-				break
+				play8 = args.join(" ")
+				const anue = await fetchJson(`https://api.zeks.me/api/ytmp3/2?apikey=apivinz&url=https://youtu.be/5laKhn3I7bU`)
+				if (anue.error) return reply(anue.error)
+				size = anue.result.size
+				infomp3 = `*🎶Musica encontrada*
 				
- 		case 'ytmp4':
-			  if(!isVerify) return isUser()
+‣ *📌Título* : ${anue.result.title}
+‣ *📂Archivo* : Mp3
+‣ *⚖️Tamaño* : ${anue.result.size}
+‣ *🔗Link* : ${anue.result.source}
+
+El audio se esta enviando espere`
+				bufferr = await getBuffer(anue.result.thumb)
+				Fg.sendMessage(from, bufferr, image, {quoted: mek, caption: infomp3, thumbnail: bufferr})
+				setTimeout( () => {
+					if (Number(size.split(' MB')[0]) >= 7.00) return reply(`✳️ El archivo es demasiado grande, la descarga del audio se canceló`)
+                  }, 5000)
+                  if (Number(size.split(' MB')[0]) >= 7.00) return 
+				bufferr1 = await getBuffer(anue.result.link)
+				Fg.sendMessage(from, bufferr1, audio, { mimetype: 'audio/mp4', quoted: mek})
+				.catch((err) => {
+					reply(`❎ Error, intente de nuevo mas tarde`); 
+					})
+          break
+     
+case 'ytmp4':
+if(!isVerify) return isUser()
   if (isBanned) return reply(banf())
-  if(!isPremium)return reply(premi())
-  if (isLimit(sender, isPremium, isOwner, limitCount, limit)) return reply(fdiama(prefix))
-					if (args.length < 1) return reply(`✳️ Use en comando más el link de YouTube\n\n📌 Ejemplo: *${prefix + command}* https://www.youtube.com/watch?v=_aelrhBsIRE`)
-			let isLinks2 = args[0].match(/(?:https?:\/{2})?(?:w{3}\.)?youtu(?:be)?\.(?:com|be)(?:\/watch\?v=|\/)([^\s&]+)/)
-			if (!isLinks2) return reply(err(prefix))
-				try {
+		if (args.length < 1) return reply(`✳️ *Ingresa el nombre de un video*\n\n📌Ejemplo: *${prefix + command}* [link]`)
 				reply(wait()) 
-				ytv(args[0])
-				.then((res) => {
-					
-				const { dl_link, thumb, title, filesizeF, filesize } = res
-				axios.get(`https://tinyurl.com/api-create.php?url=${dl_link}`)
-				.then((a) => {
-				if (Number(filesize) >= 90000) return sendMediaURL(from, thumb, `
-*✅ Descarga Completa*
-
-‣ *📌Título* : ${title}
-‣ *📟 Ext* : mp4
-‣ *⚖️Tamaño* : ${filesizeF}
-‣ *🔗 Link* : ${a.data}
-
-_📤 El video se está enviando, si no llega descargue por el link_`)
-				const captionsYtmp4 = `
-*✅ Descarga Completa*
-
-‣ *📌Título* : ${title}
-‣ *?? Ext* : mp4
-‣ *⚖️Tamaño* : ${filesizeF}
-‣ *🔗 Link* : ${a.data}
-
-_📤 El video se está enviando, si no llega descargue por el link_`
-				sendMediaURL(from, thumb, captionsYtmp4)
-				sendMediaURL(from, dl_link).catch(() => reply(mess.error.api))
-				limitAdd(sender, limit)
-				})		
-				})
-				} catch (err) {
-			    reply(mess.error.api)
-				}
-				break
+				play7 = args.join(" ")
+				const anuee = await fetchJson(`https://api.zeks.me/api/ytplaymp4/2?apikey=apivinz&q=${play7}`)
+				if (anue.error) return reply(anuee.error)
+				size = anuee.result.size
+				infomp3 = `*🎥Vídeo encontrado*
 				
+‣ *📌Título* : ${anuee.result.title}
+‣ *📂Archivo* : Mp4
+‣ *⚖️Tamaño* : ${anuee.result.size}
+‣ *🔗Link* : ${anuee.result.source}
 
+El vídeo se esta enviando espere`			
+				buffer = await getBuffer(anuee.result.thumb)
+				Fg.sendMessage(from, buffer, image, {quoted: mek, caption: infomp3, thumbnail: buffer})
+				setTimeout( () => {
+					if (Number(size.split(' MB')[0]) >= 30.00) return reply(`✳️ El archivo es demasiado grande, la descarga del video se canceló`)
+                  }, 5000)
+                  if (Number(size.split(' MB')[0]) >= 30.00) return 
+				buffer1 = await getBuffer(anuee.result.link)
+				Fg.sendMessage(from, buffer1, video, {mimetype: 'video/mp4', filename: `${anuee.result.video}.mp4`, quoted: mek, caption: `✅ Video descargado\n\n‣ *Titulo:* ${anuee.result.title}`, thumbnail: buffer})
+				.catch((err) => {
+					reply(`❎ Error, intente de nuevo mas tarde`); 
+					})
+          break
+     
       case 'igfoto':       
                  case 'igvideo':    
                     case 'ig':
@@ -6702,8 +6674,9 @@ El audio se esta enviando espere`
           break
 
 case 'playvid2': 
- case 'playmp42': 
- case 'playvideo2': 
+case 'playmp42': 
+case 'audio': 
+case 'playvideo2': 
 if(!isVerify) return isUser()
 if (isBanned) return reply(banf())
 if (args.length < 1) return reply(`✳️ *Ingresa el nombre de un video*\n\n📌Ejemplo: *${prefix + command}* Lil Peep broken smile`)

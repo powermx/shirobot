@@ -3084,7 +3084,7 @@ if(!isVerify) return isUser()
 Responde con *${prefix}simi* _tu mensaje_
 
 *📌Ejemplo:* ${prefix}simi hola`
-if (args.length < 1) return Fg.sendMessage(from, simiimg, image, {caption: simitext, quoted: mek, contextInfo: {"mentionedJid": [sender]}})
+if (args.length < 1) return Fg.sendMessage(from, simiimg, image, {caption: simitext, quoted: mek, thumbnail: simiimg, contextInfo: {"mentionedJid": [sender]}})
                      texto = args.join(' ')
                      anu = await fetchJson(`https://api.simsimi.net/v2/?text=${texto}&lc=es`, {method: 'GET'})
                      simfg = (`${anu.success} 🐤`)      

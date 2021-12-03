@@ -6715,7 +6715,7 @@ if(!isVerify) return isUser()
 				play7 = args.join(" ")
 				const anuu = await fetchJson(`https://api.zeks.me/api/ytplaymp4/2?apikey=apivinz&q=${play7}`)
 				if (anuu.error) return reply(anuu.error)
-				const sizze = anuu.result.size
+				const size = anuu.result.size
 				infomp3 = `*🎥Vídeo encontrado*
 				
 ‣ *📌Título* : ${anuu.result.title}
@@ -6727,9 +6727,9 @@ El vídeo se esta enviando espere`
 				buffer = await getBuffer(anuu.result.thumb)
 				Fg.sendMessage(from, buffer, image, {quoted: mek, caption: infomp3, thumbnail: buffer})
 				setTimeout( () => {
-					if (Number(sizze.split(' MB')[0]) >= 30.00) return reply(`✳️ El archivo es demasiado grande, la descarga del video se canceló`)
+					if (Number(size.split(' MB')[0]) >= 30.00) return reply(`✳️ El archivo es demasiado grande, la descarga del video se canceló`)
                   }, 5000)
-                  if (Number(sizze.split(' MB')[0]) >= 30.00) return 
+                  if (Number(size.split(' MB')[0]) >= 30.00) return 
 				buffer1 = await getBuffer(anuu.result.link)
 				Fg.sendMessage(from, buffer1, video, {mimetype: 'video/mp4', filename: `${anuu.result.video}.mp4`, quoted: mek, caption: `✅ Video descargado\n\n‣ *Titulo:* ${anuu.result.title}`, thumbnail: buffer})
 				.catch((err) => {

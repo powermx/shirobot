@@ -6653,7 +6653,7 @@ if(!isVerify) return isUser()
 				play8 = args.join(" ")
 				const anuuu = await fetchJson(`https://api.zeks.me/api/ytplaymp3/2?apikey=apivinz&q=${play8}`)
 				if (anuuu.error) return reply(anuuu.error)
-				sizze = anuuu.result.size
+				const sizze = anuuu.result.size
 				infomp3 = `*🎶Musica encontrada*
 				
 ‣ *📌Título* : ${anuuu.result.title}
@@ -6715,7 +6715,7 @@ if(!isVerify) return isUser()
 				play7 = args.join(" ")
 				const anuu = await fetchJson(`https://api.zeks.me/api/ytplaymp4/2?apikey=apivinz&q=${play7}`)
 				if (anuu.error) return reply(anuu.error)
-				sizze = anuu.result.size
+				const sizze = anuu.result.size
 				infomp3 = `*🎥Vídeo encontrado*
 				
 ‣ *📌Título* : ${anuu.result.title}

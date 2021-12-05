@@ -88,8 +88,8 @@ ${mdata.subject}
 				let buff = await getBuffer(ppimg)			
              const bosco1 = await Fg.prepareMessage("0@s.whatsapp.net", buff, MessageType.location,{ thumbnail: buff})
 			 const bosco2 = bosco1.message["ephemeralMessage"] ? bosco1.message.ephemeralMessage : bosco1
-                welcomeBut = [{buttonId:`a`,buttonText:{displayText:'🐱 GRACIAS'},type:1}]
-                welcomeButt = { contentText: `${teks}`, footerText: `*Copyright ©MIRUSH-BOT 2021*`, buttons: welcomeBut, headerType: 6, locationMessage: bosco2.message.locationMessage}
+                welcomeBut = [{buttonId:`nada`,buttonText:{displayText:'🐱 GRACIAS'},type:1}]
+                welcomeButt = { contentText: `${teks}`, footerText: `*Copyright © gatybot*`, buttons: welcomeBut, headerType: 6, locationMessage: bosco2.message.locationMessage}
                 Fg.sendMessage(mdata.id, welcomeButt, MessageType.buttonsMessage, { caption: 'buff', "contextInfo": { "mentionedJid" : [num], },})
                  
 

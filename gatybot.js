@@ -6663,21 +6663,20 @@ if(!isVerify) return isUser()
 				play8 = args.join(" ")
 				const anuuu = await fetchJson(`https://api.zeks.me/api/ytplaymp3/2?apikey=apivinz&q=${play8}`)
 				if (anuuu.error) return reply(anuuu.error)
-				const sizze = anuuu.result.size
 				infomp3 = `*🎶Musica encontrada*
 				
 ‣ *📌Título* : ${anuuu.result.title}
 ‣ *📂Archivo* : Mp3
-‣ *⚖️Tamaño* : ${sizze}
+‣ *⚖️Tamaño* : ${anuuu.result.size}
 ‣ *🔗Link* : ${anuuu.result.source}
 
 El audio se esta enviando espere`
 				bufferr = await getBuffer(anuuu.result.thumb)
 				Fg.sendMessage(from, bufferr, image, {quoted: mek, caption: infomp3, thumbnail: bufferr})
 				setTimeout( () => {
-					if (Number(sizze.split(' MB')[0]) >= 7.00) return reply(`✳️ El archivo es demasiado grande, la descarga del audio se canceló`)
+					if (Number(anuuu.result.size.split(' MB')[0]) >= 7.00) return reply(`✳️ El archivo es demasiado grande, la descarga del audio se canceló`)
                   }, 5000)
-                  if (Number(sizze.split(' MB')[0]) >= 7.00) return 
+                  if (Number(anuuu.result.sizesplit(' MB')[0]) >= 7.00) return 
 				bufferr1 = await getBuffer(anuuu.result.link)
 				Fg.sendMessage(from, bufferr1, audio, { mimetype: 'audio/mp4', quoted: mek})
 				.catch((err) => {

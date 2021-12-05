@@ -6660,24 +6660,25 @@ if(!isVerify) return isUser()
   if (isBanned) return reply(banf())
 		if (args.length < 1) return reply(`✳️ *Ingresa el nombre de una música*\n\n📌Ejemplo: *${prefix + command}* Lil Peep broken smile`)
 				reply(wait()) 
-				play8 = args.join(" ")
-				const anuuu = await fetchJson(`https://api.zeks.me/api/ytplaymp3/2?apikey=apivinz&q=${play8}`)
-				if (anuuu.error) return reply(anuuu.error)
+				const play8 = args.join(" ")
+				const playanu = await fetchJson(`https://api.zeks.me/api/ytplaymp3/2?apikey=apivinz&q=${play8}`)
+				if (playanu.error) return reply(playanu.error)
+				sizea = playanu.result.split
 				infomp3 = `*🎶Musica encontrada*
 				
-‣ *📌Título* : ${anuuu.result.title}
+‣ *📌Título* : ${playanu.result.title}
 ‣ *📂Archivo* : Mp3
-‣ *⚖️Tamaño* : ${anuuu.result.size}
-‣ *🔗Link* : ${anuuu.result.source}
+‣ *⚖️Tamaño* : ${playanu.result.size}
+‣ *🔗Link* : ${playanu.result.source}
 
 El audio se esta enviando espere`
-				bufferr = await getBuffer(anuuu.result.thumb)
+				bufferr = await getBuffer(playanuresult.thumb)
 				Fg.sendMessage(from, bufferr, image, {quoted: mek, caption: infomp3, thumbnail: bufferr})
 				setTimeout( () => {
-					if (Number(anuuu.result.size.split(' MB')[0]) >= 7.00) return reply(`✳️ El archivo es demasiado grande, la descarga del audio se canceló`)
+					if (Number(sizea.split(' MB')[0]) >= 7.00) return reply(`✳️ El archivo es demasiado grande, la descarga del audio se canceló`)
                   }, 5000)
-                  if (Number(anuuu.result.sizesplit(' MB')[0]) >= 7.00) return 
-				bufferr1 = await getBuffer(anuuu.result.link)
+                  if (Number(sizea.sizesplit(' MB')[0]) >= 7.00) return 
+				bufferr1 = await getBuffer(playanu.result.link)
 				Fg.sendMessage(from, bufferr1, audio, { mimetype: 'audio/mp4', quoted: mek})
 				.catch((err) => {
 					reply(`❎ Error, intente de nuevo mas tarde`); 

@@ -62,10 +62,11 @@ CFonts.say(`gatybot by gatito`, {
     JSON.stringify(Fg.base64EncodedAuthInfo(), null, "\t")
   );
   
-  //𝗕𝗜𝗘𝗡𝗩𝗘𝗡𝗜𝗗𝗔 𝗬 𝗗𝗘𝗦𝗣𝗘𝗗𝗜𝗗𝗔 𝗰𝗼𝗻 𝗮𝗽𝗶 //
+
 Fg.on('group-participants-update', async (anu) => {
 	const _welcom = JSON.parse(fs.readFileSync('./database/group/welcom.json'))
-	const _bye = JSON.parse(fs.readFileSync('./database/group/bye.json'))	
+	//const _bye = JSON.parse(fs.readFileSync('./database/group/bye.json'))	
+	const _antidel = JSON.parse(fs.readFileSync('./database/group/antidelete.json'))
 		if (!_welcom.includes(anu.jid)) return
 		try {
 			const mdata = await Fg.groupMetadata(anu.jid)
@@ -99,10 +100,12 @@ ${mdata.subject}
          	if(!_bye.includes(anu.jid)) return 
          	//sólo foto user
          	let fotouser = await getBuffer(ppimg)
-         //
          	let img = await getBuffer(ppimg)
             teks = `_*Adios @${num.split('@')[0]}*_`
-            Fg.sendMessage(mdata.id, img, MessageType.image, {caption: teks, contextInfo: {'mentionedJid': [num]}})
+            //Fg.sendMessage(mdata.id, img, MessageType.image, {caption: teks, contextInfo: {'mentionedJid': [num]}})
+            Fg.sendMessage(mdata.id, welcomezz, MessageType.sticker, {quoted: mek})
+            
+            
 //------𝗔𝗗𝗠𝗜𝗡𝗦
 } else if (anu.action == 'promote') {
             let img = await getBuffer(ppimg)
@@ -135,12 +138,10 @@ ${mdata.subject}
 
 //antidelete 
 //=================================================//
-const _antidel = JSON.parse(fs.readFileSync('./database/group/antidelete.json'))
-
 Fg.on('message-delete', async (m) => {
-if (m.key.remoteJid == 'status@broadcast') return
-if (!m.key.fromMe && m.key.fromMe) return
-if (!_antidel.includes(m.jid)) return
+if (m.key.remoteJid == 'status@broadcast') return 
+if (!m.key.fromMe && m.key.fromMe) return 
+if (_antidel.includes(m.jid)) return 
 m.message = (Object.keys(m.message)[0] === 'ephemeralMessage') ? m.message.ephemeralMessage.message : m.message
 const jam = moment.tz('America/La_Paz').format('HH:mm:ss')
 let d = new Date

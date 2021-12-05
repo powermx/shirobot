@@ -6663,7 +6663,7 @@ if(!isVerify) return isUser()
 				const play8 = args.join(" ")
 				const playanu = await fetchJson(`https://api.zeks.me/api/ytplaymp3/2?apikey=apivinz&q=${play8}`)
 				if (playanu.error) return reply(playanu.error)
-				sizea = playanu.result.split
+				sizea = playanu.result.size
 				infomp3 = `*🎶Musica encontrada*
 				
 ‣ *📌Título* : ${playanu.result.title}

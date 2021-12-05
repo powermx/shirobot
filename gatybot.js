@@ -58,7 +58,6 @@ const { error } = require("qrcode-terminal");
 const CryptoJS = require("crypto-js");
 const crypto = require('crypto');
 const CFonts  = require('cfonts')
-const util = require('minecraft-server-util');
 //====================[ FIN DE MODULOS ]====================//
 
 
@@ -97,7 +96,7 @@ const apikeyimgbb = '04b9e9337ecb1ceb0250f81549301785'
 
 const _informe = JSON.parse(fs.readFileSync('./result/reportes/informe.json'));
 const _solicitud = JSON.parse(fs.readFileSync('./result/reportes/solicitud.json'));
-const confi = JSON.parse(fs.readFileSync('./settings.json'))
+const confi = JSON.parse(fs.readFileSync('./settings.json'));
 
 //====================================================================================================//
 
@@ -6830,7 +6829,7 @@ if(!isVerify) return isUser()
 				    limitAdd(sender, limit)
 					break
 					
-      case 'toimage': 
+case 'toimage': 
 case 'toimg':
 case 'aimg':
 case 'aimagen':

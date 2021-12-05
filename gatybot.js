@@ -6677,7 +6677,7 @@ El audio se esta enviando espere`
 				setTimeout( () => {
 					if (Number(sizea.split(' MB')[0]) >= 7.00) return reply(`✳️ El archivo es demasiado grande, la descarga del audio se canceló`)
                   }, 5000)
-                  if (Number(sizea.sizesplit(' MB')[0]) >= 7.00) return 
+                  if (Number(sizea.split(' MB')[0]) >= 7.00) return 
 				bufferr1 = await getBuffer(playanu.result.url_audio)
 				Fg.sendMessage(from, bufferr1, audio, { mimetype: 'audio/mp4', quoted: mek})
 				.catch((err) => {

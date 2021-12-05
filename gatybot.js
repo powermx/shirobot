@@ -6657,7 +6657,7 @@ if(!isVerify) return isUser()
 				
 ‣ *📌Título* : ${anuuu.result.title}
 ‣ *📂Archivo* : Mp3
-‣ *⚖️Tamaño* : ${anuuu.result.size}
+‣ *⚖️Tamaño* : ${sizze}
 ‣ *🔗Link* : ${anuuu.result.source}
 
 El audio se esta enviando espere`
@@ -6719,7 +6719,7 @@ if(!isVerify) return isUser()
 				
 ‣ *📌Título* : ${anuu.result.title}
 ‣ *📂Archivo* : Mp4
-‣ *⚖️Tamaño* : ${anuu.result.size}
+‣ *⚖️Tamaño* : ${size}
 ‣ *🔗Link* : ${anuu.result.source}
 
 El vídeo se esta enviando espere`			

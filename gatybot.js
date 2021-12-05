@@ -5063,7 +5063,7 @@ if (args.length < 1) return reply(`✳️ Ejemplo : ${prefix + command} Lil Peep
 		    		});
 		    		ytresult += `─── ${botname} ───`
 		    		
-		            Fg.sendMessage(from, tbuff, image, {quoted: mek, caption: ytresult})
+		            Fg.sendMessage(from, tbuff, image, {quoted: mek, caption: ytresult, thumbnail: tbuff})
 		            limitAdd(sender, limit)
 					break
 					

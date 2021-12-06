@@ -6158,7 +6158,7 @@ case 'bienvenida':
 					}
 		break
 
-case 'leave':
+case 'despedida':
 case 'left':
 case 'goodbye':
 case 'adios':

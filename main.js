@@ -97,12 +97,11 @@ ${mdata.subject}
             //-----𝗦𝗔𝗟𝗜𝗗𝗔 
          } else if (anu.action == 'remove') {
          	if(!_bye.includes(anu.jid)) return 
-         	//sólo foto user
-         	let fotouser = await getBuffer(ppimg)
-         //
-         	let img = await getBuffer(ppimg)
-            teks = `_*Adios @${num.split('@')[0]}*_`
-            Fg.sendMessage(mdata.id, img, MessageType.image, {caption: teks, contextInfo: {'mentionedJid': [num]}})
+            const byeaa =["https://i.ibb.co/MDdfmTL/bye-0.webp"]
+            byexx = byeaa[Math.floor(Math.random() * byeaa.length)]
+            byezz = await getBuffer(byexx)
+            Fg.sendMessage(mdata.id, byezz, MessageType.sticker )
+                    
 //------𝗔𝗗𝗠𝗜𝗡𝗦
 } else if (anu.action == 'promote') {
             let img = await getBuffer(ppimg)

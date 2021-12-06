@@ -7915,7 +7915,7 @@ case 'dado':
                     break
 
 case 'nada':
-                    const weelcomeaa =["https://i.ibb.co/6RK4M8v/welcome-0.webp", "https://i.ibb.co/PwNmbvg/welcome-1.webp", "https://i.ibb.co/zsTmfcY/welcome-2.webp"]
+                    const weelcomeaa =["https://i.ibb.co/6RK4M8v/welcome-0.webp", "https://i.ibb.co/PwNmbvg/welcome-1.webp", "https://i.ibb.co/fp9rHdX/welcome-2.webp","https://i.ibb.co/G3h4MBS/welcome-3.webp"]
                     welcomexx = weelcomeaa[Math.floor(Math.random() * weelcomeaa.length)]
                     welcomezz = await getBuffer(welcomexx)
                     Fg.sendMessage(from, welcomezz, MessageType.sticker, {quoted: mek})

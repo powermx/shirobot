@@ -8446,7 +8446,7 @@ if (mek.message.extendedTextMessage === undefined || mek.message.extendedTextMes
 
 					if (currentWWarn === undefined && checkIdWWarn === undefined) addWarnId(warnuser)
 					addWarn(warnuser, 1)
-					Fg.sendMessage(from, `✅ Se le dio la *${advertenciaa}* a @${warnuser.split("@")[0]}\n\n*📌Nota:* 4 advertencias = ban`, text, {quoted: mek, contextInfo: {"mentionedJid": [warnuser]}})
+					Fg.sendMessage(from, `✅ Se le dio la *${advertenciaa}* advertencia a @${warnuser.split("@")[0]}\n\n*📌Nota:* 4 advertencias = ban`, text, {quoted: mek, contextInfo: {"mentionedJid": [warnuser]}})
 		if (currentWWarn === 3) {
 			Fg.sendMessage(from, `✅ @${warnuser.split("@")[0]} has superado las 4 advertencias adiós`, text, {quoted: mek, contextInfo: {"mentionedJid": [warnuser]}})
 			setTimeout( () => {

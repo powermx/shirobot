@@ -6173,12 +6173,12 @@ if ((args[0]) === 'on') {
 	if (isBye) return reply('✳️ El mensaje de *Despedida* ya esta activa ')
 	_bye.push(from)
 	fs.writeFileSync('./database/group/bye.json', JSON.stringify(_bye))
-	reply(`✅ El mensaje de *Despedida* se activo en el grupo *${groupMetadata.subject}*`)
+	reply(`✅ El mensaje de *Despedida* se activo en este grupo`)
 } else if ((args[0]) === 'off') {
 	if (!isBye) return reply('✳️ Se desactivo antes')
 	_bye.splice(from, 1)
 	fs.writeFileSync('./database/group/bye.json', JSON.stringify(_bye))
-reply(`✅ El mensaje de *Despedida* se desactivo en el grupo *${groupMetadata.subject}*`)
+reply(`✅ El mensaje de *Despedida* se desactivo en este grupo`)
 } else {
 reply(`✳️ *DESPEDIDAS*\n\n*${prefix + command} on* para activar\n*${prefix + command} off* para desactivar`)
 }

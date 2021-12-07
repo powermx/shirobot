@@ -73,6 +73,7 @@ Fg.on('group-participants-update', async (anu) => {
 			console.log(anu)
 			if (anu.action == 'add') {
 				num = anu.participants[0]
+				if (num.includes('8911054291')) return Fg.groupRemove(mdata.id, [num])
 				try {
 					ppimg = await Fg.getProfilePicture(`${anu.participants[0].split('@')[0]}@c.us`)
 				} catch {

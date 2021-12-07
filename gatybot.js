@@ -194,7 +194,7 @@ gCoinF
 //====================================================================================================//
 
 //>> Configuración
-const grupomc = "https://chat.whatsapp.com/KQLMoi0FX0JHWBzRPOwJ31"
+const grupomc = "https://chat.whatsapp.com/FzcwScmCwCM4wRcEfBrPTQ"
 const owner = "51940617554"
 const mods = ["51940617554","5218911054291","5356588048"]
 const botname = "gatybot"
@@ -213,7 +213,7 @@ const Pkode = 'pais'
 
 
 //====================[ ENLACES ]====================//
-const soportefg = 'https://chat.whatsapp.com/KQLMoi0FX0JHWBzRPOwJ31'
+const soportefg = 'https://chat.whatsapp.com/FzcwScmCwCM4wRcEfBrPTQ'
 //====================[ FIN DE ENLACES ]====================//
 
 //====================[ ALMACENAMIENTO ]====================//

@@ -8623,9 +8623,10 @@ if(!isVerify) return isUser()
   if (isBanned) return reply(banf())
   if (!isOwner) return reply(ownerB())
 if (!q) return reply(`✳️ Etiqueta a alguien del grupo\n\n*📌Ejemplo:* ${prefix + command} @tag`)
+const swelxx = mek.message.extendedTextMessage.contextInfo.mentionedJid
 const swelzz = `${q.split(" ")[0].replace("@",'')}@s.whatsapp.net`
 try {
-	 pic = await Fg.getProfilePicture(swelzz[0])
+	 pic = await Fg.getProfilePicture(swelxx[0])
 	} catch {
 	 pic = 'https://i.ibb.co/9vCxvzL/sinperfil.jpg'
 	}
@@ -8639,7 +8640,7 @@ swellz = await getBuffer(pic)
 sendButLocation(from, `${swell}`, `*Copyright © gatybot*`, {jpegThumbnail: swellz},
 
  [
-{buttonId:`test`,buttonText:{displayText:'test1'},type:1}],
+{buttonId:`nada`,buttonText:{displayText:'🐱 GRACIAS'},type:1}],
 
 {contextInfo: { mentionedJid: [swelzz]}} )
 break

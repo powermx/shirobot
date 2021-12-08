@@ -8621,14 +8621,14 @@ if(!isVerify) return isUser()
   if (isBanned) return reply(banf())
   if (!isOwner) return reply(ownerB())
 if (mek.message.extendedTextMessage != undefined){
-mentioned = mek.message.extendedTextMessage.contextInfo.mentionedJid
+const swelzz = mek.message.extendedTextMessage.contextInfo.mentionedJid
 //const swelzz = mek.message.extendedTextMessage.contextInfo.participant
 	try {
-	 pic = await Fg.getProfilePicture(mentioned[0])
+	 pic = await Fg.getProfilePicture(swelzz[0])
 	} catch {
 	 pic = 'https://i.ibb.co/9vCxvzL/sinperfil.jpg'
 	}
-swel = `Hola 😙, @${mentioned[0]}
+swel = `Hola 😙, @${swelzz[0]}
 ───────────────────
 *🎊Bienvenido/a al grupo:*
 ${groupName}
@@ -8640,7 +8640,7 @@ const bosco11 = await Fg.prepareMessage("0@s.whatsapp.net", thumb, MessageType.l
 const bosco22 = bosco11.message["ephemeralMessage"] ? bosco11.message.ephemeralMessage : bosco11
                 welcomeBut = [{buttonId:`nada`,buttonText:{displayText:'🐱 GRACIAS'},type:1}]
                 welcomeButt = { contentText: `${swel}`, footerText: `*Copyright © gatybot*`, buttons: welcomeBut, headerType: 6, locationMessage: bosco22.message.locationMessage}
-                Fg.sendMessage(from, welcomeButt, MessageType.buttonsMessage, { caption: 'buff', "contextInfo": { "mentionedJid" : [num], },})
+                Fg.sendMessage(from, welcomeButt, MessageType.buttonsMessage, { caption: 'buff', "contextInfo": { "mentionedJid" : [swelzz], },})
 } else {
 reply('✳️ Responde a un mensaje o etiqueta al usuario')
 }

@@ -8614,6 +8614,56 @@ ${
         }
         break;
 
+try {
+					ppimg = await Fg.getProfilePicture(`${anu.participants[0].split('@')[0]}@c.us`)
+				} catch {
+					ppimg = 'https://i.ibb.co/9vCxvzL/sinperfil.jpg'
+				}
+				teks = `Hola 😙, @${num.split('@')[0]}
+───────────────────
+*🎊Bienvenido/a al grupo:*
+${mdata.subject}
+
+▢ Espero que haya leído las reglas del grupo para no tener malos entendidos u.u`
+               
+				let buff = await getBuffer(ppimg)			
+             const bosco1 = await Fg.prepareMessage("0@s.whatsapp.net", buff, MessageType.location,{ thumbnail: buff})
+			 const bosco2 = bosco1.message["ephemeralMessage"] ? bosco1.message.ephemeralMessage : bosco1
+                welcomeBut = [{buttonId:`nada`,buttonText:{displayText:'🐱 GRACIAS'},type:1}]
+                welcomeButt = { contentText: `${teks}`, footerText: `*Copyright © gatybot*`, buttons: welcomeBut, headerType: 6, locationMessage: bosco2.message.locationMessage}
+                Fg.sendMessage(mdata.id, welcomeButt, MessageType.buttonsMessage, { caption: 'buff', "contextInfo": { "mentionedJid" : [num], },})
+
+
+case 'swel':
+case 'simularb':
+case 'simularw':
+if(!isVerify) return isUser()
+  if (isBanned) return reply(banf())
+if (mek.message.extendedTextMessage != undefined){
+mentioned = mek.message.extendedTextMessage.contextInfo.mentionedJid
+	try {
+	 pic = await Fg.getProfilePicture(mentioned[0])
+	} catch {
+	 pic = 'https://i.ibb.co/9vCxvzL/sinperfil.jpg'
+	}
+swel = `Hola 😙, @${mentioned.split('@')[0]}
+───────────────────
+*🎊Bienvenido/a al grupo:*
+${mdata.subject}
+
+▢ Espero que haya leído las reglas del grupo para no tener malos entendidos u.u`
+thumb = await getBuffer(pic)
+
+const bosco11 = await Fg.prepareMessage("0@s.whatsapp.net", thumb, MessageType.location,{ thumbnail: thumb})
+const bosco22 = bosco11.message["ephemeralMessage"] ? bosco11.message.ephemeralMessage : bosco11
+                welcomeBut = [{buttonId:`nada`,buttonText:{displayText:'🐱 GRACIAS'},type:1}]
+                welcomeButt = { contentText: `${swel}`, footerText: `*Copyright © gatybot*`, buttons: welcomeBut, headerType: 6, locationMessage: bosco22.message.locationMessage}
+                Fg.sendMessage(from, welcomeButt, MessageType.buttonsMessage, { caption: 'buff', "contextInfo": { "mentionedJid" : [num], },})
+} else {
+reply('✳️ Responde a un mensaje o etiqueta al usuario')
+}
+break
+
 //--------------------------------------
       default:
  

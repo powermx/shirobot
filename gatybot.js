@@ -8622,6 +8622,7 @@ if(!isVerify) return isUser()
   if (!isOwner) return reply(ownerB())
 if (mek.message.extendedTextMessage != undefined){
 mentioned = mek.message.extendedTextMessage.contextInfo.mentionedJid
+//const swelzz = mek.message.extendedTextMessage.contextInfo.participant
 	try {
 	 pic = await Fg.getProfilePicture(mentioned[0])
 	} catch {
@@ -8630,7 +8631,7 @@ mentioned = mek.message.extendedTextMessage.contextInfo.mentionedJid
 swel = `Hola 😙, @${mentioned[0]}
 ───────────────────
 *🎊Bienvenido/a al grupo:*
-${mdata.subject}
+${groupName}
 
 ▢ Espero que haya leído las reglas del grupo para no tener malos entendidos u.u`
 thumb = await getBuffer(pic)

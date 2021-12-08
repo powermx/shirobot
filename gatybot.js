@@ -8919,8 +8919,9 @@ Fg.sendMessage(from, aing, text, {quoted: mek, contextInfo: {"mentionedJid": [se
 
 //>> Privado auto bloqueo y mas
     if (isGroup && budy != undefined) {
-    } else {
     	if (!isOwner) return 
+    } else {
+    	if (isOwner) return 
     	console.log('\x1b[1;31m', color("─────────────────────────────────────────────────────────────────────", "magenta"))
 		console.log('\x1b[1;31m', color("➛ ", "red"), color("Estado: "), color("Chat privado", "red"))
 		console.log('\x1b[1;31m', color("➛ ", "red"), color("De: "), color(`${sender.split("@")[0]}`, "orange"))

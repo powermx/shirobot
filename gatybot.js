@@ -2775,6 +2775,7 @@ break
   🎲 ${prefix}simi2
   🎲 ${prefix}slot
   🎲 ${prefix}dado
+  🎲 ${prefix}chiste
 
     *IMAGENES*
   🌅 ${prefix}imagen
@@ -2880,6 +2881,7 @@ break
   🐱 ${prefix}unbanchat
   🐱 ${prefix}chatmode
   🐱 ${prefix}buggc
+  🐱 ${prefix}simularw
   
 
     *INFORMACIÓN*
@@ -8620,30 +8622,26 @@ case 'simularw':
 if(!isVerify) return isUser()
   if (isBanned) return reply(banf())
   if (!isOwner) return reply(ownerB())
-if (mek.message.extendedTextMessage != undefined){
-const swelzz = mek.message.extendedTextMessage.contextInfo.mentionedJid
-//const swelzz = mek.message.extendedTextMessage.contextInfo.participant
-	try {
+if (!q) return reply(`✳️ Etiqueta a alguien del grupo\n\n*📌Ejemplo:* ${prefix + command} @tag`)
+const swelzz = `${q.split(" ")[0].replace("@",'')}@s.whatsapp.net`
+try {
 	 pic = await Fg.getProfilePicture(swelzz[0])
 	} catch {
 	 pic = 'https://i.ibb.co/9vCxvzL/sinperfil.jpg'
 	}
-swel = `Hola 😙, @${swelzz[0]}
+swell =`Hola 😙, @${swelzz.split("@")[0]}
 ───────────────────
 *🎊Bienvenido/a al grupo:*
 ${groupName}
 
 ▢ Espero que haya leído las reglas del grupo para no tener malos entendidos u.u`
-thumb = await getBuffer(pic)
+swellz = await getBuffer(pic)
+sendButLocation(from, `${swell}`, `*Copyright © gatybot*`, {jpegThumbnail: swellz},
 
-const bosco11 = await Fg.prepareMessage("0@s.whatsapp.net", thumb, MessageType.location,{ thumbnail: thumb})
-const bosco22 = bosco11.message["ephemeralMessage"] ? bosco11.message.ephemeralMessage : bosco11
-                welcomeBut = [{buttonId:`nada`,buttonText:{displayText:'🐱 GRACIAS'},type:1}]
-                welcomeButt = { contentText: `${swel}`, footerText: `*Copyright © gatybot*`, buttons: welcomeBut, headerType: 6, locationMessage: bosco22.message.locationMessage}
-                Fg.sendMessage(from, welcomeButt, MessageType.buttonsMessage, { caption: 'buff', "contextInfo": { "mentionedJid" : [swelzz], },})
-} else {
-reply('✳️ Responde a un mensaje o etiqueta al usuario')
-}
+ [
+{buttonId:`test`,buttonText:{displayText:'test1'},type:1}],
+
+{contextInfo: { mentionedJid: [swelzz]}} )
 break
 
 //--------------------------------------

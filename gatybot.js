@@ -2565,7 +2565,7 @@ let Leveling_ = 'desactivado'
 
 //>> Usuario no Verificado
 const isUser = () => { 
-  sendButMessage(from, `▢ Hola *@${sender.split("@")[0]}*\n╭──────────────────✾\n│ Todavía no estas verificado/a\n╰──────────────────✾`, `Presiona el botón o escribe ${prefix}verify`, [
+  sendButMessage(from, `╭◪ Hola *@${sender.split("@")[0]}*\n╰───────────────────╮  \n╭───────────────────╯\n├❏ Todavía no estas verificado \n├❏ Verifique para utilizar mis comandos \n╰───────────────────╯`, `Presiona el botón o escribe *${prefix}verify*`, [
           {
             buttonId: `${prefix}verify`,
             buttonText: {

@@ -6703,7 +6703,6 @@ if(!isVerify) return isUser()
 ‣ *⚖️Tamaño* : ${playbanu.result.size}
 ‣ *🔗Link* : ${playbanu.result.source}`
 				bufferr = await getBuffer(playbanu.result.thumbnail)
-				Fg.sendMessage(from, bufferr, image, {quoted: mek, caption: infomp3, thumbnail: bufferr})
 				sendButLocation(from, `${infomp3}`, `Elija un formato\n\nSi tiene problemas  con el comando use *${prefix}play2*`, {jpegThumbnail: bufferr},
 
  [

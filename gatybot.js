@@ -4955,7 +4955,7 @@ if(!isVerify) return isUser()
 				play8 = args.join(" ")
 				const anue = await fetchJson(`https://api.zeks.me/api/ytmp3/2?apikey=apivinz&url=https://youtu.be/5laKhn3I7bU`)
 				if (anue.error) return reply(anue.error)
-				size = anue.result.size
+			   size = anue.result.size
 				infomp3 = `*🎶Musica encontrada*
 				
 ‣ *📌Título* : ${anue.result.title}
@@ -4986,7 +4986,7 @@ if(!isVerify) return isUser()
 				play7 = args.join(" ")
 				const anua = await fetchJson(`https://api.zeks.me/api/ytplaymp4/2?apikey=apivinz&q=${play7}`)
 				if (anua.error) return reply(anua.error)
-				size = anua.result.size
+			   size = anua.result.size
 				infomp3 = `*🎥Vídeo encontrado*
 				
 ‣ *📌Título* : ${anua.result.title}
@@ -6682,6 +6682,77 @@ El audio se esta enviando espere`
                   if (Number(sizea.split(' MB')[0]) >= 7.00) return 
 				bufferr1 = await getBuffer(playanu.result.url_audio)
 				Fg.sendMessage(from, bufferr1, audio, { mimetype: 'audio/mp4', quoted: mek})
+				.catch((err) => {
+					reply(`❎ Error, intente de nuevo mas tarde`); 
+					})
+          break
+
+case 'playb':
+if(!isVerify) return isUser()
+  if (isBanned) return reply(banf())
+		if (args.length < 1) return reply(`✳️ *Ingresa el nombre de una música/video*\n\n📌Ejemplo: *${prefix + command}* Lil Peep broken smile`)
+				reply(wait()) 
+			    play8 = args.join(" ")
+				const playbanu = await fetchJson(`https://api.zeks.me/api/ytplaymp3?apikey=apivinz&q=${play8}`)
+				if (playbanu.error) return reply(playbanu.error)
+				sizea = playbanu.result.size
+				infomp3 = `*⏯️Musica/video encontrada*
+				
+‣ *📌Título* : ${playbanu.result.title}
+‣ *📂Archivo* : Mp3/mp4
+‣ *⚖️Tamaño* : ${playbanu.result.size}
+‣ *🔗Link* : ${playbanu.result.source}`
+				bufferr = await getBuffer(playbanu.result.thumbnail)
+				Fg.sendMessage(from, bufferr, image, {quoted: mek, caption: infomp3, thumbnail: bufferr})
+				sendButLocation(from, `${infomp3}`, `Elija un formato\n\nSi tiene problemas  con el comando use *${prefix}play2*`, {jpegThumbnail: bufferr},
+
+ [
+{buttonId:`ytmp33 ${playbanu.result.source}`,buttonText:{displayText:'🎶AUDIO'},type:1},
+{buttonId:`ytmp44 ${playbanu.result.source}`,buttonText:{displayText:'🎥VIDEO'},type:1}],
+
+{contextInfo: { mentionedJid: [sender]}} )
+				.catch((err) => {
+					reply(`❎ Error, intente de nuevo mas tarde`); 
+					})
+          break
+
+     case 'ytmp33':
+if(!isVerify) return isUser()
+  if (isBanned) return reply(banf())
+		if (args.length < 1) return reply(`✳️ *Ingresa el nombre de una música*\n\n📌Ejemplo: *${prefix + command}* [link]`)
+				reply(wait()) 
+				play8 = args.join(" ")
+				const aznue = await fetchJson(`https://api.zeks.me/api/ytmp3/2?apikey=apivinz&url=${play8}`)
+				if (aznue.error) return reply(aznue.error)
+			   size = aznue.result.size
+				setTimeout( () => {
+					if (Number(size.split(' MB')[0]) >= 7.00) return reply(`✳️ El archivo es demasiado grande, la descarga del audio se canceló`)
+                  }, 5000)
+                  if (Number(size.split(' MB')[0]) >= 7.00) return 
+				bufferr1 = await getBuffer(aznue.result.link)
+				Fg.sendMessage(from, bufferr1, audio, { mimetype: 'audio/mp4', quoted: mek})
+				.catch((err) => {
+					reply(`❎ Error, intente de nuevo mas tarde`); 
+					})
+          break
+     
+case 'ytmp44':
+if(!isVerify) return isUser()
+  if (isBanned) return reply(banf())
+     if(!isPremium)return reply(premi())
+		if (args.length < 1) return reply(`✳️ *Ingresa el nombre de un video*\n\n📌Ejemplo: *${prefix + command}* [link]`)
+				reply(wait()) 
+				play7 = args.join(" ")
+				const axnua = await fetchJson(`https://api.zeks.me/api/ytplaymp4/2?apikey=apivinz&q=${play7}`)
+				if (axnua.error) return reply(axnua.error)
+			   size = axnua.result.size
+				setTimeout( () => {
+					if (Number(size.split(' MB')[0]) >= 30.00) return reply(`✳️ El archivo es demasiado grande, la descarga del video se canceló`)
+                  }, 5000)
+                  if (Number(size.split(' MB')[0]) >= 30.00) return 
+				buffer1 = await getBuffer(axnua.result.link)
+				buffer = await getBuffer(axnua.result.thumb)
+				Fg.sendMessage(from, buffer1, video, {mimetype: 'video/mp4', filename: `${axnua.result.video}.mp4`, quoted: mek, caption: `✅ Video descargado\n\n‣ *Titulo:* ${axnua.result.title}`, thumbnail: buffer})
 				.catch((err) => {
 					reply(`❎ Error, intente de nuevo mas tarde`); 
 					})

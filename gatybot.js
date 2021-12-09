@@ -4880,6 +4880,9 @@ contextInfo: { mentionedJid: mem },
 quoted: mek
 }
 Fg.sendMessage(from, options, text)
+.catch((err) => {
+            reply(`❎ Error, intente de nuevo mas tarde`); 
+            })
 break
 
 //-- Notification al grupo

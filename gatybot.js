@@ -2452,7 +2452,7 @@ var enlace = 'Undefined'
 //====================================================================================================//
 
 //>> Anti groseria
-	if (budy.includes("puto") || (budy.includes("mierda") || (budy.includes("Puto") || (budy.includes("puta") || (budy.includes("Puta") || (budy.includes("Estupido") || (budy.includes("Calla gay") || (budy.includes("estupido") || (budy.includes("Mierda") || (budy.includes("mrd ") || (budy.includes("Mrd ")))))))))))){
+	if (budy.includes("puto") || (budy.includes("mierda") || (budy.includes("Puto") || (budy.includes("puta") || (budy.includes("Puta") || (budy.includes("Estupido") || (budy.includes("Calla gay") || (budy.includes("estupido") || (budy.includes("Mierda") || (budy.includes("mrd ") || (budy.includes("Mrd ") || (budy.includes("jodiendo") || (budy.includes("Jodiendo") || (budy.includes("pvto"))))))))))))))){
 		const currentWarn = getWarn(sender)
 				const checkIdWarn = getWarnId(sender)
 					if (currentWarn === undefined && checkIdWarn === undefined) addWarnId(sender)

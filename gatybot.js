@@ -4867,7 +4867,7 @@ if(!isVerify) return isUser()
   if (isBanned) return reply(banf())
 if (!isGroup) return reply(group())
 if (!isGroupAdmins && !isOwner)return reply(admin())
-
+try {
 var group = await Fg.groupMetadata(from)
 var member = group['participants']
 var mem = []
@@ -4880,9 +4880,9 @@ contextInfo: { mentionedJid: mem },
 quoted: mek
 }
 Fg.sendMessage(from, options, text)
-.catch((err) => {
-            reply(`❎ Error, intente de nuevo mas tarde`); 
-            })
+} catch (e) {
+          reply(`❎ Error, intente de nuevo mas tarde`); 
+        }
 break
 
 //-- Notification al grupo

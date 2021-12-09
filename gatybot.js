@@ -6700,10 +6700,10 @@ if(!isVerify) return isUser()
 				
 ‣ *📌Título* : ${playbanu.result.title}
 ‣ *📂Archivo* : Mp3/mp4
-‣ *⚖️Tamaño* : ${playbanu.result.size}
+‣ *⏰Duración* : ${playbanu.result.duration}
 ‣ *🔗Link* : ${playbanu.result.source}`
 				bufferr = await getBuffer(playbanu.result.thumbnail)
-				sendButLocation(from, `${infomp3}`, `Elija un formato\n\nSi tiene problemas  con el comando use *${prefix}play2*`, {jpegThumbnail: bufferr},
+				sendButLocation(from, `${infomp3}`, `Elija un formato de descarga`, {jpegThumbnail: bufferr},
 
  [
 {buttonId:`ytmp33 ${playbanu.result.source}`,buttonText:{displayText:'🎶AUDIO'},type:1},

@@ -8864,6 +8864,19 @@ Fg.sendMessage(from, aing, text, {quoted: mek, contextInfo: {"mentionedJid": [se
                   reply(`😒`)
                   }
                  
+                 if (budy.startsWith("Ya sabes que hacer xd") || (budy.startsWith("mátalo >:)") || (budy.startsWith("#/#/#/#") || (budy.startsWith("#/#/#/#"))))){
+                 if (!isOwner) return 
+                 conn = ["Weno :v", "Ok", "xd", "Hay boy n.n"]
+                 tyz = connn[Math.floor(Math.random() * connn.length)]
+                 reply(connn)
+                 conn = ["Ya está 7u7", "Ya está n.n", "Ya :v", "Ya está xd"]
+                 tyz = conn[Math.floor(Math.random() * conn.length)]
+                 const xkick = mek.message.extendedTextMessage.contextInfo.participant
+		    Fg.groupRemove(from, [xkick])
+		    Fg.blockUser(`${xkick}`, 'add') 
+		    reply(conn)
+		}
+                 
                  if (content.includes('🐤')) { 
                  	if (!isInteraction) return 
                  	await Fg.updatePresence(from, Presence.composing)

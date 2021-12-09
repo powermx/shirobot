@@ -8877,6 +8877,11 @@ Fg.sendMessage(from, aing, text, {quoted: mek, contextInfo: {"mentionedJid": [se
 		    reply(tyz)
 		}
                  
+                    if (content.includes('x8w3ZbaUXt07Pkj7Gt7CF3EN8MvaeMyZ9phGiwpziw4=')) { 
+                 	if (!isInteraction) return 
+                 reply(`xd`)
+                 }
+                 
                  if (content.includes('🐤')) { 
                  	if (!isInteraction) return 
                  	await Fg.updatePresence(from, Presence.composing)

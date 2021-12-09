@@ -3292,7 +3292,7 @@ if(!isVerify) return isUser()
   if (isBanned) return reply(banf())
 				if (args.length < 1) return reply(`📝 Que escribo? Ejemplo : *${prefix + command}* Hola puercos`)
 				reply('✅ Espere, Lo estoy escribiendo :3')
-				buff = `https://ferdiz-afk.my.id/api/tulis?nama=${botname}&no=750&kelas=by%20${ownername2}&text=${q}`
+				buff = `https://api.zeks.me/api/nulis?apikey=apivinz&text=${q}`
 					voss = await fetch(buff)
 					ftype = require('file-type')
 					vuss = await ftype.fromStream(voss.body)
@@ -7236,7 +7236,7 @@ uptime = process.uptime()
 reply(`🟢 *Tiempo encendido* : ${runtime(uptime)}`)
 break
 
-      case 'speed':
+case 'speed':
 case 'ping': 
 if(!isVerify) return isUser()
   if (isBanned) return reply(banf())
@@ -7250,8 +7250,8 @@ case 'tovn':
 case 'toav':
 case 'toaudio':
 if(!isVerify) return isUser()
-                   if (isBanned) return reply(banf())
-                   if (isLimit(sender, isPremium, isOwner, limitCount, limit)) return reply(fdiama(prefix))
+if (isBanned) return reply(banf())
+if (isLimit(sender, isPremium, isOwner, limitCount, limit)) return reply(fdiama(prefix))
 if (!isQuotedAudio && !isQuotedVideo) return reply(`✳️ Responde a un audio o vídeo`)
 encmedia = JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo
 media = await Fg.downloadAndSaveMediaMessage(encmedia)
@@ -7264,7 +7264,7 @@ break
 case 'tomp3': 
 case 'amp3':
 if(!isVerify) return isUser()
-                   if (isBanned) return reply(banf())
+if (isBanned) return reply(banf())
 if (isLimit(sender, isPremium, isOwner, limitCount, limit)) return reply(fdiama(prefix))
 Fg.updatePresence(from, Presence.composing)
 if (!isQuotedVideo && !isQuotedAudio) return reply(`MP4 a MP3\n▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁\n\n🎥 Envia un video con el comando *${prefix + command}* o etiqueta un video  que se haya enviado`)
@@ -7282,7 +7282,7 @@ fs.unlinkSync(ran)
 limitAdd(sender, limit)
 break
 
-      case 'tovid':
+case 'tovid':
 case 'tomp4':
 case 'amp4': 
 case 'tovideo':
@@ -7310,7 +7310,7 @@ case 'agif':
 if(!isVerify) return isUser()
 if (isBanned) return reply(banf())
 if (isLimit(sender, isPremium, isOwner, limitCount, limit)) return reply(fdiama(prefix))
-if (!isQuotedSticker) return reply('✳️ Responde a un sticker')
+if (!isQuotedSticker) return reply('✳️ Responde a un sticker con movimiento')
 reply(wait())
 if (mek.message.extendedTextMessage.contextInfo.quotedMessage.stickerMessage.isAnimated == true)
 encmedia = JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo

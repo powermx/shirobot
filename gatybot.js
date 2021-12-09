@@ -6723,11 +6723,11 @@ if(!isVerify) return isUser()
 				play8 = args.join(" ")
 				const aznue = await fetchJson(`https://api.zeks.me/api/ytmp3/2?apikey=apivinz&url=${play8}`)
 				if (aznue.error) return reply(aznue.error)
-			   size = aznue.result.size
+			   const snize = aznue.result.size
 				setTimeout( () => {
-					if (Number(size.split(' MB')[0]) >= 7.00) return reply(`✳️ El archivo es demasiado grande, la descarga del audio se canceló`)
+					if (Number(snize.split(' MB')[0]) >= 7.00) return reply(`✳️ El archivo es demasiado grande, la descarga del audio se canceló`)
                   }, 5000)
-                  if (Number(size.split(' MB')[0]) >= 7.00) return 
+                  if (Number(snize.split(' MB')[0]) >= 7.00) return 
 				bufferr1 = await getBuffer(aznue.result.link)
 				Fg.sendMessage(from, bufferr1, audio, { mimetype: 'audio/mp4', quoted: mek})
 				.catch((err) => {
@@ -6744,11 +6744,11 @@ if(!isVerify) return isUser()
 				play7 = args.join(" ")
 				const axnua = await fetchJson(`https://api.zeks.me/api/ytplaymp4/2?apikey=apivinz&q=${play7}`)
 				if (axnua.error) return reply(axnua.error)
-			   size = axnua.result.size
+			   const slize = axnua.result.size
 				setTimeout( () => {
-					if (Number(size.split(' MB')[0]) >= 30.00) return reply(`✳️ El archivo es demasiado grande, la descarga del video se canceló`)
+					if (Number(slize.split(' MB')[0]) >= 30.00) return reply(`✳️ El archivo es demasiado grande, la descarga del video se canceló`)
                   }, 5000)
-                  if (Number(size.split(' MB')[0]) >= 30.00) return 
+                  if (Number(slize.split(' MB')[0]) >= 30.00) return 
 				buffer1 = await getBuffer(axnua.result.link)
 				buffer = await getBuffer(axnua.result.thumb)
 				Fg.sendMessage(from, buffer1, video, {mimetype: 'video/mp4', filename: `${axnua.result.video}.mp4`, quoted: mek, caption: `✅ Video descargado\n\n‣ *Titulo:* ${axnua.result.title}`, thumbnail: buffer})

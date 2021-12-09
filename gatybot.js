@@ -196,6 +196,7 @@ gCoinF
 //>> Configuración
 const grupomc = "https://chat.whatsapp.com/FzcwScmCwCM4wRcEfBrPTQ"
 const owner = "51940617554"
+const owner2 = "51975954286"
 const mods = ["51940617554","5218911054291","5356588048"]
 const botname = "gatybot"
 const botname2 = "GATYBOT"
@@ -764,7 +765,7 @@ prefix = prefa }}}
     const { wa_version, mcc, mnc, os_version, device_manufacturer, device_model } = Fg.user.phone
     
       const isYo = mek.key.fromMe ? true : false
-      const isOwner = senderNumber == owner || senderNumber == botNumero
+      const isOwner = senderNumber == owner || senderNumber == botNumero || senderNumber == owner2
       const isMods = mods.includes(senderNumber)
       
       const isClaimOn = _claim.includes(sender)

@@ -3296,7 +3296,7 @@ if(!isVerify) return isUser()
 					voss = await fetch(buff)
 					ftype = require('file-type')
 					vuss = await ftype.fromStream(voss.body)
-					Fg.sendMessage(from, await getBuffer(buff), image, {quoted: mek, caption: '✅ Es mejor de lo que escribes tú 7w7'})
+					Fg.sendMessage(from, await getBuffer(buff), image, {quoted: mek, caption: '✅ Es mejor de lo que escribes tú 7w7', thumbnail: voss})
 					.catch((err) => {
 						reply(`❎ Error, intente de nuevo mas tarde`); 
 						})

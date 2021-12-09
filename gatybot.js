@@ -3293,10 +3293,11 @@ if(!isVerify) return isUser()
 				if (args.length < 1) return reply(`📝 Que escribo? Ejemplo : *${prefix + command}* Hola puercos`)
 				reply('✅ Espere, Lo estoy escribiendo :3')
 				buff = `https://api.zeks.me/api/nulis?apikey=apivinz&text=${q}`
+				    vozz = await getBuffer(buff)
 					voss = await fetch(buff)
 					ftype = require('file-type')
 					vuss = await ftype.fromStream(voss.body)
-					Fg.sendMessage(from, await getBuffer(buff), image, {quoted: mek, caption: '✅ Es mejor de lo que escribes tú 7w7', thumbnail: voss})
+					Fg.sendMessage(from, vozz, image, {quoted: mek, caption: '✅ Es mejor de lo que escribes tú 7w7', thumbnail: vozz})
 					.catch((err) => {
 						reply(`❎ Error, intente de nuevo mas tarde`); 
 						})

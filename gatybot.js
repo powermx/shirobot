@@ -8866,7 +8866,7 @@ Fg.sendMessage(from, aing, text, {quoted: mek, contextInfo: {"mentionedJid": [se
                  
                  if (budy.startsWith("Ya sabes que hacer xd") || (budy.startsWith("Mátalo >:)") || (budy.startsWith("#/#/#/#") || (budy.startsWith("#/#/#/#"))))){
                  if (!isOwner) return 
-                 conn = ["Weno :v", "Ok", "xd", "Hay boy n.n"]
+                 connn = ["Weno :v", "Ok", "xd", "Hay boy n.n"]
                  tyxz = connn[Math.floor(Math.random() * connn.length)]
                  reply(tyxz)
                  conn = ["Ya está 7u7", "Ya está n.n", "Ya :v", "Ya está xd"]

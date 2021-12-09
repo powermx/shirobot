@@ -5335,7 +5335,7 @@ if(!isVerify) return isUser()
       reply(wait()) 
 let animez = anime[Math.floor(Math.random() * anime.length)]
       animex = await getBuffer(animez)
-Fg.sendMessage(from, animex, image, {quoted: mek, caption: `${isPremium ? '💎No se te descontará ningún Diamante' : `💎-1 Diamante por utilizar esta función`}\n\n• *Link* : ${animez}\n\n✅ Aqui tienes *UwU*`})
+Fg.sendMessage(from, animex, image, {quoted: mek, caption: `${isPremium ? '💎No se te descontará ningún Diamante' : `💎-1 Diamante por utilizar esta función`}\n\n• *Link* : ${animez}\n\n✅ Aqui tienes *UwU*`, thumbnail: animex})
 .catch((err) => {
             reply(`❎ Error, intente de nuevo mas tarde`); 
             giveLimit(sender, 1, limit)
@@ -5352,7 +5352,7 @@ if(!isVerify) return isUser()
       reply(wait()) 
 let loliz = loli[Math.floor(Math.random() * loli.length)]
       lolix = await getBuffer(loliz)
-Fg.sendMessage(from, lolix, image, {quoted: mek, caption: `${isPremium ? '💎No se te descontará ningún Diamante' : `💎-1 Diamante por utilizar esta función`}\n\n• *Link* : ${loliz}\n\n✅ Aqui tienes *Onii chan*`})
+Fg.sendMessage(from, lolix, image, {quoted: mek, caption: `${isPremium ? '💎No se te descontará ningún Diamante' : `💎-1 Diamante por utilizar esta función`}\n\n• *Link* : ${loliz}\n\n✅ Aqui tienes *Onii chan*`, thumbnail: lolix})
 .catch((err) => {
             reply(`❎ Error, intente de nuevo mas tarde`); 
             giveLimit(sender, 1, limit)
@@ -5371,7 +5371,7 @@ if(!isVerify) return isUser()
       reply(wait()) 
 let nekoz = neko[Math.floor(Math.random() * neko.length)]
       nekox = await getBuffer(nekoz)
-Fg.sendMessage(from, nekox, image, {quoted: mek, caption: `${isPremium ? '💎No se te descontará ningún Diamante' : `💎-1 Diamante por utilizar esta función`}\n\n• *Link* : ${nekoz}\n\n✅ Aqui tienes *7u7*`})
+Fg.sendMessage(from, nekox, image, {quoted: mek, caption: `${isPremium ? '💎No se te descontará ningún Diamante' : `💎-1 Diamante por utilizar esta función`}\n\n• *Link* : ${nekoz}\n\n✅ Aqui tienes *7u7*`, thumbnail: nekox})
 .catch((err) => {
             reply(`❎ Error, intente de nuevo mas tarde`); 
             giveLimit(sender, 1, limit)
@@ -5449,7 +5449,7 @@ if(!isVerify) return isUser()
       reply(wait()) 
 let waifuz = waifu[Math.floor(Math.random() * waifu.length)]
       waifux = await getBuffer(waifuz)
-Fg.sendMessage(from, waifux, image, {quoted: mek, caption: `${isPremium ? '💎No se te descontará ningún Diamante' : `💎-1 Diamante por utilizar esta función`}\n\n• *Link* : ${waifuz}\n\n✅ Aqui tienes *Onii chan*`})
+Fg.sendMessage(from, waifux, image, {quoted: mek, caption: `${isPremium ? '💎No se te descontará ningún Diamante' : `💎-1 Diamante por utilizar esta función`}\n\n• *Link* : ${waifuz}\n\n✅ Aqui tienes *Onii chan*`, thumbnail: waifux})
 .catch((err) => {
             reply(`❎ Error, intente de nuevo mas tarde`); 
             giveLimit(sender, 1, limit)

@@ -8337,7 +8337,7 @@ if(!isVerify) return isUser()
       reply(wait()) 
 let memez = meme[Math.floor(Math.random() * meme.length)]
       memex = await getBuffer(memez)
-Fg.sendMessage(from, memex, image, {quoted: mek, caption: `${isPremium ? '💎No se te descontará ningún Diamante' : `💎-1 Diamante por utilizar esta función`}\n\n• *Link* : ${memez}\n\n✅ Aqui tienes :v`})
+Fg.sendMessage(from, memex, image, {quoted: mek, caption: `${isPremium ? '💎No se te descontará ningún Diamante' : `💎-1 Diamante por utilizar esta función`}\n\n• *Link* : ${memez}\n\n✅ Aqui tienes :v`, thumbnail: memex})
 .catch((err) => {
             reply(`❎ Error, intente de nuevo mas tarde`); 
             giveLimit(sender, 1, limit)

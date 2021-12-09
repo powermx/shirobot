@@ -6683,8 +6683,10 @@ El audio se esta enviando espere`
 				Fg.sendMessage(from, bufferr, image, {quoted: mek, caption: infomp3, thumbnail: bufferr})
 				setTimeout( () => {
 					if (Number(sizea.split(' MB')[0]) >= 7.00) return reply(`✳️ El archivo es demasiado grande, la descarga del audio se canceló`)
+					if (Number(sizea.split(' GB')[0]) >= 7.00) return reply(`✳️ El archivo es demasiado grande, la descarga del audio se canceló`)
                   }, 5000)
                   if (Number(sizea.split(' MB')[0]) >= 7.00) return 
+                  if (Number(sizea.split(' GB')[0]) >= 7.00) return 
 				bufferr1 = await getBuffer(playanu.result.url_audio)
 				Fg.sendMessage(from, bufferr1, audio, { mimetype: 'audio/mp4', quoted: mek})
 				.catch((err) => {
@@ -6731,8 +6733,10 @@ if(!isVerify) return isUser()
 			   const snize = aznue.result.size
 				setTimeout( () => {
 					if (Number(snize.split(' MB')[0]) >= 7.00) return reply(`✳️ El archivo es demasiado grande, la descarga del audio se canceló`)
+					if (Number(snize.split(' GB')[0]) >= 7.00) return reply(`✳️ El archivo es demasiado grande, la descarga del audio se canceló`)
                   }, 5000)
                   if (Number(snize.split(' MB')[0]) >= 7.00) return 
+                  if (Number(snize.split(' GB')[0]) >= 7.00) return 
 				bufferr1 = await getBuffer(aznue.result.link)
 				Fg.sendMessage(from, bufferr1, audio, { mimetype: 'audio/mp4', quoted: mek})
 				.catch((err) => {
@@ -6752,8 +6756,10 @@ if(!isVerify) return isUser()
 			   const slize = axnua.result.size
 				setTimeout( () => {
 					if (Number(slize.split(' MB')[0]) >= 30.00) return reply(`✳️ El archivo es demasiado grande, la descarga del video se canceló`)
+					if (Number(slize.split(' GB')[0]) >= 30.00) return reply(`✳️ El archivo es demasiado grande, la descarga del video se canceló`)
                   }, 5000)
                   if (Number(slize.split(' MB')[0]) >= 30.00) return 
+                  if (Number(slize.split(' GB')[0]) >= 30.00) return 
 				buffer1 = await getBuffer(axnua.result.link)
 				buffer = await getBuffer(axnua.result.thumb)
 				Fg.sendMessage(from, buffer1, video, {mimetype: 'video/mp4', filename: `${axnua.result.video}.mp4`, quoted: mek, caption: `✅ Video descargado\n\n‣ *Titulo:* ${axnua.result.title}`, thumbnail: buffer})
@@ -6815,8 +6821,10 @@ El vídeo se esta enviando espere`
 				Fg.sendMessage(from, buffer, image, {quoted: mek, caption: infomp3, thumbnail: buffer})
 				setTimeout( () => {
 					if (Number(size.split(' MB')[0]) >= 30.00) return reply(`✳️ El archivo es demasiado grande, la descarga del video se canceló`)
+					if (Number(size.split(' GB')[0]) >= 30.00) return reply(`✳️ El archivo es demasiado grande, la descarga del video se canceló`)
                   }, 5000)
                   if (Number(size.split(' MB')[0]) >= 30.00) return 
+                  if (Number(size.split(' GB')[0]) >= 30.00) return 
 				buffer1 = await getBuffer(anuu.result.link)
 				Fg.sendMessage(from, buffer1, video, {mimetype: 'video/mp4', filename: `${anuu.result.video}.mp4`, quoted: mek, caption: `✅ Video descargado\n\n‣ *Titulo:* ${anuu.result.title}`, thumbnail: buffer})
 				.catch((err) => {

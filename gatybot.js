@@ -220,6 +220,7 @@ const soportefg = 'https://chat.whatsapp.com/FzcwScmCwCM4wRcEfBrPTQ'
 //====================[ ALMACENAMIENTO ]====================//
 fakefg = fs.readFileSync('./image/fake.jpg')
 shiro0 = fs.readFileSync('./storage/image/shiro_0.jpg')
+shiro1 = fs.readFileSync('./storage/image/shiro_1.jpg')
 loli0 = fs.readFileSync('./storage/image/loli_0.jpg')
 loli1 = fs.readFileSync('./storage/image/loli_1.jpg')
 
@@ -947,7 +948,7 @@ Fg.sendMessage(from, teks, text, {quoted:mek,thumbnail : false})
           });
     };
     
-    //---- 𝗙𝗨𝗡𝗖𝗜𝗢́𝗡 𝗗𝗘 𝗥𝗘𝗦𝗣𝗨𝗘𝗦𝗧𝗔 𝗙𝗔𝗟𝗦𝗔 ----  
+    //---- 𝗙𝗨𝗡𝗖??𝗢́𝗡 𝗗𝗘 𝗥𝗘𝗦𝗣𝗨𝗘𝗦𝗧𝗔 𝗙𝗔𝗟𝗦𝗔 ----  
    //--fake estado
     const estadofake = (teks) => {
       Fg.sendMessage(from, teks, text, {
@@ -2898,7 +2899,7 @@ break
   ℹ️ ${prefix}join
   ℹ️ ${prefix}ayuda`
 
-py =  await Fg.prepareMessage(from, imgth, image, {quoted: mek, thumbnail: gaty4, contextInfo: {externalAdReply: {title: `>⃗✗᳙᳓gaty ᭲ bot͢ 式⁩`,body: "© Created by gatito", previewType: "PHOTO", thumbnail: shiro0, sourceUrl:``}}})
+py =  await Fg.prepareMessage(from, imgth, image, {quoted: mek, thumbnail: gaty4, contextInfo: {externalAdReply: {title: `>⃗✗᳙᳓gaty ᭲ bot͢ 式⁩`,body: "© Created by gatito", previewType: "PHOTO", thumbnail: shiro1, sourceUrl:``}}})
 
 gbutsan = [
 {buttonId: `${prefix}creador`, buttonText: {displayText: '🐱 CREADOR'}, type: 1},

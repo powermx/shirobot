@@ -62,7 +62,7 @@ CFonts.say(`shirobot by gatito`, {
     JSON.stringify(Fg.base64EncodedAuthInfo(), null, "\t")
   );
   
-  //𝗕𝗜𝗘𝗡𝗩𝗘𝗡𝗜𝗗𝗔 𝗬 𝗗𝗘𝗦𝗣𝗘𝗗𝗜𝗗𝗔 𝗰𝗼𝗻 𝗮𝗽𝗶 //
+  //𝗕𝗜𝗘𝗡𝗩𝗘𝗡𝗜𝗗𝗔 𝗬 𝗗𝗘𝗦𝗣𝗘𝗗𝗜𝗗𝗔//
 Fg.on('group-participants-update', async (anu) => {
 	const _welcom = JSON.parse(fs.readFileSync('./database/group/welcom.json'))
 	const _bye = JSON.parse(fs.readFileSync('./database/group/bye.json'))	
@@ -83,17 +83,25 @@ Fg.on('group-participants-update', async (anu) => {
 				} catch {
 					ppimg = 'https://i.ibb.co/9vCxvzL/sinperfil.jpg'
 				}
-				teks = `Hola 😙, @${num.split('@')[0]}
-───────────────────
+				
+				const thu = await Fg.getStatus(anu.participants[0], MessageType.text)
+				const memgp = mdata.participants.length
+				
+				teks = `Hola 😙, *@${num.split('@')[0]}*
+
 *🎊Bienvenido/a al grupo:*
 ${mdata.subject}
 
-▢ Espero que haya leído las reglas del grupo para no tener malos entendidos u.u`
+       *INFO*
+*🌿Biografia :* ${thu.status}
+*🌿Miembros :* ${memgp}
+
+_*❖* Espero que haya leído las reglas para no tener malos entendidos_`
                
 				let buff = await getBuffer(ppimg)			
              const bosco1 = await Fg.prepareMessage("0@s.whatsapp.net", buff, MessageType.location,{ thumbnail: buff})
 			 const bosco2 = bosco1.message["ephemeralMessage"] ? bosco1.message.ephemeralMessage : bosco1
-                welcomeBut = [{buttonId:`nada`,buttonText:{displayText:'🐱 GRACIAS'},type:1}]
+                welcomeBut = [{buttonId:`nada`,buttonText:{displayText:'💟 GRACIAS'},type:1}]
                 welcomeButt = { contentText: `${teks}`, footerText: `*Copyright © shirobot*`, buttons: welcomeBut, headerType: 6, locationMessage: bosco2.message.locationMessage}
                 Fg.sendMessage(mdata.id, welcomeButt, MessageType.buttonsMessage, { caption: 'buff', "contextInfo": { "mentionedJid" : [num], },})
                  
@@ -110,18 +118,17 @@ ${mdata.subject}
 //------𝗔𝗗𝗠𝗜𝗡𝗦
 } else if (anu.action == 'promote') {
             let img = await getBuffer(ppimg)
-            thu = await Fg.getStatus(anu.participants[0], MessageType.text)
-            teks = `≡ *NUEVO ADMIN*
-╭──────────────────✾
-├ *Nombre* : @${num.split('@')[0]}
-├ *Número* : wa.me/${num.replace('@s.whatsapp.net', '')}
-├ *Info* : ${thu.status} 
-├ *Mensaje* : Felicidades  Admin 🎉
-╰──────────────────✾`
+            teks = `*⬆️NUEVO/A ADMIN DETECTADO⬆️*
+
+       *INFO*
+*🍥Nombre :* @${num.split('@')[0]}
+*🍥Biografia :* ${thu.status} 
+
+*🎊Felicidades ahora eres un admin del grupo:*
+${mdata.subject}`
             Fg.sendMessage(mdata.id, img, MessageType.image, {caption: teks, contextInfo: {'mentionedJid': [num]}})
          } else if (anu.action == 'demote') {
             let img = await getBuffer(ppimg)
-            thu = await Fg.getStatus(anu.participants[0], MessageType.text)
             teks = `≡ *ADMIN DEGRADADO*
 ╭──────────────────✾
 ├ *Nombre* : @${num.split('@')[0]}

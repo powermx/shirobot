@@ -2648,7 +2648,7 @@ break
 💣 *Usos :*  _${totalhit}_
 ⚔️ *Prefix :*  _${prefix}_
 
-    *CONVERTIDORES*
+       *CONVERTIDORES*
   🫐 ${prefix}sticker (Foto/video) 
   🫐 ${prefix}sticker2 (Nombre|Autor)
   🫐 ${prefix}take (Nombre|Autor)
@@ -2685,7 +2685,7 @@ break
   🫐 ${prefix}emoji_ht
   🫐 ${prefix}emoji_lg
 
-    *DESCARGAS*
+       *DESCARGAS*
   📥 ${prefix}play
   📥 ${prefix}play2
   📥 ${prefix}playvid
@@ -2698,13 +2698,13 @@ break
   📥 ${prefix}tiktokaudio [error]
   📥 ${prefix}mdfire
 
-    *BUSQUEDA*
+       *BUSQUEDA*
   🔎 ${prefix}ytsearch
   🔎 ${prefix}ytstalk
   🔎 ${prefix}igstalk
   🔎 ${prefix}playstore
 
-    *EDUCACIÓN*
+       *EDUCACIÓN*
   📚 ${prefix}covid
   📚 ${prefix}hora
   📚 ${prefix}trad
@@ -2714,7 +2714,7 @@ break
   📚 ${prefix}encode
   📚 ${prefix}decode
 
-    *LOGOS*
+       *LOGOS*
   🎨 ${prefix}blackpink
   🎨 ${prefix}glich
   🎨 ${prefix}retroneon
@@ -2730,7 +2730,7 @@ break
   🎨 ${prefix}breakwall
   🎨 ${prefix}bneon
 
-    *MEDIA*
+       *MEDIA*
   🎥 ${prefix}screenshot
   🎥 ${prefix}tourl
   🎥 ${prefix}tourl2
@@ -2744,7 +2744,7 @@ break
   🎥 ${prefix}escribe
   🎥 ${prefix}tinyurl (acortador)
 
-    *FUNCIÓNES*
+       *FUNCIÓNES*
   🍒 ${prefix}random
   🍒 ${prefix}leermas (texto1|texto2)
   🍒 ${prefix}reenviado (texto)
@@ -2753,7 +2753,7 @@ break
   🍒 ${prefix}mention (549xxx)
   🍒 ${prefix}say
 
-    *ECONOMÍA*
+       *ECONOMÍA*
   🪙 ${prefix}shop
   🪙 ${prefix}toplevel
   🪙 ${prefix}cartera
@@ -2765,7 +2765,7 @@ break
   🪙 ${prefix}addgcoin
   🪙 ${prefix}claim
 
-    *DIVERSIÓN*
+       *DIVERSIÓN*
   🎲 ${prefix}shipping 
   🎲 ${prefix}pregunta
   🎲 ${prefix}vor (verdad/reto)
@@ -2783,7 +2783,7 @@ break
   🎲 ${prefix}dado
   🎲 ${prefix}chiste
 
-    *IMAGENES*
+       *IMAGENES*
   🖼️ ${prefix}imagen
   🖼️ ${prefix}par
   🖼️ ${prefix}pinterest
@@ -2796,14 +2796,14 @@ break
   🖼️ ${prefix}man
   🖼️ ${prefix}rip
 
-    *NSFW*
+       *NSFW*
   🔞 ${prefix}hentai
   🔞 ${prefix}pack
   🔞 ${prefix}nsfw_waifu
   🔞 ${prefix}nsfw_loli
   🔞 ${prefix}nsfw_neko
 
-    *GRUPOS*
+       *GRUPOS*
   👥 ${prefix}infogp
   👥 ${prefix}infodetec
   👥 ${prefix}group
@@ -2841,7 +2841,7 @@ break
   👥 ${prefix}delete (mensaje bot)
   👥 ${prefix}salir (dejo el grupo)
 
-    *MENSIONES*
+       *MENSIONES*
   🪀 ${prefix}tagall
   🪀 ${prefix}tag
   🪀 ${prefix}notify (texto)
@@ -2850,12 +2850,12 @@ break
   🪀 ${prefix}sticktag
   🪀 ${prefix}imgtag
 
-    *SESIÓN*
+       *SESIÓN*
   🤖 ${prefix}serbot
   🤖 ${prefix}stopbot
   🤖 ${prefix}listbots
 
-    *AVANZADO*
+       *AVANZADO*
   ⚙️ ${prefix}blocklist
   ⚙️ ${prefix}banlist
   ⚙️ ${prefix}listbanchat
@@ -2864,7 +2864,7 @@ break
   ⚙️ ${prefix}premiumlist
   ⚙️ ${prefix}checkpremium
 
-    *OWNER*
+       *OWNER*
   🐱 ${prefix}actualizar
   🐱 ${prefix}modo (publico/privado)
   🐱 ${prefix}stickcmd
@@ -2889,7 +2889,7 @@ break
   🐱 ${prefix}buggc
   🐱 ${prefix}simularw
 
-    *INFORMACIÓN*
+       *INFORMACIÓN*
   ℹ️ ${prefix}reglas
   ℹ️ ${prefix}creador
   ℹ️ ${prefix}info

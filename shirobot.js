@@ -2905,8 +2905,8 @@ break
 py =  await Fg.prepareMessage(from, imgth, image, {quoted: mek, thumbnail: imgth, contextInfo: {externalAdReply: {title: `>⃗✗᳙᳓Shiro ᭲ Bot͢ 式⁩`,body: "I love you Macielly", previewType: "PHOTO", thumbnail: waifu0, sourceUrl:``}}})
 
 gbutsan = [
-{buttonId: `${prefix}creador`, buttonText: {displayText: '🐱 CREADOR'}, type: 1},
-{buttonId: `${prefix}info`, buttonText: {displayText: '🤖 INFO'}, type: 1}
+{buttonId: `creador`, buttonText: {displayText: '🐱 CREADOR'}, type: 1},
+{buttonId: `info`, buttonText: {displayText: '🤖 INFO'}, type: 1}
 ]
 gbuttonan = {
 imageMessage: py.message.imageMessage,

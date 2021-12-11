@@ -1005,7 +1005,7 @@ return Math.floor(angka)
 
 //>> sticker nombre
 function addMetadata(packname, author) {	
-	if (!packname) packname = 'Shirobot OFC'; if (!author) author = 'By gatito';	
+	if (!packname) packname = 'Shirobot'; if (!author) author = 'gatito';	
 	author = author.replace(/[^a-zA-Z0-9]/g, '');	
 	let name = `${author}_${packname}`
 	if (fs.existsSync(`./${name}.exif`)) return `./${name}.exif`
@@ -6872,7 +6872,7 @@ if(!isVerify) return isUser()
 							.on('end', function () {
 								console.log('\x1b[1;31m', color("─────────────────────────────────────────────────────────────────────", "magenta"));
 								console.log('\x1b[1;31m', color("➛ ", "red"), color("Estado: "), color("Sticker imagen creado con éxito", "yellow"))
-								exec(`webpmux -set exif ${addMetadata('Shirobot OFC', 'By gatito')} ${ran} -o ${ran}`, async (error) => {
+								exec(`webpmux -set exif ${addMetadata('Shirobot', 'gatito')} ${ran} -o ${ran}`, async (error) => {
 									 if (error) {
 											 reply('❎ Error al crear el sticker')
 											 fs.unlinkSync(media)	
@@ -6908,7 +6908,7 @@ if(!isVerify) return isUser()
 							.on('end', function () {
 								console.log('\x1b[1;31m', color("─────────────────────────────────────────────────────────────────────", "magenta"));
 								console.log('\x1b[1;31m', color("➛ ", "red"), color("Estado: "), color("Sticker video creado con éxito", "yellow"))
-								exec(`webpmux -set exif ${addMetadata('Shirobot OFC', 'By gatito')} ${ran} -o ${ran}`, async (error) => {
+								exec(`webpmux -set exif ${addMetadata('Shirobot', 'gatito')} ${ran} -o ${ran}`, async (error) => {
 									if (error) {
 											 reply('❎ Error al crear el stickergif')
 											 fs.unlinkSync(media)	

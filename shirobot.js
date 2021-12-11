@@ -229,6 +229,9 @@ fakelogo = fs.readFileSync('./almacenamiento/imagenes/gaty_2.jpg')
 gaty4 = fs.readFileSync('./almacenamiento/imagenes/gaty_4.jpg')
 fglogo = fs.readFileSync('./almacenamiento/imagenes/gaty_0.jpg')
 gatylogo = fs.readFileSync('./almacenamiento/imagenes/gaty_2.jpg')
+
+shirologo = fs.readFileSync('./storage/image/shiro_1.jpg')
+
 minecraft = fs.readFileSync('./almacenamiento/imagenes/minecraft_0.jpg')
 //====================[ FIN DE ALMACENAMIENTO ]====================//
 
@@ -925,7 +928,7 @@ var ase = new Date();
                  "h": `Hola ${pushname}`,
                  'duration': '99999', 
                  'caption': `Hola ${pushname}`,
-                 'jpegThumbnail': gatylogo
+                 'jpegThumbnail': shirologo
                         }
                        }
 	                  }
@@ -2899,7 +2902,7 @@ break
   ℹ️ ${prefix}join
   ℹ️ ${prefix}ayuda`
 
-py =  await Fg.prepareMessage(from, imgth, image, {quoted: mek, thumbnail: gaty4, contextInfo: {externalAdReply: {title: `>⃗✗᳙᳓Shiro ᭲ Bot͢ 式⁩`,body: "I love you Macielly", previewType: "PHOTO", thumbnail: shiro1, sourceUrl:``}}})
+py =  await Fg.prepareMessage(from, imgth, image, {quoted: mek, thumbnail: imgth, contextInfo: {externalAdReply: {title: `>⃗✗᳙᳓Shiro ᭲ Bot͢ 式⁩`,body: "I love you Macielly", previewType: "PHOTO", thumbnail: waifu0, sourceUrl:``}}})
 
 gbutsan = [
 {buttonId: `${prefix}creador`, buttonText: {displayText: '🐱 CREADOR'}, type: 1},
@@ -2912,7 +2915,7 @@ footerText: `║▌│█║▌│ █║▌│█│║▌║\n║▌│█║�
 buttons: gbutsan,
 headerType: 4
 }
-await Fg.sendMessage(from, gbuttonan, MessageType.buttonsMessage, {contextInfo: {  mentionedJid: [sender]}, quoted: mek, thumbnail: gaty4 })
+await Fg.sendMessage(from, gbuttonan, MessageType.buttonsMessage, {contextInfo: {  mentionedJid: [sender]}, quoted: mek, thumbnail: imgth })
 } catch (e) {
 	console.log(`Error :`, color(e,'red'))
      reply('❎ Error al mostrar el menú, intenta de nuevo después de este mensaje')
@@ -2985,7 +2988,7 @@ _Base oficial del bot_
 
 • *Edgar :* @${ayudante.split("@s.whatsapp.net")[0]}
 _Ayuda en algunos comandos_`
-Fg.sendMessage(from, inifernazer, text, { quoted: mek, contextInfo: { externalAdReply:{title: `式⃟🐱INFORMACIÓNES🐱⃟式`,body: `• Fecha : ${fecha2}\n• Hora : ${hora2}`, previewType:"PHOTO",thumbnail: gatylogo, sourceUrl:``}, "mentionedJid": [fgnum, fg, ayudante]}})
+Fg.sendMessage(from, inifernazer, text, { quoted: mek, contextInfo: { externalAdReply:{title: `式⃟🐱INFORMACIÓNES🐱⃟式`,body: `• Fecha : ${fecha2}\n• Hora : ${hora2}`, previewType:"PHOTO",thumbnail: shirologo, sourceUrl:``}, "mentionedJid": [fgnum, fg, ayudante]}})
              
            break
 
@@ -3006,7 +3009,7 @@ _*<CONSECUENCIAS/>*_
 ▪︎El bot te bloqueara o dejara el grupo
 
 *📌Nota:* El bot no esta activo 24/7`
-Fg.sendMessage(from, reglasbot, text, { quoted: mek, contextInfo: { externalAdReply:{title: `式⃟🐱REGLAS DEL BOT🐱⃟式`,body:"마시엘리", previewType:"PHOTO",thumbnail: gatylogo, sourceUrl:``}}})
+Fg.sendMessage(from, reglasbot, text, { quoted: mek, contextInfo: { externalAdReply:{title: `式⃟🐱REGLAS DEL BOT🐱⃟式`,body:"마시엘리", previewType:"PHOTO",thumbnail: shirologo, sourceUrl:``}}})
 break
 
 case 'help':
@@ -3021,7 +3024,7 @@ Subes de nivel cada ves que envíes mensajes al grupo
 ───────────────────
 _*PRONTO SE AGREGARAN MAS AYUDAS*_
 ───────────────────`
-Fg.sendMessage(from, reglasbot, text, { quoted: mek, contextInfo: { externalAdReply:{title: `式⃟??AYUDA/HELP🐱⃟式`,body:"• preguntas frecuentes", previewType:"PHOTO",thumbnail: gatylogo, sourceUrl:``}}})
+Fg.sendMessage(from, reglasbot, text, { quoted: mek, contextInfo: { externalAdReply:{title: `式⃟??AYUDA/HELP🐱⃟式`,body:"• preguntas frecuentes", previewType:"PHOTO",thumbnail: shirologo, sourceUrl:``}}})
 break
 
 
@@ -5790,7 +5793,7 @@ if (!isQuotedSticker) return reply(`✳️ Responde a un sticker\n\n*USO DEL COM
 try {
   	ppimg = await Fg.getProfilePicture(`${sender.split('@')[0]}@c.us`)
   } catch {
-  	ppimg = 'https://i.ibb.co/rksd9bC/gaty-2.jpg'
+  	ppimg = 'https://i.ibb.co/7gPkC4q/shiro-1.jpg'
   }
   takesx = await getBuffer(ppimg)
 const encmediats = isQuotedSticker ? JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo : mek
@@ -6847,7 +6850,7 @@ if(!isVerify) return isUser()
   try {
   	ppimg = await Fg.getProfilePicture(`${sender.split('@')[0]}@c.us`)
   } catch {
-  	ppimg = 'https://i.ibb.co/rksd9bC/gaty-2.jpg'
+  	ppimg = 'https://i.ibb.co/7gPkC4q/shiro-1.jpg'
   }
   reusesr = await getBuffer(ppimg)
 					if ((isMedia && !mek.message.videoMessage || isQuotedImage) && args.length == 0) {
@@ -7840,7 +7843,7 @@ reply(`No hay sesión en curso, 🛡️ Para iniciar uno escribe ${prefix}ttt`);
   }
 break
 
-               //-----  𝗝𝘂𝗲𝗴𝗼𝘀 𝗽𝗮𝗿𝗮 𝗴𝗮𝗻𝗮𝗿 𝗕𝗼𝘁𝗖𝗼𝗶𝗻𝘀--         
+               //-----  𝗝𝘂𝗲𝗴𝗼𝘀 𝗽𝗮𝗿𝗮 𝗴𝗮𝗻𝗮𝗿 𝗕??𝘁𝗖𝗼𝗶𝗻𝘀--         
 case 'math':
 case 'mate':
 case 'mates':

@@ -2,7 +2,7 @@
 
 //-- 
 const wait = () => { 
-return '*⏰┋Soy lenta, espera T-T*'
+return '*⏰┋Espere un momento ≧▽≦*'
 }
 
 //--
@@ -42,7 +42,7 @@ const banf = () => {
 
 //--
 const ownerB = () => {
-  return '❎  Esta función es solo para *Para el dueño del Bot*'
+  return '❎ Esta función es solo para *Para el dueño del Bot*'
 }
 //--
 const modsB = () => {

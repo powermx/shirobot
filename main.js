@@ -20,21 +20,21 @@ const moment = require("moment-timezone");
 
 blocked = [];
 
-require("./gatybot.js");
-nocache("./gatybot.js", (module) => console.log('\x1b[1;31m', color(`─────────────────────────────────────────────────────────────────────\n`, "magenta"), color("➛ ", "red"), color("Estado: "), color(`${module} Se actualizó!`, "pink")));
+require("./shirobot.js");
+nocache("./shirobot.js", (module) => console.log('\x1b[1;31m', color(`─────────────────────────────────────────────────────────────────────\n`, "magenta"), color("➛ ", "red"), color("Estado: "), color(`${module} Se actualizó!`, "pink")));
 
 const starts = async (Fg = new WAConnection()) => {
   Fg.logger.level = "warn";
   Fg.version = [2, 2140, 12];
  
  const CFonts  = require('cfonts')
-CFonts.say('gaty', {
+CFonts.say('shiro', {
   font: 'simple3d',
   align: 'center',
   gradient: ['red', 'magenta']
 })
 
-CFonts.say(`gatybot by gatito`, {
+CFonts.say(`shirobot by gatito`, {
   font: 'console',
   align: 'center',
   colors: ['yellow']
@@ -94,7 +94,7 @@ ${mdata.subject}
              const bosco1 = await Fg.prepareMessage("0@s.whatsapp.net", buff, MessageType.location,{ thumbnail: buff})
 			 const bosco2 = bosco1.message["ephemeralMessage"] ? bosco1.message.ephemeralMessage : bosco1
                 welcomeBut = [{buttonId:`nada`,buttonText:{displayText:'🐱 GRACIAS'},type:1}]
-                welcomeButt = { contentText: `${teks}`, footerText: `*Copyright © gatybot*`, buttons: welcomeBut, headerType: 6, locationMessage: bosco2.message.locationMessage}
+                welcomeButt = { contentText: `${teks}`, footerText: `*Copyright © shirobot*`, buttons: welcomeBut, headerType: 6, locationMessage: bosco2.message.locationMessage}
                 Fg.sendMessage(mdata.id, welcomeButt, MessageType.buttonsMessage, { caption: 'buff', "contextInfo": { "mentionedJid" : [num], },})
                  
 

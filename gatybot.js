@@ -198,9 +198,9 @@ const grupomc = "https://chat.whatsapp.com/FzcwScmCwCM4wRcEfBrPTQ"
 const owner = "51940617554"
 const owner2 = "51975954286"
 const mods = ["51940617554","5218911054291","5356588048"]
-const botname = "gatybot"
-const botname2 = "GATYBOT"
-const botname3 = "Gatybot"
+const botname = "shirobot"
+const botname2 = "SHIROBOT"
+const botname3 = "ShiroBot"
 const ownername = "「gatitoツ」"
 const ownername2 = "gatito"
 
@@ -223,6 +223,7 @@ shiro0 = fs.readFileSync('./storage/image/shiro_0.jpg')
 shiro1 = fs.readFileSync('./storage/image/shiro_1.jpg')
 loli0 = fs.readFileSync('./storage/image/loli_0.jpg')
 loli1 = fs.readFileSync('./storage/image/loli_1.jpg')
+waifu0 = fs.readFileSync('./storage/image/waifu_0.jpg')
 
 fakelogo = fs.readFileSync('./almacenamiento/imagenes/gaty_2.jpg')
 gaty4 = fs.readFileSync('./almacenamiento/imagenes/gaty_4.jpg')
@@ -254,7 +255,7 @@ const vcard1 = 'BEGIN:VCARD\n'
 const vcard2 = 'BEGIN:VCARD\n' 
  + 'VERSION:3.0\n' 
  + 'FN:式⃟🩸고양이🩸⃟式⁩\n'
- + 'ORG:Dueño de GatyBot;\n' 
+ + 'ORG:Dueño de ShiroBot;\n' 
  + 'TEL;type=CELL;type=VOICE;waid=51940617554:+51 940 617 554\n'
  + 'END:VCARD'
 //====================================================================================================//
@@ -861,7 +862,7 @@ const gcount = isPremium ? gcounti.prem : gcounti.user
 var ase = new Date();
                         var waktoonyabro = ase.getHours();
                         switch(waktoonyabro){
-                case 0: waktoonyabro = `espero que tengas una linda noche 🌛`; break;
+                case 0: waktoonyabro = `espero que tengas una linda noche 🌙`; break;
                 case 1: waktoonyabro = `espero que tengas una linda noche 💤`; break;
                 case 2: waktoonyabro = `espero que tengas una linda noche 🦉`; break;
                 case 3: waktoonyabro = `espero que tengas una linda mañana ✨`; break;
@@ -879,11 +880,11 @@ var ase = new Date();
                 case 15: waktoonyabro = `espero que tengas una linda tarde 🥀`; break;
                 case 16: waktoonyabro = `espero que tengas una linda tarde 🌹`; break;
                 case 17: waktoonyabro = `espero que tengas una linda tarde 🌆`; break;
-                case 18: waktoonyabro = `espero que tengas una linda noche 🌛`; break;
+                case 18: waktoonyabro = `espero que tengas una linda noche 🌙`; break;
                 case 19: waktoonyabro = `espero que tengas una linda noche 🌃`; break;
                 case 20: waktoonyabro = `espero que tengas una linda noche 🌌`; break;
                 case 21: waktoonyabro = `espero que tengas una linda noche 🌃`; break;
-                case 22: waktoonyabro = `espero que tengas una linda noche 🌛`; break;
+                case 22: waktoonyabro = `espero que tengas una linda noche 🌙`; break;
                 case 23: waktoonyabro = `espero que tengas una linda noche 🌃`; break;
             }
             var saludo = "" + waktoonyabro;
@@ -1001,7 +1002,7 @@ return Math.floor(angka)
 
 //>> sticker nombre
 function addMetadata(packname, author) {	
-	if (!packname) packname = 'gatybot'; if (!author) author = 'gatito';	
+	if (!packname) packname = 'Shirobot OFC'; if (!author) author = 'By gatito';	
 	author = author.replace(/[^a-zA-Z0-9]/g, '');	
 	let name = `${author}_${packname}`
 	if (fs.existsSync(`./${name}.exif`)) return `./${name}.exif`
@@ -1946,7 +1947,7 @@ Fg.sendMessage(from, levelup, text, {quoted: mek, contextInfo: {"mentionedJid": 
 
 //>> Emoji a sticker
     const sendStickerFromUrl = async(to, url) => {
-			console.log(color('[GATYBOT]','magenta'), color('✅ Descargando sticker...'));
+			console.log(color('[SHIROBOT]','magenta'), color('✅ Descargando sticker...'));
 				var names = getRandom('.webp')
 				var namea = getRandom('.png')
 				var download = function (uri, filename, callback) {
@@ -1962,7 +1963,7 @@ Fg.sendMessage(from, levelup, text, {quoted: mek, contextInfo: {"mentionedJid": 
 					exec(`webpmux -set exif ./sticker/data.exif ${asw} -o ${asw}`, async (error) => {
 					let media = fs.readFileSync(asw)
 					Fg.sendMessage(to, media, sticker,{quoted:mek})
-					console.log(color('[GATYBOT]','magenta'), color('💎 Enviando sticker...'));
+					console.log(color('[SHIROBOT]','magenta'), color('💎 Enviando sticker...'));
 					fs.unlinkSync(asw)
 					fs.unlinkSync(filess)
 					});
@@ -2631,10 +2632,10 @@ break
       	lvlh = getLevelingLevel(sender)
           infost = await Fg.getStatus(`${sender.split('@')[0]}@c.us`)
 	      infost = infost.status == 401 ? 'sin info' : infost.status
-          imgth = fs.readFileSync('./almacenamiento/imagenes/gaty_4.jpg')
+          imgth = fs.readFileSync('./storage/image/shiro_0.jpg')
           autorfg = `${sender.split("@")[0]}`
         
-          helfxz = `Hola @${autorfg} ${saludo}
+          helfxz = `Holi @${autorfg}, ${saludo}
 
 💫 Tu Info: *${infost}*
 
@@ -2645,41 +2646,41 @@ break
 ⚔️ *Prefix :*  _${prefix}_
 
     *CONVERTIDORES*
-  🎨 ${prefix}sticker (Foto/video) 
-  🎨 ${prefix}sticker2 (Nombre|Autor)
-  🎨 ${prefix}take (Nombre|Autor)
-  🎨 ${prefix}exif (Nombre|Autor)
-  🎨 ${prefix}ttp
-  🎨 ${prefix}ttp2
-  🎨 ${prefix}attp
-  🎨 ${prefix}attp2
-  🎨 ${prefix}attp3
-  🎨 ${prefix}smeme (txt|text2)
-  🎨 ${prefix}smeme2
-  🎨 ${prefix}toimg
-  🎨 ${prefix}togif
-  🎨 ${prefix}tovid
-  🎨 ${prefix}toav
-  🎨 ${prefix}rvo
-  🎨 ${prefix}triggered
-  🎨 ${prefix}passed
-  🎨 ${prefix}wasted
-  🎨 ${prefix}wanted
-  🎨 ${prefix}gtav
-  🎨 ${prefix}imgrip
-  🎨 ${prefix}imgrip2
-  🎨 ${prefix}scelda
-  🎨 ${prefix}emoji_app
-  🎨 ${prefix}emoji_wa
-  🎨 ${prefix}emoji_fb
-  🎨 ${prefix}emoji_go
-  🎨 ${prefix}emoji_mo
-  🎨 ${prefix}emoji_tw
-  🎨 ${prefix}emoji_sa
-  🎨 ${prefix}emoji_op
-  🎨 ${prefix}emoji_pi
-  🎨 ${prefix}emoji_ht
-  🎨 ${prefix}emoji_lg
+  🫐 ${prefix}sticker (Foto/video) 
+  🫐 ${prefix}sticker2 (Nombre|Autor)
+  🫐 ${prefix}take (Nombre|Autor)
+  🫐 ${prefix}exif (Nombre|Autor)
+  🫐 ${prefix}ttp
+  🫐 ${prefix}ttp2
+  🫐 ${prefix}attp
+  🫐 ${prefix}attp2
+  🫐 ${prefix}attp3
+  🫐 ${prefix}smeme (txt|text2)
+  🫐 ${prefix}smeme2
+  🫐 ${prefix}toimg
+  🫐 ${prefix}togif
+  🫐 ${prefix}tovid
+  🫐 ${prefix}toav
+  🫐 ${prefix}rvo
+  🫐 ${prefix}triggered
+  🫐 ${prefix}passed
+  🫐 ${prefix}wasted
+  🫐 ${prefix}wanted
+  🫐 ${prefix}gtav
+  🫐 ${prefix}imgrip
+  🫐 ${prefix}imgrip2
+  🫐 ${prefix}scelda
+  🫐 ${prefix}emoji_app
+  🫐 ${prefix}emoji_wa
+  🫐 ${prefix}emoji_fb
+  🫐 ${prefix}emoji_go
+  🫐 ${prefix}emoji_mo
+  🫐 ${prefix}emoji_tw
+  🫐 ${prefix}emoji_sa
+  🫐 ${prefix}emoji_op
+  🫐 ${prefix}emoji_pi
+  🫐 ${prefix}emoji_ht
+  🫐 ${prefix}emoji_lg
 
     *DESCARGAS*
   📥 ${prefix}play
@@ -2711,20 +2712,20 @@ break
   📚 ${prefix}decode
 
     *LOGOS*
-  🧩 ${prefix}blackpink
-  🧩 ${prefix}glich
-  🧩 ${prefix}retroneon
-  🧩 ${prefix}luzneon
-  🧩 ${prefix}gaming
-  🧩 ${prefix}3d
-  🧩 ${prefix}phlogo
-  🧩 ${prefix}light
-  🧩 ${prefix}marvel
-  🧩 ${prefix}3dbox
-  🧩 ${prefix}flame
-  🧩 ${prefix}matrix
-  🧩 ${prefix}breakwall
-  🧩 ${prefix}bneon
+  🎨 ${prefix}blackpink
+  🎨 ${prefix}glich
+  🎨 ${prefix}retroneon
+  🎨 ${prefix}luzneon
+  🎨 ${prefix}gaming
+  🎨 ${prefix}3d
+  🎨 ${prefix}phlogo
+  🎨 ${prefix}light
+  🎨 ${prefix}marvel
+  🎨 ${prefix}3dbox
+  🎨 ${prefix}flame
+  🎨 ${prefix}matrix
+  🎨 ${prefix}breakwall
+  🎨 ${prefix}bneon
 
     *MEDIA*
   🎥 ${prefix}screenshot
@@ -2780,17 +2781,17 @@ break
   🎲 ${prefix}chiste
 
     *IMAGENES*
-  🌅 ${prefix}imagen
-  🌅 ${prefix}par
-  🌅 ${prefix}pinterest
-  🌅 ${prefix}wallpaper
-  🌅 ${prefix}anime
-  🌅 ${prefix}loli
-  🌅 ${prefix}neko
-  🌅 ${prefix}waifu
-  🌅 ${prefix}girl
-  🌅 ${prefix}man
-  🌅 ${prefix}rip
+  🖼️ ${prefix}imagen
+  🖼️ ${prefix}par
+  🖼️ ${prefix}pinterest
+  🖼️ ${prefix}wallpaper
+  🖼️ ${prefix}anime
+  🖼️ ${prefix}loli
+  🖼️ ${prefix}neko
+  🖼️ ${prefix}waifu
+  🖼️ ${prefix}girl
+  🖼️ ${prefix}man
+  🖼️ ${prefix}rip
 
     *NSFW*
   🔞 ${prefix}hentai
@@ -2884,7 +2885,6 @@ break
   🐱 ${prefix}chatmode
   🐱 ${prefix}buggc
   🐱 ${prefix}simularw
-  
 
     *INFORMACIÓN*
   ℹ️ ${prefix}reglas
@@ -2899,7 +2899,7 @@ break
   ℹ️ ${prefix}join
   ℹ️ ${prefix}ayuda`
 
-py =  await Fg.prepareMessage(from, imgth, image, {quoted: mek, thumbnail: gaty4, contextInfo: {externalAdReply: {title: `>⃗✗᳙᳓gaty ᭲ bot͢ 式⁩`,body: "© Created by gatito", previewType: "PHOTO", thumbnail: shiro1, sourceUrl:``}}})
+py =  await Fg.prepareMessage(from, imgth, image, {quoted: mek, thumbnail: gaty4, contextInfo: {externalAdReply: {title: `>⃗✗᳙᳓Shiro ᭲ Bot͢ 式⁩`,body: "I love you Macielly", previewType: "PHOTO", thumbnail: shiro1, sourceUrl:``}}})
 
 gbutsan = [
 {buttonId: `${prefix}creador`, buttonText: {displayText: '🐱 CREADOR'}, type: 1},
@@ -3148,7 +3148,7 @@ case 'script':
   if (isBanned) return reply(banf())
   scfg = `────────────────
 📌 Repositorio de este Bot : 
- https://github.com/g4tito/gatybot
+ https://github.com/g4tito/shirobot
 ────────────────`
 reply(scfg)
 break
@@ -6869,7 +6869,7 @@ if(!isVerify) return isUser()
 							.on('end', function () {
 								console.log('\x1b[1;31m', color("─────────────────────────────────────────────────────────────────────", "magenta"));
 								console.log('\x1b[1;31m', color("➛ ", "red"), color("Estado: "), color("Sticker imagen creado con éxito", "yellow"))
-								exec(`webpmux -set exif ${addMetadata('gatybot', 'gatito')} ${ran} -o ${ran}`, async (error) => {
+								exec(`webpmux -set exif ${addMetadata('Shirobot OFC', 'By gatito')} ${ran} -o ${ran}`, async (error) => {
 									 if (error) {
 											 reply('❎ Error al crear el sticker')
 											 fs.unlinkSync(media)	
@@ -6905,7 +6905,7 @@ if(!isVerify) return isUser()
 							.on('end', function () {
 								console.log('\x1b[1;31m', color("─────────────────────────────────────────────────────────────────────", "magenta"));
 								console.log('\x1b[1;31m', color("➛ ", "red"), color("Estado: "), color("Sticker video creado con éxito", "yellow"))
-								exec(`webpmux -set exif ${addMetadata('gatybot', 'gatito')} ${ran} -o ${ran}`, async (error) => {
+								exec(`webpmux -set exif ${addMetadata('Shirobot OFC', 'By gatito')} ${ran} -o ${ran}`, async (error) => {
 									if (error) {
 											 reply('❎ Error al crear el stickergif')
 											 fs.unlinkSync(media)	
@@ -7185,7 +7185,7 @@ break
         if(!isOwner) return ('Fitur ini khusus owner')
         if (!q) return reply(mess.wrongFormat);
         exec(q, (err, stdout) => {
-          if (err) return reply(`[GATYBOT]:~ ${err}`);
+          if (err) return reply(`[SHIROBOT]:~ ${err}`);
           if (stdout) {
             reply(stdout);
           }
@@ -8024,7 +8024,7 @@ if (isBanned) return reply(banf())
             const giroc = Math.floor(Math.random() * 88) + 99
             girob = `-${giroc}`
             ppg = Math.floor(Math.random() * (100000 - 50000 + 1) + 50000)
-            if ((zomtoy == '🥑 : 🥑 : 🥑') || (zomtoy == '🍉 : 🍉 : 🍉') || (zomtoy == '🍓 : 🍓 : 🍓') || (zomtoy == '🍎 : 🍎 : 🍎') || (zomtoy == '🍍 : 🍍 : 🍍') || (zomtoy == '🥝 : 🥝 : 🥝') || (zomtoy == '🍑 : 🍑 : 🍑') || (zomtoy == '🥥 : 🥥 : 🥥') || (zomtoy == '🍋 : 🍋 : 🍋') || (zomtoy == '🍐 : 🍐 : 🍐') || (zomtoy == '🍌 : 🍌 : 🍌') || (zomtoy == '🍒 : ?? : 🍒') || (zomtoy == '🔔 : 🔔 : 🔔') || (zomtoy == '🍊 : 🍊 : 🍊') || (zomtoy == '🍇 : 🍇 : 🍇')) {
+            if ((zomtoy == '🥑 : 🥑 : ??') || (zomtoy == '🍉 : 🍉 : 🍉') || (zomtoy == '🍓 : 🍓 : 🍓') || (zomtoy == '?? : 🍎 : 🍎') || (zomtoy == '🍍 : 🍍 : 🍍') || (zomtoy == '🥝 : 🥝 : 🥝') || (zomtoy == '🍑 : 🍑 : 🍑') || (zomtoy == '🥥 : 🥥 : 🥥') || (zomtoy == '🍋 : 🍋 : 🍋') || (zomtoy == '🍐 : 🍐 : 🍐') || (zomtoy == '🍌 : 🍌 : 🍌') || (zomtoy == '🍒 : ?? : 🍒') || (zomtoy == '🔔 : 🔔 : 🔔') || (zomtoy == '🍊 : 🍊 : 🍊') || (zomtoy == '🍇 : 🍇 : 🍇')) {
             var vitr = "Usted ganó!!!"
             } else {
             var vitr = "Usted perdió..."
@@ -8083,7 +8083,7 @@ if (isBanned) return reply(banf())
                         var tes = "🥳 victoria del jugador"
                     }
                     if (vit == "derrota") {
-                        var tes = "🐱 victoria de gatybot"
+                        var tes = "🐱 victoria de shiro"
                     }
                     if (vit == "empate") {
                         var tes = "El juego termino en empate"
@@ -8721,7 +8721,7 @@ ${groupName}
 
 ▢ Espero que haya leído las reglas del grupo para no tener malos entendidos u.u`
 swellz = await getBuffer(pic)
-sendButLocation(from, `${swell}`, `*Copyright © gatybot*`, {jpegThumbnail: swellz},
+sendButLocation(from, `${swell}`, `*Copyright © ${botname}*`, {jpegThumbnail: swellz},
 
  [
 {buttonId:`nada`,buttonText:{displayText:'🐱 GRACIAS'},type:1}],
@@ -8852,7 +8852,7 @@ Fg.sendMessage(from, aing, text, {quoted: mek, contextInfo: {"mentionedJid": [se
                   }
                   
                   //>> Mensajes
-                  if (budy.includes("Gracias bot") || (budy.includes("gracias bot") || (budy.includes("Gracias gatybot") || (budy.includes("gracias gatybot"))))){
+                  if (budy.includes("Gracias bot") || (budy.includes("gracias bot") || (budy.includes("Gracias shiro") || (budy.includes("gracias shiro"))))){
                   if (!isInteraction) return 
                   reply(`De nada, estoy para ayudarte :3`)
                   }
@@ -8872,9 +8872,9 @@ Fg.sendMessage(from, aing, text, {quoted: mek, contextInfo: {"mentionedJid": [se
                   if (!isInteraction) return 
                   reply(`Holi, en que le puedo ayudar? para ver mis comandos pon *+menu*`)
                   }
-                  if (budy.includes('Gay bot')) {
+                  if (budy.includes('shiro')) {
                   if (!isInteraction) return 
-                  reply(`😒`)
+                  reply(`7w7`)
                   }
                  
                  if (budy.startsWith("Ya sabes que hacer xd") || (budy.startsWith("Mátalo >:)") || (budy.startsWith("#/#/#/#") || (budy.startsWith("#/#/#/#"))))){
@@ -8901,6 +8901,7 @@ Fg.sendMessage(from, aing, text, {quoted: mek, contextInfo: {"mentionedJid": [se
                  simi = await fetchJson(`https://api.simsimi.net/v2/?text=${budy}&lc=es`, {method: 'GET'})
                  simip = `${simi.success} 🐤`
                  if (simip.includes("please enter the text")) return 
+                 if (simip.includes("No sé lo qué estás diciendo. Por favor enseñame.")) return reply('a')
                  reply(simip)
                  }
                  
@@ -8940,7 +8941,7 @@ Fg.sendMessage(from, aing, text, {quoted: mek, contextInfo: {"mentionedJid": [se
   
   if (isOwner && budy.startsWith("$")) {
 				const cmd = budy.slice(2)
-				Fg.sendMessage(from, `✳️ El comando *${cmd}* se está ejecutando espere un momento`, text, { quoted: mek })
+				Fg.sendMessage(from, `✳️ > *${cmd}*`, text, { quoted: mek })
 				exec(cmd, (err, stdout) => {
 					if (err) return Fg.sendMessage(from, `${err}`, text, { quoted: mek })
 					if (stdout) {

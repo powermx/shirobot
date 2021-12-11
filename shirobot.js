@@ -2648,44 +2648,44 @@ break
 💣 *Usos :*  _${totalhit}_
 ⚔️ *Prefix :*  _${prefix}_
 
-       *CONVERTIDORES*
-  🫐 ${prefix}sticker (Foto/video) 
-  🫐 ${prefix}sticker2 (Nombre|Autor)
-  🫐 ${prefix}take (Nombre|Autor)
-  🫐 ${prefix}exif (Nombre|Autor)
-  🫐 ${prefix}ttp
-  🫐 ${prefix}ttp2
-  🫐 ${prefix}attp
-  🫐 ${prefix}attp2
-  🫐 ${prefix}attp3
-  🫐 ${prefix}smeme (txt|text2)
-  🫐 ${prefix}smeme2
-  🫐 ${prefix}toimg
-  🫐 ${prefix}togif
-  🫐 ${prefix}tovid
-  🫐 ${prefix}toav
-  🫐 ${prefix}rvo
-  🫐 ${prefix}triggered
-  🫐 ${prefix}passed
-  🫐 ${prefix}wasted
-  🫐 ${prefix}wanted
-  🫐 ${prefix}gtav
-  🫐 ${prefix}imgrip
-  🫐 ${prefix}imgrip2
-  🫐 ${prefix}scelda
-  🫐 ${prefix}emoji_app
-  🫐 ${prefix}emoji_wa
-  🫐 ${prefix}emoji_fb
-  🫐 ${prefix}emoji_go
-  🫐 ${prefix}emoji_mo
-  🫐 ${prefix}emoji_tw
-  🫐 ${prefix}emoji_sa
-  🫐 ${prefix}emoji_op
-  🫐 ${prefix}emoji_pi
-  🫐 ${prefix}emoji_ht
-  🫐 ${prefix}emoji_lg
+    *CONVERTIDORES*
+  🎨 ${prefix}sticker (Foto/video) 
+  🎨 ${prefix}sticker2 (Nombre|Autor)
+  🎨 ${prefix}take (Nombre|Autor)
+  🎨 ${prefix}exif (Nombre|Autor)
+  🎨 ${prefix}ttp
+  🎨 ${prefix}ttp2
+  🎨 ${prefix}attp
+  🎨 ${prefix}attp2
+  🎨 ${prefix}attp3
+  🎨 ${prefix}smeme (txt|text2)
+  🎨 ${prefix}smeme2
+  🎨 ${prefix}toimg
+  🎨 ${prefix}togif
+  🎨 ${prefix}tovid
+  🎨 ${prefix}toav
+  🎨 ${prefix}rvo
+  🎨 ${prefix}triggered
+  🎨 ${prefix}passed
+  🎨 ${prefix}wasted
+  🎨 ${prefix}wanted
+  🎨 ${prefix}gtav
+  🎨 ${prefix}imgrip
+  🎨 ${prefix}imgrip2
+  🎨 ${prefix}scelda
+  🎨 ${prefix}emoji_app
+  🎨 ${prefix}emoji_wa
+  🎨 ${prefix}emoji_fb
+  🎨 ${prefix}emoji_go
+  🎨 ${prefix}emoji_mo
+  🎨 ${prefix}emoji_tw
+  🎨 ${prefix}emoji_sa
+  🎨 ${prefix}emoji_op
+  🎨 ${prefix}emoji_pi
+  🎨 ${prefix}emoji_ht
+  🎨 ${prefix}emoji_lg
 
-       *DESCARGAS*
+    *DESCARGAS*
   📥 ${prefix}play
   📥 ${prefix}play2
   📥 ${prefix}playvid
@@ -2698,13 +2698,13 @@ break
   📥 ${prefix}tiktokaudio [error]
   📥 ${prefix}mdfire
 
-       *BUSQUEDA*
+    *BUSQUEDA*
   🔎 ${prefix}ytsearch
   🔎 ${prefix}ytstalk
   🔎 ${prefix}igstalk
   🔎 ${prefix}playstore
 
-       *EDUCACIÓN*
+    *EDUCACIÓN*
   📚 ${prefix}covid
   📚 ${prefix}hora
   📚 ${prefix}trad
@@ -2714,23 +2714,23 @@ break
   📚 ${prefix}encode
   📚 ${prefix}decode
 
-       *LOGOS*
-  🎨 ${prefix}blackpink
-  🎨 ${prefix}glich
-  🎨 ${prefix}retroneon
-  🎨 ${prefix}luzneon
-  🎨 ${prefix}gaming
-  🎨 ${prefix}3d
-  🎨 ${prefix}phlogo
-  🎨 ${prefix}light
-  🎨 ${prefix}marvel
-  🎨 ${prefix}3dbox
-  🎨 ${prefix}flame
-  🎨 ${prefix}matrix
-  🎨 ${prefix}breakwall
-  🎨 ${prefix}bneon
+    *LOGOS*
+  🧩 ${prefix}blackpink
+  🧩 ${prefix}glich
+  🧩 ${prefix}retroneon
+  🧩 ${prefix}luzneon
+  🧩 ${prefix}gaming
+  🧩 ${prefix}3d
+  🧩 ${prefix}phlogo
+  🧩 ${prefix}light
+  🧩 ${prefix}marvel
+  🧩 ${prefix}3dbox
+  🧩 ${prefix}flame
+  🧩 ${prefix}matrix
+  🧩 ${prefix}breakwall
+  🧩 ${prefix}bneon
 
-       *MEDIA*
+    *MEDIA*
   🎥 ${prefix}screenshot
   🎥 ${prefix}tourl
   🎥 ${prefix}tourl2
@@ -2744,7 +2744,7 @@ break
   🎥 ${prefix}escribe
   🎥 ${prefix}tinyurl (acortador)
 
-       *FUNCIÓNES*
+    *FUNCIÓNES*
   🍒 ${prefix}random
   🍒 ${prefix}leermas (texto1|texto2)
   🍒 ${prefix}reenviado (texto)
@@ -2753,7 +2753,7 @@ break
   🍒 ${prefix}mention (549xxx)
   🍒 ${prefix}say
 
-       *ECONOMÍA*
+    *ECONOMÍA*
   🪙 ${prefix}shop
   🪙 ${prefix}toplevel
   🪙 ${prefix}cartera
@@ -2765,7 +2765,7 @@ break
   🪙 ${prefix}addgcoin
   🪙 ${prefix}claim
 
-       *DIVERSIÓN*
+    *DIVERSIÓN*
   🎲 ${prefix}shipping 
   🎲 ${prefix}pregunta
   🎲 ${prefix}vor (verdad/reto)
@@ -2783,27 +2783,27 @@ break
   🎲 ${prefix}dado
   🎲 ${prefix}chiste
 
-       *IMAGENES*
-  🖼️ ${prefix}imagen
-  🖼️ ${prefix}par
-  🖼️ ${prefix}pinterest
-  🖼️ ${prefix}wallpaper
-  🖼️ ${prefix}anime
-  🖼️ ${prefix}loli
-  🖼️ ${prefix}neko
-  🖼️ ${prefix}waifu
-  🖼️ ${prefix}girl
-  🖼️ ${prefix}man
-  🖼️ ${prefix}rip
+    *IMAGENES*
+  🌅 ${prefix}imagen
+  🌅 ${prefix}par
+  🌅 ${prefix}pinterest
+  🌅 ${prefix}wallpaper
+  🌅 ${prefix}anime
+  🌅 ${prefix}loli
+  🌅 ${prefix}neko
+  🌅 ${prefix}waifu
+  🌅 ${prefix}girl
+  🌅 ${prefix}man
+  🌅 ${prefix}rip
 
-       *NSFW*
+    *NSFW*
   🔞 ${prefix}hentai
   🔞 ${prefix}pack
   🔞 ${prefix}nsfw_waifu
   🔞 ${prefix}nsfw_loli
   🔞 ${prefix}nsfw_neko
 
-       *GRUPOS*
+    *GRUPOS*
   👥 ${prefix}infogp
   👥 ${prefix}infodetec
   👥 ${prefix}group
@@ -2841,7 +2841,7 @@ break
   👥 ${prefix}delete (mensaje bot)
   👥 ${prefix}salir (dejo el grupo)
 
-       *MENSIONES*
+    *MENSIONES*
   🪀 ${prefix}tagall
   🪀 ${prefix}tag
   🪀 ${prefix}notify (texto)
@@ -2850,12 +2850,12 @@ break
   🪀 ${prefix}sticktag
   🪀 ${prefix}imgtag
 
-       *SESIÓN*
+    *SESIÓN*
   🤖 ${prefix}serbot
   🤖 ${prefix}stopbot
   🤖 ${prefix}listbots
 
-       *AVANZADO*
+    *AVANZADO*
   ⚙️ ${prefix}blocklist
   ⚙️ ${prefix}banlist
   ⚙️ ${prefix}listbanchat
@@ -2864,7 +2864,7 @@ break
   ⚙️ ${prefix}premiumlist
   ⚙️ ${prefix}checkpremium
 
-       *OWNER*
+    *OWNER*
   🐱 ${prefix}actualizar
   🐱 ${prefix}modo (publico/privado)
   🐱 ${prefix}stickcmd
@@ -2889,7 +2889,7 @@ break
   🐱 ${prefix}buggc
   🐱 ${prefix}simularw
 
-       *INFORMACIÓN*
+    *INFORMACIÓN*
   ℹ️ ${prefix}reglas
   ℹ️ ${prefix}creador
   ℹ️ ${prefix}info
@@ -2905,8 +2905,8 @@ break
 py =  await Fg.prepareMessage(from, imgth, image, {quoted: mek, thumbnail: imgth, contextInfo: {externalAdReply: {title: `>⃗✗᳙᳓Shiro ᭲ Bot͢ 式⁩`,body: "I love you Macielly", previewType: "PHOTO", thumbnail: waifu0, sourceUrl:``}}})
 
 gbutsan = [
-{buttonId: `creador`, buttonText: {displayText: '🐱 CREADOR'}, type: 1},
-{buttonId: `info`, buttonText: {displayText: '🤖 INFO'}, type: 1}
+{buttonId: `${prefix}creador`, buttonText: {displayText: '🐱 CREADOR'}, type: 1},
+{buttonId: `${prefix}info`, buttonText: {displayText: '🤖 INFO'}, type: 1}
 ]
 gbuttonan = {
 imageMessage: py.message.imageMessage,

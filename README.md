@@ -1,9 +1,9 @@
-# 🐱「gaтyвфт」🤖
+# ☯️「shirobot」☪️
 ---------
 
 <h1 align="center">
     <p>
-        <img src= "storage/image/gaty_2.jpg">
+        <img src= "storage/image/shiro_1.jpg">
     </p>
     <p align="center">
         <a href="#"><img title="whatsapp-bot-termux" src="https://img.shields.io/badge/-WHATSAPP--BOT--TERMUX-green?colorA=%23ff0000&colorB=%23017e40&style=for-the-badge"></a>
@@ -13,9 +13,9 @@
     </p>
     <p>
         <a href="https://github.com/g4tito/followers"><img title="Followers" src="https://img.shields.io/github/followers/g4tito?color=blue&style=flat-square"></a>
-        <a href="https://github.com/g4tito/gatybot/stargazers/"><img title="Stars" src="https://img.shields.io/github/stars/g4tito/gatybot?color=red&style=flat-square"></a>
-        <a href="https://github.com/g4tito/gatybot/network/members"><img title="Forks" src="http://img.shields.io/github/forks/g4tito/gatybot?color=red&style=flat-square"></a>
-        <a href="https://github.com/g4tito/gatybot/watchers"><img title="Watching" src="https://img.shields.io/github/watchers/g4tito/gatybot?label=Watchers&color=blue&style=flat-square"></a>
+        <a href="https://github.com/g4tito/shirobot/stargazers/"><img title="Stars" src="https://img.shields.io/github/stars/g4tito/shirobot?color=red&style=flat-square"></a>
+        <a href="https://github.com/g4tito/shirobot/network/members"><img title="Forks" src="http://img.shields.io/github/forks/g4tito/shirobot?color=red&style=flat-square"></a>
+        <a href="https://github.com/g4tito/shirobot/watchers"><img title="Watching" src="https://img.shields.io/github/watchers/g4tito/shirobot?label=Watchers&color=blue&style=flat-square"></a>
         <a href="https://hits.seeyoufarm.com"><img src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2Fg4tito%2Fgatybot&count_bg=%2379C83D&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=Support&edge_flat=false"/></a>
         <a href="#"><img title="MANTENIMIENTO" src="https://img.shields.io/badge/MANTENIMIENTO-SI-blue.svg"</a>
     </p>
@@ -24,7 +24,7 @@
 ---------
 
 ## 🔮 Deploy
-- [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/g4tito/gatybot/)
+- [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/g4tito/shirobot/)
 
 ---------
 
@@ -45,7 +45,7 @@
 
 - Desde termux
 ```bash
-> cd gatybot
+> cd shirobot
 > git pull
 ```
 
@@ -62,7 +62,7 @@
 > pkg update -y
 > pkg upgrade -y
 > pkg install git
-> git clone https://github.com/g4tito/gatybot
+> git clone https://github.com/g4tito/shirobot
 > cd gatybot
 > bash install.sh
 > npm start

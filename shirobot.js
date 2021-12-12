@@ -2902,31 +2902,8 @@ break
   ℹ️ ${prefix}join
   ℹ️ ${prefix}ayuda`
 
-py = await Fg.prepareMessage(from, imgth, image, {quoted: mek, thumbnail: imgth, contextInfo: {externalAdReply: {title: `>⃗✗᳙᳓Shiro ᭲ Bot͢ 式⁩`,body: "I love you Macielly", previewType: "PHOTO", thumbnail: waifu0, sourceUrl:``}}})
-gbutsan = [
-{buttonId: `${prefix}creador`, buttonText: {displayText: '🐱 CREADOR'}, type: 1},
-{buttonId: `${prefix}info`, buttonText: {displayText: '🤖 INFO'}, type: 1}
-]
-gbuttonan = {
-imageMessage: py.message.imageMessage,
-contentText: helfxz,
-footerText: `║▌│█║▌│ █║▌│█│║▌║\n║▌│█║▌│ █║▌│█│║▌║\n      *Copyright © ${botname} 2021*`,
-buttons: gbutsan,
-headerType: 4
-}
-await Fg.sendMessage(from, gbuttonan, MessageType.buttonsMessage, {contextInfo: {  mentionedJid: [sender]}, quoted: mek})
-} catch (e) {
-	console.log(`Error :`, color(e,'red'))
-     reply('❎ Error al mostrar el menú, intenta de nuevo después de este mensaje')
-                     }
-break
-
-case 'tezt':
-
-          try {
-        helfxz = `Test menu boton`
-
-  py = await Fg.prepareMessage(from, shiro0, image, {quoted: mek, thumbnail: shiro0, contextInfo: {externalAdReply: {title: `>⃗✗᳙᳓Shiro ᭲ Bot͢ 式⁩`,body: "I love you Macielly", previewType: "PHOTO", thumbnail: waifu0, sourceUrl:``}}})
+//{quoted: mek, thumbnail: imgth, contextInfo: {externalAdReply: {title: `>⃗✗᳙᳓Shiro ᭲ Bot͢ 式⁩`,body: "I love you Macielly", previewType: "PHOTO", thumbnail: waifu0, sourceUrl:``}}}
+py = await Fg.prepareMessage(from, shiro0, image)
 gbutsan = [
 {buttonId: `${prefix}creador`, buttonText: {displayText: '🐱 CREADOR'}, type: 1},
 {buttonId: `${prefix}info`, buttonText: {displayText: '🤖 INFO'}, type: 1}

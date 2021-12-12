@@ -2902,7 +2902,7 @@ break
   ℹ️ ${prefix}join
   ℹ️ ${prefix}ayuda`
 
-py =  await Fg.prepareMessage(from, imgth, image, {quoted: mek, thumbnail: imgth, contextInfo: {externalAdReply: {title: `>⃗✗᳙᳓Shiro ᭲ Bot͢ 式⁩`,body: "I love you Macielly", previewType: "PHOTO", thumbnail: waifu0, sourceUrl:``}}})
+py = await Fg.prepareMessage(from, imgth, image, {quoted: mek, thumbnail: imgth, contextInfo: {externalAdReply: {title: `>⃗✗᳙᳓Shiro ᭲ Bot͢ 式⁩`,body: "I love you Macielly", previewType: "PHOTO", thumbnail: waifu0, sourceUrl:``}}})
 gbutsan = [
 {buttonId: `${prefix}creador`, buttonText: {displayText: '🐱 CREADOR'}, type: 1},
 {buttonId: `${prefix}info`, buttonText: {displayText: '🤖 INFO'}, type: 1}
@@ -2922,10 +2922,11 @@ await Fg.sendMessage(from, gbuttonan, MessageType.buttonsMessage, {contextInfo: 
 break
 
 case 'tezt':
+
           try {
         helfxz = `Test menu boton`
 
-  py =  await Fg.prepareMessage(from, shiro0, image)
+  py = await Fg.prepareMessage(from, shiro0, image, {quoted: mek, thumbnail: shiro0, contextInfo: {externalAdReply: {title: `>⃗✗᳙᳓Shiro ᭲ Bot͢ 式⁩`,body: "I love you Macielly", previewType: "PHOTO", thumbnail: waifu0, sourceUrl:``}}})
 gbutsan = [
 {buttonId: `${prefix}creador`, buttonText: {displayText: '🐱 CREADOR'}, type: 1},
 {buttonId: `${prefix}info`, buttonText: {displayText: '🤖 INFO'}, type: 1}

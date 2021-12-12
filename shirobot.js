@@ -219,7 +219,7 @@ const soportefg = 'https://chat.whatsapp.com/FzcwScmCwCM4wRcEfBrPTQ'
 
 //====================[ ALMACENAMIENTO ]====================//
 fakefg = fs.readFileSync('./image/fake.jpg')
-shiro0 = fs.readFileSync('./storage/image/shiro_0.jpg')
+const shiro0 = fs.readFileSync('./storage/image/shiro_0.jpg')
 shiro1 = fs.readFileSync('./storage/image/shiro_1.jpg')
 loli0 = fs.readFileSync('./storage/image/loli_0.jpg')
 loli1 = fs.readFileSync('./storage/image/loli_1.jpg')
@@ -2921,6 +2921,29 @@ await Fg.sendMessage(from, gbuttonan, MessageType.buttonsMessage, {contextInfo: 
                      }
 break
 
+case 'tezt':
+          try {
+        helfxz = `Test menu boton`
+
+  py =  await Fg.prepareMessage(from, shiro0, image)
+gbutsan = [
+{buttonId: `${prefix}creador`, buttonText: {displayText: '🐱 CREADOR'}, type: 1},
+{buttonId: `${prefix}info`, buttonText: {displayText: '🤖 INFO'}, type: 1}
+]
+gbuttonan = {
+imageMessage: py.message.imageMessage,
+contentText: helfxz,
+footerText: `║▌│█║▌│ █║▌│█│║▌║\n║▌│█║▌│ █║▌│█│║▌║\n      *Copyright © ${botname} 2021*`,
+buttons: gbutsan,
+headerType: 4
+}
+await Fg.sendMessage(from, gbuttonan, MessageType.buttonsMessage, {contextInfo: {  mentionedJid: [sender]}, quoted: mek})
+} catch (e) {
+	console.log(`Error :`, color(e,'red'))
+     reply('❎ Error al mostrar el menú, intenta de nuevo después de este mensaje')
+                     }
+break
+
 //--info bot 
 case 'info':
 case 'status':
@@ -4915,7 +4938,7 @@ await Fg.sendMessage(from, options, text)
 break
 ;
 
-//-------(𝗗𝗘𝗦𝗖𝗔𝗥??A𝗦 -  𝗦𝗧𝗔𝗟𝗞𝗦) 𝗜𝗡𝗦𝗧𝗔 - 𝗧𝗜𝗞𝗧𝗢𝗞------
+//-------(𝗗𝗘𝗦𝗖𝗔𝗥??A𝗦 -  𝗦𝗧𝗔𝗟𝗞𝗦) 𝗜𝗡𝗦𝗧𝗔 - 𝗧𝗜𝗞𝗧𝗢??------
       case 'tiktok':
       if(!isVerify) return isUser()
   if (isBanned) return reply(banf())

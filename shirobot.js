@@ -194,7 +194,7 @@ gCoinF
 //====================================================================================================//
 
 //>> Configuración
-const grupomc = "https://chat.whatsapp.com/FzcwScmCwCM4wRcEfBrPTQ"
+const grupomc = "https://chat.whatsapp.com/EphX7iaMsKj70m0BrZsmvw"
 const owner = "51940617554"
 const owner2 = "51975954286"
 const mods = ["51940617554","5218911054291","5356588048"]
@@ -214,7 +214,7 @@ const Pkode = 'pais'
 
 
 //====================[ ENLACES ]====================//
-const soportefg = 'https://chat.whatsapp.com/FzcwScmCwCM4wRcEfBrPTQ'
+const soportefg = 'https://chat.whatsapp.com/EphX7iaMsKj70m0BrZsmvw'
 //====================[ FIN DE ENLACES ]====================//
 
 //====================[ ALMACENAMIENTO ]====================//

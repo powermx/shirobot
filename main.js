@@ -78,6 +78,9 @@ Fg.on('group-participants-update', async (anu) => {
 				if (num.startsWith('2')) return Fg.groupRemove(mdata.id, [num])
 				if (num.startsWith('3')) return Fg.groupRemove(mdata.id, [num])
 				if (num.startsWith('4')) return Fg.groupRemove(mdata.id, [num])
+				if (num.startsWith('55')) return Fg.groupRemove(mdata.id, [num])
+				if (num.startsWith('62')) return Fg.groupRemove(mdata.id, [num])
+				if (num.startsWith('88')) return Fg.groupRemove(mdata.id, [num])
 				try {
 					ppimg = await Fg.getProfilePicture(`${anu.participants[0].split('@')[0]}@c.us`)
 				} catch {

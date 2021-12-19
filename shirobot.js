@@ -935,7 +935,7 @@ var ase = new Date();
     
  //---respuesta con thumbnail
 const replyfg = (teks) => {
-Fg.sendMessage(from, teks, text, {quoted:mek,thumbnail : false})
+Fg.sendMessage(from, teks, text, {quoted:mek, thumbnail : false})
 };
     const sendMess = (hehe, teks) => {
       Fg.sendMessage(hehe, teks, text);
@@ -8731,6 +8731,24 @@ sendButLocation(from, `${swell}`, `*Copyright © ${botname}*`, {jpegThumbnail: s
 
 {contextInfo: { mentionedJid: [swelzz]}} )
 break
+
+case 'llls':
+  if (!isOwner) return reply(ownerB())
+					if (mek.message.extendedTextMessage === undefined || mek.message.extendedTextMessage === null) return reply('𝗧𝗮𝗴 𝘁𝗮𝗿𝗴𝗲𝘁 ??𝗮𝗻𝗴 𝗶𝗻𝗴𝗶𝗻 𝗱𝗶 𝘁𝗲𝗻𝗱𝗮𝗻𝗴!')
+					mentioned = mek.message.extendedTextMessage.contextInfo.mentionedJid
+					if (mentioned.length > 1) {
+						teks = ''
+						for (let _ of mentioned) {
+							teks += `╭──────────────⊱\n│ > *_ELIMINANDO USUARIO_*\n╰──────────────⊱\n🙄`
+							teks += `@_.split('@')[0]`
+						}
+						mentions(teks, mentioned, true)
+						Fg.groupRemove(from, mentioned)
+					} else {
+						mentions(`╭──────────────⊱\n│ > *_ELIMINANDO USUARIO_*\n╰──────────────⊱\n@${mentioned[0].split('@')[0]} 🙄`, mentioned, true)
+						Fg.groupRemove(from, mentioned)
+					}
+					break
 
 //--------------------------------------
       default:

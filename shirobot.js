@@ -167,7 +167,7 @@ let single = false
 let prefa = '/'
 
 //--
-banChats = false;
+banChats = true;
 offline = false;
 
 //====================[ HELP/MENU ]====================//
@@ -2599,7 +2599,7 @@ const sendMessageFromContent = async(jid, message, options) => {
              }
 
 //>> Bot modo privado y grupo muteado
-    if (!isOwner && banChats && isCmd === true) return reply('✳️ Bot en modo privado, todas las funciones bloqueadas')
+    if (!isOwner && banChats && isCmd === true) return reply('✳️ Bot en mantenimiento por lo tanto la mayoría de los comandos están bloqueados') //Bot en modo privado, todas las funciones bloqueadas
     if (!isOwner && !isMods && isBanchat && isCmd === true) return reply('✳️ Grupo muteado, todas las funciones bloqueadas')
    
 //====================================================================================================//
@@ -7843,7 +7843,7 @@ reply(`No hay sesión en curso, 🛡️ Para iniciar uno escribe ${prefix}ttt`);
   }
 break
 
-               //-----  𝗝𝘂𝗲𝗴𝗼𝘀 𝗽𝗮𝗿𝗮 𝗴𝗮𝗻𝗮𝗿 𝗕??𝘁𝗖𝗼𝗶𝗻𝘀--         
+               //-----  ??𝘂𝗲𝗴𝗼𝘀 𝗽𝗮𝗿𝗮 𝗴𝗮𝗻𝗮𝗿 𝗕??𝘁𝗖𝗼𝗶𝗻𝘀--         
 case 'math':
 case 'mate':
 case 'mates':

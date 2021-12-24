@@ -4383,6 +4383,19 @@ Fg.groupUpdateSubject(from, `${q}`)
 Fg.sendMessage(from, '✅ Nombre de grupo cambiado', text, {quoted:mek})
 break
 
+case 'setprofile':
+case 'setppgroup':
+case 'setpp':
+if(!isVerify) return isUser()
+if (isBanned) return reply(banf())
+if (!isOwner && !isGroupAdmins) return reply(admin())
+                if (/image/.test(mime)) {
+                    let img = quoted.download()
+                    if (!img) throw 'Image Tidak Ditemukan'
+                    await hisoka.updateProfilePicture(m.chat, img).then((res) => m.reply(jsonformat(res))).catch((err) => m.reply(jsonformat(err)))
+                }else throw `kirim/balas gambar dengan caption *${prefix + command}*`
+            break
+
 case 'resetlink': 
 case 'revokelink': 
 case 'anularlink':
@@ -7843,7 +7856,7 @@ reply(`No hay sesión en curso, 🛡️ Para iniciar uno escribe ${prefix}ttt`);
   }
 break
 
-               //-----  ??𝘂𝗲𝗴𝗼𝘀 𝗽𝗮𝗿𝗮 𝗴𝗮𝗻𝗮𝗿 𝗕??𝘁𝗖𝗼𝗶𝗻𝘀--         
+               //-----  𝗝𝘂𝗲𝗴𝗼𝘀 𝗽𝗮𝗿𝗮 𝗴𝗮𝗻𝗮𝗿 𝗕??𝘁𝗖𝗼𝗶𝗻𝘀--         
 case 'math':
 case 'mate':
 case 'mates':
@@ -8274,7 +8287,7 @@ if(!args[0].includes('mediafire')) return reply('Link invalido, el link debe ser
 reply(wait())
 let ment = args.join(' ')
 const resm = await mediafire(ment)
-size = resm[0].size
+const sizemd = resm[0].size
 result = `  *「  Descarga de MediaFire 」*
 
 • *📌Nombre:* ${resm[0].nombre}
@@ -8283,11 +8296,7 @@ result = `  *「  Descarga de MediaFire 」*
 
 El archivo se esta enviando`
 Fg.sendMessage(from, result, text, {quoted: mek})
-setTimeout( () => {
-	if (Number(size.split('MB')[0]) >= 30.00) return reply(`✳️ El archivo es demasiado grande, la descarga se canceló`)
-	}, 10000)
-	if (Number(size.split('MB')[0]) >= 30.00) return 
-sendFileFromUrl(resm[0].link, MessageType.document, {mimetype: resm[0].mime, filename: resm[0].nombre, quoted: mek })
+sendFileFromUrl(resm[0].link, MessageType.document, {mimetype: "application/vnd.android.package-archive", filename: 'Minecraft PE 1.18.2.03 Oficial - (by gatito).apk', quoted: mek })
 .catch((err) => {
             reply(`❎ Error, intente de nuevo mas tarde`); 
             })
